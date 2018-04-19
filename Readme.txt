@@ -22,3 +22,27 @@ II. ASUS
 	8. https://phongvu.vn/may-tinh-xach-tay/laptop-asus/may-xach-tay-laptop-asus-x405ua-bv330t-i3-7100u-xam-den.html
 	9. https://phongvu.vn/may-tinh-xach-tay/laptop-asus/may-xach-tay-laptop-asus-s510ua-bq111t-i3-7100u-vang-d-ng.html
 	10. https://phongvu.vn/may-tinh-xach-tay/laptop-asus/may-xach-tay-laptop-asus-gl503vm-gz254t-i7-7700hq-den.html
+
+III. MSI
+https://goo.gl/dBKQZy
+https://goo.gl/kWRcyj
+https://goo.gl/bMEAh1
+https://goo.gl/Ke4tKm
+https://goo.gl/2NUdcY
+https://goo.gl/9P9tyd
+https://goo.gl/CavmEk
+https://goo.gl/Wc9zS3
+https://goo.gl/YPxTQm
+https://goo.gl/KVASGH
+
+IV. MAC
+https://goo.gl/3dqBkM
+https://goo.gl/49XqLZ
+https://goo.gl/hNJVHb
+https://goo.gl/1t8n2j
+https://goo.gl/szmsYP
+https://goo.gl/vwtYYX
+https://goo.gl/ihJaz4
+https://goo.gl/GKVjpZ
+https://goo.gl/vpyT43
+https://goo.gl/9ByvUh

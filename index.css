@@ -1,0 +1,40 @@
+*{margin: 0;padding:0;}
+
+.contact{
+	background-color: black;
+	color: white;
+	display: fixed;
+}
+
+.hotline{
+	padding-top: 10px;
+}
+
+.logo a img{
+	width: 300px;
+	height: auto;
+	margin-top: 3em; 
+}
+
+.widget li{
+	list-style: none;
+	display: inline-block;
+	padding: 10px 12px 0 5px;
+}
+.widget li a:hover{
+	color: orange;
+	display: block;
+}
+
+.widget li a{
+	text-decoration: none;
+	color: white;
+}
+
+.rule li{
+	font-size: 12px;
+	list-style: none;
+	display: inline-block;
+	padding: 10px 12px 0 5px;
+	color: orange;
+}

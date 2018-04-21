@@ -898,6 +898,18 @@ textarea.input {
   color: #FFF;
 }
 
+.product .product-img .product-label>span.most-view {
+  background-color: #D10024;
+  border-color: #D10024;
+  color: #FFF;
+}
+
+.product .product-img .product-label>span.most-selling {
+  background-color: #D10024;
+  border-color: #D10024;
+  color: #FFF;
+}
+
 .product .product-body {
   position: relative;
   padding: 15px;

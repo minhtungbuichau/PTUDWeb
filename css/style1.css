@@ -900,6 +900,32 @@ textarea.input {
   color: #FFF;
 }
 
+.product-details .product-body .product-label{
+  position: absolute;
+  top: 70px;
+  right: 220px;
+}
+
+.product-details .product-body .product-label>span.sale {
+  background-color: #FFF;
+  border-color: #D10024;
+  color: #D10024;
+}
+
+.product-details .product-body .product-label>span.new {
+  background-color: #D10024;
+  border-color: #D10024;
+  color: #FFF;
+}
+
+.product-details .product-body .product-label>span{
+  left: 20px;
+  border: 2px solid;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
 .product .product-body {
   position: relative;
   padding: 15px;

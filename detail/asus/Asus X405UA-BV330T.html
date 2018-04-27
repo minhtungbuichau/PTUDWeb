@@ -25,7 +25,7 @@
 
  		<!-- Custom stlylesheet -->
  		<link type="text/css" rel="stylesheet" href="../../css/style1.css"/>
-
+		<link type="text/css" rel="stylesheet" href="../../css/style-dropdown.css">
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -47,7 +47,8 @@
 					</ul>
 					<ul class="header-links pull-right">
 						<li><a href="#"><i class="fa fa-dollar"></i> VNĐ</a></li>
-						<li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
+						<li><a href="./login/SignIn.html"><i class="fa fa-user"></i>Đăng nhập</a></li>
+						<li><a href="./login/SignUp.html"><i class="fa fa-plus"></i>Đăng ký</a></li>
 					</ul>
 				</div>
 			</div>
@@ -63,7 +64,7 @@
 						<div class="col-md-3">
 							<div class="header-logo">
 								<a href="#" class="logo">
-									<img src="./img/logo.png" alt="">
+									<img width = "80%" src="../../img/logo.png" alt="">
 								</a>
 							</div>
 						</div>
@@ -83,8 +84,8 @@
 										<option value="6">MSI</option>
 										<option value="7">Apple</option>
 									</select>
-									<input class="input" placeholder="Search here">
-									<button class="search-btn">Search</button>
+									<input class="input" placeholder="Bạn đang tìm gì?">
+									<button class="search-btn">Tìm kiếm</button>
 								</form>
 							</div>
 						</div>
@@ -97,8 +98,8 @@
 								<div>
 									<a href="#">
 										<i class="fa fa-heart-o"></i>
-										<span>Your Wishlist</span>
-										<div class="qty">2</div>
+										<span>Yêu thích</span>
+										<div class="qty">0</div>
 									</a>
 								</div>
 								<!-- /Wishlist -->
@@ -106,9 +107,10 @@
 								<div class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 										<i class="fa fa-shopping-cart"></i>
-										<span>Your Cart</span>
-										<div class="qty">3</div>
+										<span>Giỏ hàng</span>
+										<div class="qty">0</div>
 									</a>
+									<!--
 									<div class="cart-dropdown">
 										<div class="cart-list">
 											<div class="product-widget">
@@ -132,6 +134,7 @@
 											<a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
 										</div>
 									</div>
+									-->
 								</div>
 								<!-- /Cart -->
 
@@ -163,15 +166,24 @@
 				<div id="responsive-nav">
 					<!-- NAV -->
 					<ul class="main-nav nav navbar-nav">
-						<li class="active"><a href="../../index.html">Home</a></li>
-						<li><a href="../../type/Laptop_ChoiGame.html">Laptop Gaming</a></li>
-						<li><a href="../../type/Laptop_VanPhong.html">Laptop Văn phòng</a></li>
-						<li><a href="../../type/Laptop_DoanhNhan.html">Laptop Doanh nhân</a></li>
-						<li><a href="../../type/Laptop_UltraBook.html">Ultra Book</a></li>
-						<li><a href="../../producer/Laptop_Dell.html">DELL</a></li>
-						<li><a href="../../producer/Laptop_Asus.html">ASUS</a></li>
-						<li><a href="../../producer/Laptop_MSI.html">MSI</a></li>
-						<li><a href="../../producer/Laptop_MacBook.html">APPLE</a></li>
+						<li class="active"><a href="../../index.html"><i class="fa fa-home"></i> Trang chủ</a></li>
+					
+						<li class="dropdown"><a href="#"><i class="fa fa-bars"></i> Xem theo loại sản phẩm</a>
+							<div class="dropdown-content">
+								<a href="../../type/Laptop_ChoiGame.html">Laptop Gaming</a>
+								<a href="../../type/Laptop_VanPhong.html">Laptop Văn phòng</a>
+								<a href="../../type/Laptop_DoanhNhan.html">Laptop Doanh nhân</a>
+								<a href="../../type/Laptop_UltraBook.html">Laptop UltraBook</a>
+							</div>
+						</li>
+						<li class="dropdown"><a href="#"><i class="fa fa-bars"></i> Xem theo nhà sản xuất</a>
+							<div class="dropdown-content">
+								<a href="../../producer/Laptop_Dell.html">DELL</a>
+								<a href="../../producer/Laptop_Asus.html">ASUS</a>
+								<a href="../../producer/Laptop_MSI.html">MSI</a>
+								<a href="../../producer/Laptop_MacBook.html">APPLE</a>
+							</div>
+						</li>
 					</ul>
 					<!-- /NAV -->
 				</div>
@@ -189,8 +201,8 @@
 				<div class="row">
 					<div class="col-md-12">
 						<ul class="breadcrumb-tree">
-							<li><a href="#">Trang chủ</a></li>
-							<li><a href="#">ASUS</a></li>
+							<li><a href="../../index.html">Trang chủ</a></li>
+							<li><a href="../../producer/Laptop_Asus.html">ASUS</a></li>
 							<li class="active">ASUS X405UA-BV330T (I3-7100U)</li>
 						</ul>
 					</div>
@@ -294,16 +306,8 @@
 							</div>
 							<ul class="product-links">
 								<li>Danh mục:</li>
-								<li><a href="#">Laptop Doanh Nhân</a></li>
-								<li><a href="#">ASUS</a></li>
-							</ul>
-
-							<ul class="product-links">
-								<li>Share:</li>
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i></a></li>
+								<li><a href="../../type/Laptop_DoanhNhan.html">Laptop Doanh Nhân</a></li>
+								<li><a href="../../producer/Laptop_Asus.html">ASUS</a></li>
 							</ul>
 
 						</div>
@@ -721,7 +725,7 @@
 								</div>
 							</div>
 							<div class="product-body">
-								<h3 class="product-name"><a href="#">ASUS X541UA-GO1384 (I5-7200U) (Đen)</a></h3>
+								<h3 class="product-name"><a href="./Asus X541UA-GO1384.html">ASUS X541UA-GO1384 (I5-7200U) (Đen)</a></h3>
 								<h4 class="product-price">10.390.000 ₫ <del class="product-old-price">12.390.000 ₫</del></h4>
 								<div class="product-rating">
 								</div>
@@ -741,7 +745,7 @@
 								</div>
 							</div>
 							<div class="product-body">
-								<h3 class="product-name"><a href="#">ASUS UX510UX-CN204 (I5-7200U) (Xám)</a></h3>
+								<h3 class="product-name"><a href="./Asus UX510UX-CN204.html">ASUS UX510UX-CN204 (I5-7200U) (Xám)</a></h3>
 								<h4 class="product-price">15.490.000 ₫ <del class="product-old-price">17.190.000 ₫</del></h4>
 								<div class="product-rating">
 								</div>
@@ -758,7 +762,7 @@
 								<img src="https://phongvu.vn/media/catalog/product/cache/23/thumbnail/380x/9df78eab33525d08d6e5fb8d27136e95/uploads/product/p_14414/2017/11/09/14414.jpg" alt="">
 							</div>
 							<div class="product-body"> 
-								<h3 class="product-name"><a href="#">ASUS GL503VM-GZ219T (I7-7700HQ) (Đen)</a></h3>
+								<h3 class="product-name"><a href="./Asus GL503VM-GZ219T.html">ASUS GL503VM-GZ219T (I7-7700HQ) (Đen)</a></h3>
 								<h4 class="product-price">32.490.000 ₫<div><br></div></h4>
 								<div class="product-rating">
 								</div>
@@ -778,7 +782,7 @@
 								</div>
 							</div>
 							<div class="product-body">
-								<h3 class="product-name"><a href="#">ASUS X510UQ-BR570 (I5-7200U) (Xám)</a></h3>
+								<h3 class="product-name"><a href="./Asus X510UQ-BR570.html">ASUS X510UQ-BR570 (I5-7200U) (Xám)</a></h3>
 								<h4 class="product-price">13.990.000 ₫ <del class="product-old-price">14.290.000 ₫</del></h4>
 								<div class="product-rating">
 								</div>
@@ -795,7 +799,7 @@
 								<img src="https://phongvu.vn/media/catalog/product/cache/23/thumbnail/380x/9df78eab33525d08d6e5fb8d27136e95/uploads/product/p_12233/2017/06/27/12233.jpg" alt="">
 							</div>
 							<div class="product-body">
-								<h3 class="product-name"><a href="#">ASUS A540UP-DM094T (I3-7100U) (Bạc)</a></h3>
+								<h3 class="product-name"><a href="./Asus A540UP-DM094T.html">ASUS A540UP-DM094T (I3-7100U) (Bạc)</a></h3>
 								<h4 class="product-price">11.900.000 ₫ <div><br></div></h4>
 								<div class="product-rating">
 								</div>
@@ -835,8 +839,8 @@
 								
 							</div>
 							<div class="product-body">
-								<h3 class="product-name"><a href="#">ASUS TP410UA-EC250T (I3-7100U)</a></h3>
-								<h4 class="product-price">13.990.000 ₫ <del class="product-old-price"><div><br><br><br></div></del></h4>
+								<h3 class="product-name"><a href="./Asus TP410UA-EC250T.html">ASUS TP410UA-EC250T (I3-7100U)</a></h3>
+								<h4 class="product-price">13.990.000 ₫ <div><br><br></div></h4>
 								<div class="product-rating">
 								</div>
 							</div>
@@ -853,7 +857,7 @@
 								
 							</div>
 							<div class="product-body">
-								<h3 class="product-name"><a href="#"> ASUS UX430UN-GV097T (I7-8550U)</a></h3>
+								<h3 class="product-name"><a href="./Asus UX430UN-GV097T.html"> ASUS UX430UN-GV097T (I7-8550U)</a></h3>
 								<h4 class="product-price">26.990.000 ₫ <del class="product-old-price"><div><br><br><br></div></del></h4>
 								<div class="product-rating">
 								</div>
@@ -873,7 +877,7 @@
 								</div>
 							</div>
 							<div class="product-body">
-								<h3 class="product-name"><a href="#">DELL XPS13 9360-99H103 (I7-7560U-SSD512G) (SILVER)</a></h3>
+								<h3 class="product-name"><a href="../dell/Dell XPS13 9360-99H103.html">DELL XPS13 9360-99H103 (I7-7560U-SSD512G) (SILVER)</a></h3>
 								<h4 class="product-price">46.090.000 ₫ <del class="product-old-price">49.590.000 ₫</del></h4>
 								<div class="product-rating">
 								</div>
@@ -891,7 +895,7 @@
 								
 							</div>
 							<div class="product-body">
-								<h3 class="product-name"><a href="#">ASUS X405UA-BV330T (I3-7100U)</a></h3>
+								<h3 class="product-name"><a href="./Asus X405UA-BV330T.html">ASUS X405UA-BV330T (I3-7100U)</a></h3>
 								<h4 class="product-price">11.790.000 ₫ 
 									<div><br><br></div>
 								</h4>
@@ -910,7 +914,7 @@
 								<img src="https://phongvu.vn/media/catalog/product/cache/23/image/380x/9df78eab33525d08d6e5fb8d27136e95/7/4/7460-n4i5259w-1_1_.jpg" alt="">
 							</div>
 							<div class="product-body">
-								<h3 class="product-name"><a href="#">DELL INSPIRON 14 7460-N4I5259W </a></h3>
+								<h3 class="product-name"><a href="../dell/Dell Inspiron 14 7460.html">DELL INSPIRON 14 7460-N4I5259W </a></h3>
 								<h4 class="product-price">16.490.000 ₫ 
 									<div><br><br></div>
 								</h4>
@@ -954,20 +958,6 @@
 
 						<div class="col-md-3 col-xs-6">
 							<div class="footer">
-								<h3 class="footer-title">Các thương hiệu được phân phối</h3>
-								<ul class="footer-links">
-									<li><a href="#">DELL</a></li>
-									<li><a href="#">ASUS</a></li>
-									<li><a href="#">MSI</a></li>
-									<li><a href="#">APPLE</a></li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="clearfix visible-xs"></div>
-
-						<div class="col-md-3 col-xs-6">
-							<div class="footer">
 								<h3 class="footer-title">Thông tin thành viên</h3>
 								<ul class="footer-links">
 									<li>1512576 - Nguyễn Quang Tính</li>
@@ -976,6 +966,24 @@
 									<li>1512651 - Bùi Châu Minh Tùng</li>
 								</ul>
 							</div>
+						</div>
+
+						<div class="clearfix visible-xs"></div>
+
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Tìm kiếm nhanh</h3>
+								<ul class="footer-links">
+									<li><a href="./producer/Laptop_Dell.html">DELL</a></li>
+									<li><a href="./producer/Laptop_Asus.html">ASUS</a></li>
+									<li><a href="./producer/Laptop_MSI.html">MSI</a></li>
+									<li><a href="./producer/Laptop_MacBook.html">APPLE</a></li>
+									<li><a href="./type/Laptop_ChoiGame.html">Laptop Gaming</a></li>
+									<li><a href="./type/Laptop_VanPhong.html">Laptop Văn phòng</a></li>
+									<li><a href="./type/Laptop_DoanhNhan.html">Laptop Doanh nhân</a></li>
+									<li><a href="./type/Laptop_UltraBook.html">Laptop UltraBook</a></li>
+								</ul>
+							</div>	
 						</div>
 
 						<div class="col-md-3 col-xs-6">
@@ -1001,18 +1009,8 @@
 					<!-- row -->
 					<div class="row">
 						<div class="col-md-12 text-center">
-							<ul class="footer-payments">
-								<li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
-								<li><a href="#"><i class="fa fa-credit-card"></i></a></li>
-								<li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
-								<li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
-								<li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
-								<li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
-							</ul>
 							<span class="copyright">
-								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by BCMT
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 							</span>
 						</div>
 					</div>

@@ -1,6 +1,4 @@
 /*
-Template Name: Electro - HTML Ecommerce Template
-Author: yaminncco
 
 Colors:
 	Body 		: #333
@@ -11,40 +9,7 @@ Colors:
 
 Fonts: Montserrat
 
-Table OF Contents
-------------------------------------
-1 > GENERAL
------- Typography
------- Buttons
------- Inputs
------- Sections
------- Breadcrumb
-2 > HEADER
------- Top header
------- Logo
------- Search
------- Cart
-3 > NAVIGATION
------- Main nav
------- Responsive Nav
-4 > CATEGORY SHOP
-5 > HOT DEAL
-6 > PRODUCT
------- Product
------- Widget product
------- Product slick
-7 > STORE PAGE
------- Aside
------- Store
-8 > PRODUCT DETAILS PAGE
------- Product view
------- Product details
------- Product tab
-9 > CHECKOUT PAGE
-10 > NEWSLETTER
-11 > FOOTER
-11 > SLICK STYLE
-12 > RESPONSIVE
+
 ------------------------------------*/
 
 /*=========================================================
@@ -2016,6 +1981,7 @@ textarea.input {
 #footer {
   background: #15161D;
   color: #B9BABC;
+  margin-top: 40px; 
 }
 
 #bottom-footer {
@@ -2327,7 +2293,7 @@ input[type="submit"]:active {
   border-radius: 0 2px 2px 0;
 }
 
-.rightsignup .loginwith {
+.right .loginwith {
   display: block;
 
   margin-bottom: 40px;

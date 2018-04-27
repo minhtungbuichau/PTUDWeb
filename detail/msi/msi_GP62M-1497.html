@@ -25,6 +25,9 @@
 
  		<!-- Custom stlylesheet -->
  		<link type="text/css" rel="stylesheet" href="../../css/style.css"/>
+ 		<link type="text/css" rel="stylesheet" href="../../css/style1.css">
+	<link type="text/css" rel="stylesheet" href="../../css/style-dropdown.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,170 +48,174 @@
     </head>
 	<body>
 		<!-- HEADER -->
-		<header>
-			<!-- TOP HEADER -->
-		
-			<!-- /TOP HEADER -->
-
-			<!-- MAIN HEADER -->
-		
-			<!-- /MAIN HEADER -->
-	<!-- HEADER -->
-<header>
-	<!-- TOP HEADER -->
-	<div id="top-header">
-		<div class="container">
-			<ul class="header-links pull-left">
-				<li><a href="#"><i class="fa fa-phone"></i> 0989 871 786</a></li>
-				<li><a href="#"><i class="fa fa-envelope-o"></i> laptopck@cklaptop.com.vn</a></li>
-				<li><a href="#"><i class="fa fa-map-marker"></i> 227 Nguyễn Văn Cừ, phường 4, quận 5, TpHCM</a></li>
-			</ul>
-			<ul class="header-links pull-right">
-				<li><a href="#"><i class="fa fa-dollar"></i> VNĐ</a></li>
-				<li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
-			</ul>
-		</div>
-	</div>
-	<!-- /TOP HEADER -->
-
-	<!-- MAIN HEADER -->
-	<div id="header">
-		<!-- container -->
-		<div class="container">
-			<!-- row -->
-			<div class="row">
-				<!-- LOGO -->
-				<div class="col-md-3">
-					<div class="header-logo">
-						<a href="#" class="logo">
-							<img width = "80%" src="../../img/logo.png" alt="">
-						</a>
-					</div>
-				</div>
-				<!-- /LOGO -->
-
-				<!-- SEARCH BAR -->
-				<div class="col-md-6">
-					<div class="header-search">
-						<form>
-							<select class="input-select">
-								<option value="0">Tất cả</option>
-								<option value="1">Gaming</option>
-								<option value="2">Văn phòng</option>
-								<option value="3">Doanh nhân</option>
-								<option value="4">Dell</option>
-								<option value="5">Asus</option>
-								<option value="6">MSI</option>
-								<option value="7">Apple</option>
-							</select>
-							<input class="input" placeholder="Search here">
-							<button class="search-btn">Search</button>
-						</form>
-					</div>
-				</div>
-				<!-- /SEARCH BAR -->
-
-				<!-- ACCOUNT -->
-				<div class="col-md-3 clearfix">
-					<div class="header-ctn">
-						<!-- Wishlist -->
-						<div>
-							<a href="#">
-								<i class="fa fa-heart-o"></i>
-								<span>Your Wishlist</span>
-								<div class="qty">2</div>
-							</a>
-						</div>
-						<!-- /Wishlist -->
-
-						<!-- Cart -->
-						<div class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-								<i class="fa fa-shopping-cart"></i>
-								<span>Your Cart</span>
-								<div class="qty">3</div>
-							</a>
-							<div class="cart-dropdown">
-								<div class="cart-list">
-									<div class="product-widget">
-										<div class="product-img">
-											<img src="./img/product01.png" alt="">
-										</div>
-										<div class="product-body">
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price"><span class="qty">1x</span>$980.00</h4>
-										</div>
-										<button class="delete"><i class="fa fa-close"></i></button>
-									</div>
-
-									<div class="product-widget">
-										<div class="product-img">
-											<img src="./img/product02.png" alt="">
-										</div>
-										<div class="product-body">
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price"><span class="qty">3x</span>$980.00</h4>
-										</div>
-										<button class="delete"><i class="fa fa-close"></i></button>
-									</div>
-								</div>
-								<div class="cart-summary">
-									<small>3 Item(s) selected</small>
-									<h5>SUBTOTAL: $2940.00</h5>
-								</div>
-								<div class="cart-btns">
-									<a href="#">View Cart</a>
-									<a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
-								</div>
-							</div>
-						</div>
-						<!-- /Cart -->
-
-						<!-- Menu Toogle -->
-						<div class="menu-toggle">
-							<a href="#">
-								<i class="fa fa-bars"></i>
-								<span>Menu</span>
-							</a>
-						</div>
-						<!-- /Menu Toogle -->
-					</div>
-				</div>
-				<!-- /ACCOUNT -->
+			<!-- HEADER -->
+	<header>
+		<!-- TOP HEADER -->
+		<div id="top-header">
+			<div class="container">
+				<ul class="header-links pull-left">
+					<li><a href="#"><i class="fa fa-phone"></i> 0989 871 786</a></li>
+					<li><a href="#"><i class="far fa-envelope"></i> laptopck@cklaptop.com.vn</a></li>
+					<li><a href="#"><i class="fa fa-map-marker"></i> 227 Nguyễn Văn Cừ, phường 4, quận 5, TpHCM</a></li>
+				</ul>
+				<ul class="header-links pull-right">
+					<li><a href="#"><i class="fa fa-dollar"></i> VNĐ</a></li>
+					<li><a href="../../login/SignIn.html"><i class="far fa-user"></i>Đăng nhập</a></li>
+					<li><a href="../../login/SignUp.html"><i class="fas fa-plus"></i>Đăng ký</a></li>
+				</ul>
 			</div>
-			<!-- row -->
 		</div>
-		<!-- container -->
-	</div>
-	<!-- /MAIN HEADER -->
-</header>
-<!-- /HEADER -->
+		<!-- /TOP HEADER -->
 
-<!-- NAVIGATION -->
-<nav id="navigation">
-	<!-- container -->
-	<div class="container">
-		<!-- responsive-nav -->
-		<div id="responsive-nav">
-			<!-- NAV -->
-			<ul class="main-nav nav navbar-nav">
-				<li class="active"><a href="../../index.html">Home</a></li>
-				<li><a href="../../type/Laptop_ChoiGame.html">Laptop Gaming</a></li>
-				<li><a href="../../type/Laptop_VanPhong.html">Laptop Văn phòng</a></li>
-				<li><a href="../../type/Laptop_DoanhNhan.html">Laptop Doanh nhân</a></li>
-				<li><a href="../../type/Laptop_UltraBook.html">Ultra Book</a></li>
-				<li><a href="../../producer/Laptop_Dell.html">DELL</a></li>
-				<li><a href="../../producer/Laptop_Asus.html">ASUS</a></li>
-				<li><a href="../../producer/Laptop_MSI.html">MSI</a></li>
-				<li><a href="../../producer/Laptop_MacBook.html">APPLE</a></li>
-			</ul>
-			<!-- /NAV -->
+		<!-- MAIN HEADER -->
+		<div id="header">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<!-- LOGO -->
+					<div class="col-md-3">
+						<div class="header-logo">
+							<a href="#" class="logo">
+								<img width = "80%" src="../../img/logo.png" alt="">
+							</a>
+						</div>
+					</div>
+					<!-- /LOGO -->
+
+					<!-- SEARCH BAR -->
+					<div class="col-md-6">
+						<div class="header-search">
+							<form>
+								<select class="input-select">
+									<option value="0">Tất cả</option>
+									<option value="1">Gaming</option>
+									<option value="2">Văn phòng</option>
+									<option value="3">Doanh nhân</option>
+									<option value="4">Ultrabook</option>
+									<option value="5">Dell</option>
+									<option value="6">Asus</option>
+									<option value="7">MSI</option>
+									<option value="8">Apple</option>
+								</select>
+								<input class="input" placeholder="Bạn đang tìm sản phẩm nào?">
+								<button class="search-btn">Tìm kiếm</button>
+							</form>
+						</div>
+					</div>
+					<!-- /SEARCH BAR -->
+
+					<!-- ACCOUNT -->
+					<div class="col-md-3 clearfix">
+						<div class="header-ctn">
+							<!-- Wishlist -->
+							<div>
+								<a href="#">
+									<i class="far fa-heart"></i>
+									<span>Yêu thích</span>
+									<div class="qty">0</div>
+								</a>
+							</div>
+							<!-- /Wishlist -->
+
+							<!-- Cart -->
+							<div class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+									<i class="fa fa-shopping-cart"></i>
+									<span>Giỏ hàng</span>
+									<div class="qty">0</div>
+								</a>
+								<!-- <div class="cart-dropdown">
+									<div class="cart-list">
+										<div class="product-widget">
+											<div class="product-img">
+												<img src="./img/product01.png" alt="">
+											</div>
+											<div class="product-body">
+												<h3 class="product-name"><a href="#">product name goes here</a></h3>
+												<h4 class="product-price"><span class="qty">1x</span>$980.00</h4>
+											</div>
+											<button class="delete"><i class="fa fa-close"></i></button>
+										</div>
+
+										<div class="product-widget">
+											<div class="product-img">
+												<img src="./img/product02.png" alt="">
+											</div>
+											<div class="product-body">
+												<h3 class="product-name"><a href="#">product name goes here</a></h3>
+												<h4 class="product-price"><span class="qty">3x</span>$980.00</h4>
+											</div>
+											<button class="delete"><i class="fa fa-close"></i></button>
+										</div>
+									</div>
+									<div class="cart-summary">
+										<small>3 Item(s) selected</small>
+										<h5>SUBTOTAL: $2940.00</h5>
+									</div>
+									<div class="cart-btns">
+										<a href="#">View Cart</a>
+										<a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
+									</div>
+								</div> -->
+							</div>
+							<!-- /Cart -->
+
+							<!-- Menu Toogle -->
+							<div class="menu-toggle">
+								<a href="#">
+									<i class="fa fa-bars"></i>
+									<span>Menu</span>
+								</a>
+							</div>
+							<!-- /Menu Toogle -->
+						</div>
+					</div>
+					<!-- /ACCOUNT -->
+				</div>
+				<!-- row -->
+			</div>
+			<!-- container -->
 		</div>
-		<!-- /responsive-nav -->
-	</div>
-	<!-- /container -->
-</nav>
-<!-- /NAVIGATION -->
+		<!-- /MAIN HEADER -->
+	</header>
+	<!-- /HEADER -->
+
+	<!-- NAVIGATION -->
+	<nav id="navigation">
+		<!-- container -->
+		<div class="container">
+			<!-- responsive-nav -->
+			<div id="responsive-nav">
+				<!-- NAV -->
+				<ul class="main-nav nav navbar-nav">
+					<li class="active"><a href="../../index.html"><i class="fas fa-home"></i> Trang chủ</a></li>
+					
+					<li class="dropdown"><a href="#"><i class="fas fa-bars"></i> Xem theo loại sản phẩm</a>
+						<div class="dropdown-content">
+							<a href="../../type/Laptop_ChoiGame.html">Laptop Gaming</a>
+							<a href="../../type/Laptop_VanPhong.html">Laptop Văn phòng</a>
+							<a href="../../type/Laptop_DoanhNhan.html">Laptop Doanh nhân</a>
+							<a href="../../type/Laptop_UltraBook.html">Laptop UltraBook</a>
+						</div>
+					</li>
+					<li class="dropdown"><a href="#"><i class="fas fa-bars"></i> Xem theo nhà sản xuất</a>
+						<div class="dropdown-content">
+							<a href="../../producer/Laptop_Dell.html">DELL</a>
+							<a href="../../producer/Laptop_Asus.html">ASUS</a>
+							<a href="../../producer/Laptop_MSI.html">MSI</a>
+							<a href="../../producer/Laptop_MacBook.html">APPLE</a>
+						</div>
+					</li>
+				</ul>
+				<!-- /NAV -->
+			</div>
+			<!-- /responsive-nav -->
+		</div>
+		<!-- /container -->
+	</nav>
+	<!-- /NAVIGATION -->
+
 
 
 <!-- END OF HEADER -->
@@ -338,8 +345,8 @@
 							</div>
 							<ul class="product-links">
 								<li>Danh mục:</li>
-								<li><a href="#">Laptop Gaming</a></li>
-								<li><a href="#">Laptop MSI</a></li>
+								<li><a href="../../type/Laptop_ChoiGame.html">Laptop Gaming</a></li>
+								<li><a href="../../producer/Laptop_MSI.html">Laptop MSI</a></li>
 							</ul>
 
 							<ul class="product-links">
@@ -1019,96 +1026,93 @@
 		<!-- /Section -->
 	
 <!-- FOOTER -->
-<footer id="footer">
-	<!-- top footer -->
-	<div class="section">
-		<!-- container -->
-		<div class="container">
-			<!-- row -->
-			<div class="row">
-				<div class="col-md-3 col-xs-6">
-					<div class="footer">
-						<h3 class="footer-title">Về chúng tôi</h3>
-						<p>Môn Lập trình ứng dụng Web - khoa Công nghệ Thông tin, trường Đại học Khoa học Tự nhiên - Đại học Quốc gia Tp. Hồ Chí Minh</p>
-						<ul class="footer-links">
-							<li><a href="#"><i class="fa fa-phone"></i> 0989 871 786</a></li>
-							<li><a href="#"><i class="fa fa-envelope-o"></i> laptopck@cklaptop.com.vn</a></li>
-							<li><a href="#"><i class="fa fa-map-marker"></i> 227 Nguyễn Văn Cừ, phường 4, quận 5, Tp. HCM</a></li>
-						</ul>
-					</div>
-				</div>
+		<footer id="footer">
+			<!-- top footer -->
+			<div class="section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Về chúng tôi</h3>
+								<p>Môn Lập trình ứng dụng Web - khoa Công nghệ Thông tin, trường Đại học Khoa học Tự nhiên - Đại học Quốc gia Tp. Hồ Chí Minh</p>
+								<ul class="footer-links">
+									<li><a href="#"><i class="fa fa-phone"></i> 0989 871 786</a></li>
+									<li><a href="#"><i class="far fa-envelope"></i> laptopck@cklaptop.com.vn</a></li>
+									<li><a href="#"><i class="fa fa-map-marker"></i> 227 Nguyễn Văn Cừ, phường 4, quận 5, Tp. HCM</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Thông tin thành viên</h3>
+								<ul class="footer-links">
+									<li>1512576 - Nguyễn Quang Tính</li>
+									<li>1512609 - Hoàng Quốc Trung</li>
+									<li>1512613 - Nguyễn Chí Trung</li>
+									<li>1512651 - Bùi Châu Minh Tùng</li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="clearfix visible-xs"></div>
 
-				<div class="col-md-3 col-xs-6">
-					<div class="footer">
-						<h3 class="footer-title">Các thương hiệu được phân phối</h3>
-						<ul class="footer-links">
-							<li><a href="#">DELL</a></li>
-							<li><a href="#">ASUS</a></li>
-							<li><a href="#">MSI</a></li>
-							<li><a href="#">APPLE</a></li>
-						</ul>
-					</div>
-				</div>
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Tìm kiếm nhanh</h3>
+								<ul class="footer-links">
+									<li><a href="../../producer/Laptop_Dell.html">DELL</a></li>
+									<li><a href="../../producer/Laptop_Asus.html">ASUS</a></li>
+									<li><a href="../../producer/Laptop_MSI.html">MSI</a></li>
+									<li><a href="../../producer/Laptop_MacBook.html">APPLE</a></li>
+									<li><a href="../../type/Laptop_ChoiGame.html">Laptop Gaming</a></li>
+									<li><a href="../../type/Laptop_VanPhong.html">Laptop Văn phòng</a></li>
+									<li><a href="../../type/Laptop_DoanhNhan.html">Laptop Doanh nhân</a></li>
+									<li><a href="../../type/Laptop_UltraBook.html">Laptop UltraBook</a></li>
+								</ul>
+							</div>
+						</div>
 
-				<div class="clearfix visible-xs"></div>
+						
 
-				<div class="col-md-3 col-xs-6">
-					<div class="footer">
-						<h3 class="footer-title">Thông tin thành viên</h3>
-						<ul class="footer-links">
-							<li>1512576 - Nguyễn Quang Tính</li>
-							<li>1512609 - Hoàng Quốc Trung</li>
-							<li>1512613 - Nguyễn Chí Trung</li>
-							<li>1512651 - Bùi Châu Minh Tùng</li>
-						</ul>
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Dịch vụ</h3>
+								<ul class="footer-links">
+									<li><a href="../../user/updateinfo.html">Tài khoản của tôi</a></li>
+									<li><a href="#">Xem giỏ hàng</a></li>
+									<li><a href="#">Về đầu trang</a></li>
+									<li><a href="#">Đến trang hệ thống</a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
+					<!-- /row -->
 				</div>
-
-				<div class="col-md-3 col-xs-6">
-					<div class="footer">
-						<h3 class="footer-title">Dịch vụ</h3>
-						<ul class="footer-links">
-							<li><a href="#">Tài khoản của tôi</a></li>
-							<li><a href="#">Xem giỏ hàng</a></li>
-							<li><a href="#">Về đầu trang</a></li>
-						</ul>
-					</div>
-				</div>
+				<!-- /container -->
 			</div>
-			<!-- /row -->
-		</div>
-		<!-- /container -->
-	</div>
-	<!-- /top footer -->
+			<!-- /top footer -->
 
-	<!-- bottom footer -->
-	<div id="bottom-footer" class="section">
-		<div class="container">
-			<!-- row -->
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<ul class="footer-payments">
-						<li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
-						<li><a href="#"><i class="fa fa-credit-card"></i></a></li>
-						<li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
-						<li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
-						<li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
-						<li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
-					</ul>
-					<span class="copyright">
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by NCT
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					</span>
+			<!-- bottom footer -->
+			<div id="bottom-footer" class="section">
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<span class="copyright">
+								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by NCT
+								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							</span>
+						</div>
+					</div>
+					<!-- /row -->
 				</div>
+				<!-- /container -->
 			</div>
-			<!-- /row -->
-		</div>
-		<!-- /container -->
-	</div>
-	<!-- /bottom footer -->
-</footer>
-<!-- /FOOTER -->
+			<!-- /bottom footer -->
+		</footer>
+		<!-- /FOOTER -->
 
 
 		<!-- jQuery Plugins -->

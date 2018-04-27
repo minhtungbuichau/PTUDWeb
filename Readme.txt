@@ -1,6 +1,6 @@
-40 sp cho 4 hãng sx: DELL , ASUS, ACER, MACBOOK
+40 sp cho 4 hãng sx: DELL , ASUS, MSI, MACBOOK
 
-I.DELL
+ I.DELL
 	1. https://phongvu.vn/may-tinh-xach-tay/laptop-dell/dell-vostro/laptop-dell-vostro-3568-vti35037-i3-7100u-4gb-1tb-15-6-dvdrw-ubuntu-en.html
 	2. https://phongvu.vn/may-tinh-xach-tay/laptop-dell/dell-inspiron/may-xach-tay-laptop-dell-inspiron-13-5378-26w972-xam.html
 	3. https://phongvu.vn/may-tinh-xach-tay/laptop-dell/dell-inspiron/laptop-dell-inspiron-n7460-n4i5259w.html

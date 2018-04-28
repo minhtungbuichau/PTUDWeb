@@ -3,7 +3,8 @@
   <head>
      <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Admin-</title>
+    <link rel="icon" href="../img/logo.png" type="image/png" sizes="8x8">
+    <title>Admin_Tình trạng đơn hàng</title>
     <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -43,7 +44,7 @@
                     </li>
                     <h3 class="menu-title">Quản lý sản phẩm</h3><!-- /.menu-title -->
                     <li>
-                        <a href="loaisp.html"> <i class="menu-icon fa fa-book"></i>Loại sản phẩm </a>
+                        <a href="loaisanpham.html"> <i class="menu-icon fa fa-book"></i>Loại sản phẩm </a>
                     </li>
                     <li>
                         <a href="nhasanxuat.html"> <i class="menu-icon fa fa-book"></i>Nhà sản xuất </a>
@@ -51,16 +52,10 @@
 
                     <h3 class="menu-title">Đơn hàng</h3><!-- /.menu-title -->
 
-                   
                     <li>
-                        <a href="chuagiao.html"> <i class="menu-icon ti-email"></i>Chưa giao </a>
+                        <a href="TinhTrangDonHang.html"> <i class="menu-icon ti-email"></i>Tình trạng đơn hàng</a>
                     </li>
-                    <li>
-                        <a href="danggiao.html"> <i class="menu-icon ti-email"></i>Đang giao </a>
-                    </li>
-                    <li>
-                        <a href="dagiao.html"> <i class="menu-icon ti-email"></i>Đã giao </a>
-                    </li>
+                  
                    
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -91,56 +86,53 @@
         <table class="table" >
       <thead class="thead-dark">
         <tr>
-          <th scope="col">STT</th>
-          <th scope="col">Mã sản phẩm</th>
-          <th scope="col">Tên sản phẩm</th>
+          <th scope="col">Đơn hàng</th>
+          <th scope="col">Ngày đặt hàng</th>
+          <th scope="col">Sản phẩm</th>
           <th scope="col">Số lượng</th>
-          <th scope="col">Giá bán</th>
+          <th scope="col">Nơi nhận</th>
+          <th scope="col">Tổng tiền</th>
+          <th scope="col">Trạng thái</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr style="background-color: yellow; color:gray;">
           <th scope="row">1</th>
-          <td>mac_MPXU2LL</td>
-          <td>Laptop MacBook 13.3" MPXU2LL</td>
-          <td>2</td>
+          <td>23/04/2018</td>
+          <td>Laptop Dell Inspiron 14 3467-M20NR21 (I3-7100U) (Đen)</td>
+          <td>3</td>
+          <td>KTX Khu B</td>
             <td>39.250.000 ₫</td>
+            <td>Đang giao</td>
         </tr>
-        <tr>
+        <tr style="background-color: red; color: violet;">
            <th scope="row">2</th>
-          <td>mac_MPXU2LL</td>
-          <td>Laptop MacBook 13.3" MPXU2LL</td>
+          <td>21/02/2018</td>
+          <td>Laptop MSI GP62MVR 7RFX-893XVN (I7-7700HQ)</td>
           <td>2</td>
+          <td>Bách Khoa</td>
             <td>39.250.000 ₫</td>
+            <td>Chưa giao</td>
         </tr>
-        <tr>
+        <tr style="background-color: green; color: orange;">
            <th scope="row">3</th>
-          <td>mac_MPXU2LL</td>
-          <td>Laptop MacBook 13.3" MPXU2LL</td>
-          <td>2</td>
+          <td>24/05/2018</td>
+          <td>Laptop Dell Vostro 3468 (F3468-70088614) (Đen)</td>
+          <td>1</td>
+          <td>Lê Hồng Phong</td>
             <td>39.250.000 ₫</td>
+            <td>Đã giao</td>
         </tr>
-        <tr>
+        <tr style="background-color: yellow; color: gray;">
            <th scope="row">4</th>
-          <td>mac_MPXU2LL</td>
-          <td>Laptop MacBook 13.3" MPXU2LL</td>
-          <td>2</td>
+          <td>24/06/2018</td>
+          <td>Laptop Asus X541UA-GO1384 (I5-7200U) (Đen)</td>
+          <td>5</td>
+          <td>KHTN</td>
             <td>39.250.000 ₫</td>
+            <td>Đang giao</td>
         </tr>
-        <tr>
-           <th scope="row">5</th>
-          <td>mac_MPXU2LL</td>
-          <td>Laptop MacBook 13.3" MPXU2LL</td>
-          <td>2</td>
-            <td>39.250.000 ₫</td>
-        </tr>
-        <tr>
-           <th scope="row">6</th>
-          <td>mac_MPXU2LL</td>
-          <td>Laptop MacBook 13.3" MPXU2LL</td>
-          <td>2</td>
-            <td>39.250.000 ₫</td>
-        </tr>
+          
       </tbody>
     </table>
     </div>

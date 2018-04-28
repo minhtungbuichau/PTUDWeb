@@ -1,0 +1,2 @@
+﻿Link github: https://github.com/minhtungbuichau/PTUDWeb.git
+Để đến trang hệ thống: Kéo xuống phần header, cột cuối cùng, nhấn vào dòng "Đến trang hệ thống"

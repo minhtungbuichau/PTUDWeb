@@ -100,7 +100,7 @@ CREATE TABLE `products` (
 -- ----------------------------
 -- Records of products
 -- ----------------------------
-INSERT INTO `products` VALUES('1','LAPTOP ASUS A540UP-DM094T ','11.900.000 ','150','15',
+INSERT INTO `products` VALUES('1','LAPTOP ASUS A540UP-DM094T ','11900000 ','150','15',
 '<p> - CPU Intel Core i3-7100U (2.4GHz, 3MB Cache)<br>
 - RAM 4GB DDR4 - 2133MHz<br>
 - HDD 500GB 5400rpm, 1x slot SSD (M.2/SATA)<br>
@@ -110,7 +110,7 @@ INSERT INTO `products` VALUES('1','LAPTOP ASUS A540UP-DM094T ','11.900.000 ','15
 - Hệ điều hành: Windows 10 Home - 64bit<br>
 - Xuất xứ: Đài Loan<br>
 - Nhà sản xuất: Asus<br></p>','2','1','55');
-INSERT INTO `products` VALUES('2','LAPTOP GL503VM-GZ219T ','32.490.000  ','133','23',
+INSERT INTO `products` VALUES('2','LAPTOP GL503VM-GZ219T ','32490000  ','133','23',
 '<p> - CPU Intel Core i7 7700HQ (2.8GHz Up to 3.8GHz, 6MB Cache)<br>
 - RAM 8GB DDR4 - 2400MHz<br>
 - SSHD 1TB 5400rpm + 8GB NAND<br>
@@ -120,7 +120,7 @@ INSERT INTO `products` VALUES('2','LAPTOP GL503VM-GZ219T ','32.490.000  ','133',
 - Hệ điều hành: Windows 10 Home - 64bit<br>
 - Xuất xứ: Đài Loan<br>
 - Nhà sản xuất: Asus<br></p>','2','1','34');
-INSERT INTO `products` VALUES('3','LAPTOP ASUS GL503VM-GZ254T  ','39.990.000 ','63','7',
+INSERT INTO `products` VALUES('3','LAPTOP ASUS GL503VM-GZ254T  ','39990000 ','63','7',
 '<p> - CPU Intel Core i7-7700HQ<br>
 - RAM 16GB<br>
 - Ổ cứng: SSD 256GB + HDD 1TB<br>
@@ -129,7 +129,7 @@ INSERT INTO `products` VALUES('3','LAPTOP ASUS GL503VM-GZ254T  ','39.990.000 ','
 - Hệ điều hành: Windows 10<br>
 - Xuất xứ: Đài Loan<br>
 - Nhà sản xuất: Asus<br></p>','2','1','69');
-INSERT INTO `products` VALUES('4','LAPTOP S510UA-BQ111T ','13.290.000 ','57','8',
+INSERT INTO `products` VALUES('4','LAPTOP S510UA-BQ111T ','13290000 ','57','8',
 '<p> - CPU Intel Core i3-7100U (2.4GHz, 3MB Cache)<br>
 - RAM 4GB DDR4 - 2133MHz<br>
 - HDD 1TB 5400rpm, x1 slot SSD (M.2/SATA)<br>
@@ -139,7 +139,7 @@ INSERT INTO `products` VALUES('4','LAPTOP S510UA-BQ111T ','13.290.000 ','57','8'
 - Hệ điều hành: Windows 10 Home - 64bit<br>
 - Xuất xứ: Đài Loan<br>
 - Nhà sản xuất: Asus<br></p>','2','1','47');
-INSERT INTO `products` VALUES('5','LAPTOP ASUS TP410UA-EC250T  ','13.990.000  ','77','10',
+INSERT INTO `products` VALUES('5','LAPTOP ASUS TP410UA-EC250T  ','13990000  ','77','10',
 '<p> - CPU Intel Core i3-7100U (2.4GHz, 3MB Cache)<br>
 - RAM 4GB DDR4 - 2133MHz<br>
 - HDD 500GB 5400rpm, 1x slot SSD (M.2/SATA)<br>
@@ -149,7 +149,7 @@ INSERT INTO `products` VALUES('5','LAPTOP ASUS TP410UA-EC250T  ','13.990.000  ',
 - Hệ điều hành: Windows 10 Home - 64bit<br>
 - Xuất xứ: Đài Loan<br>
 - Nhà sản xuất: Asus<br></p>','2','1','34');
-INSERT INTO `products` VALUES('6','LAPTOP ASUS UX430UN-GV097T ','26.990.000  ','88','11',
+INSERT INTO `products` VALUES('6','LAPTOP ASUS UX430UN-GV097T ','26990000  ','88','11',
 '<p> - CPU Intel® Core™ i7-8550U (1.8GHz Up to 4.0GHz, 8MB Cache)<br>
 - RAM 8GB DDR4 - 2400MHz<br>
 - SSD 256GB (M.2/SATA)<br>
@@ -159,7 +159,7 @@ INSERT INTO `products` VALUES('6','LAPTOP ASUS UX430UN-GV097T ','26.990.000  ','
 - Hệ điều hành: Windows 10 Home - 64bit<br>
 - Xuất xứ: Đài Loan<br>
 - Nhà sản xuất: Asus<br></p>','2','1','56');
-INSERT INTO `products` VALUES('7','LAPTOP ASUS UX510UX-CN204','15.490.000 ','450','51',
+INSERT INTO `products` VALUES('7','LAPTOP ASUS UX510UX-CN204','15490000 ','450','51',
 '<p> - CPU Intel Core i5-7200U (2.5GHz Up to 3.1GHz, 3MB Cache)<br>
 - RAM 4GB DDR4 - 2133MHz<br>
 - HDD 1TB 5400rpm, 1x slot SSD (M.2/SATA)<br>
@@ -169,7 +169,7 @@ INSERT INTO `products` VALUES('7','LAPTOP ASUS UX510UX-CN204','15.490.000 ','450
 - Hệ điều hành: Free DOS<br>
 - Xuất xứ: Đài Loan<br>
 - Nhà sản xuất: Asus<br></p>','2','1','96');
-INSERT INTO `products` VALUES('8','LAPTOP ASUS X405UA-BV330T  ','11.790.000  ','542','77',
+INSERT INTO `products` VALUES('8','LAPTOP ASUS X405UA-BV330T  ','11790000  ','542','77',
 '<p> - CPU Intel Core i3-7100U (2.4GHz, 3MB Cache)<br>
 - RAM 4GB DDR4 - 2133MHz<br>
 - HDD 500GB 5400rpm<br>
@@ -179,7 +179,7 @@ INSERT INTO `products` VALUES('8','LAPTOP ASUS X405UA-BV330T  ','11.790.000  ','
 - Hệ điều hành: Windows 10 Home - 64bit<br>
 - Xuất xứ: Đài Loan<br>
 - Nhà sản xuất: Asus<br></p>','2','1','77');
-INSERT INTO `products` VALUES('9','LAPTOP ASUS X510UQ-BR570  ','13.990.000  ','344','44',
+INSERT INTO `products` VALUES('9','LAPTOP ASUS X510UQ-BR570  ','13990000  ','344','44',
 '<p> - CPU Intel Core i3-7100U (2.4GHz, 3MB Cache)<br>
 - RAM 4GB DDR4 - 2133MHz<br>
 - HDD 500GB 5400rpm, 1x slot SSD (M.2/SATA)<br>
@@ -189,7 +189,7 @@ INSERT INTO `products` VALUES('9','LAPTOP ASUS X510UQ-BR570  ','13.990.000  ','3
 - Hệ điều hành: Windows 10 Home - 64bit<br>
 - Xuất xứ: Đài Loan<br>
 - Nhà sản xuất: Asus<br></p>','2','1','65');
-INSERT INTO `products` VALUES('10','LAPTOP ASUS X541UA-GO1384  ','10.390.000','233','15',
+INSERT INTO `products` VALUES('10','LAPTOP ASUS X541UA-GO1384  ','10390000','233','15',
 '<p> - CPU Intel Core i5-7200U (2.5GHz Up to 3.1GHz, 3MB Cache)<br>
 - RAM 4GB DDR4 - 2133MHz<br>
 - HDD 1TB 5400rpm<br>

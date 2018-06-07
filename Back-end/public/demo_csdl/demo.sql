@@ -7,7 +7,8 @@ Source Host           : localhost:3000
 Source Database       : chlaptop
 
 */
-
+CREATE database qllaptop;
+use qllaptop;
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------

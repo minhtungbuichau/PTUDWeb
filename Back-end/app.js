@@ -7,7 +7,10 @@ var wnumb = require('wnumb');
 
 var session = require('express-session');
 var MySQLStore = require('express-mysql-session')(session);
-var homeController = require('./controllers/homeController');
+var homeController = require('./controllers/homeController'),
+    categoryController = require('./controllers/categoryController'),
+    producerController=require('./controllers/producerController'),
+    productController = require('./controllers/productController');
 
 var app = express();
 app.engine('hbs', exphbs({
@@ -32,11 +35,40 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
+var sessionStore = new MySQLStore({
+    host: 'localhost',
+    port: 3306,
+    user: 'root',
+    password: 'tinh',
+    database: 'qllaptop',
+    createDatabaseTable: true,
+    schema: {
+        tableName: 'sessions',
+        columnNames: {
+            session_id: 'session_id',
+            expires: 'expires',
+            data: 'data'
+        }
+    }
+});
+
+app.use(session({
+    key: 'session_cookie_name',
+    secret: 'session_cookie_secret',
+    store: sessionStore,
+    resave: false,
+    saveUninitialized: false
+}));
+
+
 app.get('/', (req, res) => {
     res.redirect('/home');
 });
 app.use('/home', homeController);
+app.use('/category', categoryController);
+app.use('/producer',producerController);
+app.use('/product', productController);
 
-app.listen(3000, () => {
-    console.log('Site running on port 3000');
+app.listen(4000, () => {
+    console.log('Site running on port 4000');
 });

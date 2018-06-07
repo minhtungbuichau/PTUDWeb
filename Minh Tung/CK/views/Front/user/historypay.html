@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<link rel="icon" href="../img/logo.png" type="image/png" sizes="8x8">
+		<title>Lịch sử mua hàng</title>
+
+ 		<!-- Google font -->
+ 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+ 		<!-- Bootstrap -->
+ 		<link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css"/>
+
+ 		<!-- Slick -->
+ 		<link type="text/css" rel="stylesheet" href="../css/slick.css"/>
+ 		<link type="text/css" rel="stylesheet" href="../css/slick-theme.css"/>
+
+ 		<!-- nouislider -->
+ 		<link type="text/css" rel="stylesheet" href="../css/nouislider.min.css"/>
+
+ 		<!-- Font Awesome Icon -->
+ 		<link rel="stylesheet" href="../css/font-awesome.min.css">
+
+ 		<!-- Custom stlylesheet -->
+ 		<link type="text/css" rel="stylesheet" href="../css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../css/style-dropdown.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    </head>
+    		<header>
+		<!-- TOP HEADER -->
+		<div id="top-header">
+			<div class="container">
+				<ul class="header-links pull-left">
+					<li><a href="#"><i class="fa fa-phone"></i> 0989 871 786</a></li>
+					<li><a href="#"><i class="far fa-envelope"></i> laptopck@cklaptop.com.vn</a></li>
+					<li><a href="#"><i class="fa fa-map-marker"></i> 227 Nguyễn Văn Cừ, phường 4, quận 5, TpHCM</a></li>
+				</ul>
+				<ul class="header-links pull-right">
+					<li><a href="#"><i class="fa fa-dollar"></i> VNĐ</a></li>
+					<li class="dropdown" ><a href="#"><i class="fas fa-bars"></i>Tài khoản của tôi</a>
+						<div class="dropdown-account">
+							<a href="./user/updateinfo.html">Cập nhật thông tin cá nhân</a>
+							<a href="./user/cart.html">Giỏ hàng</a>
+							<a href="./user/pay.html">Thanh toán</a>
+							<a href="./user/historypay.html">Lịch sử mua hàng</a>
+							<a href="./index.html">Đăng xuất</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- /TOP HEADER -->
+
+		<!-- MAIN HEADER -->
+		<div id="header">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<!-- LOGO -->
+					<div class="col-md-3">
+						<div class="header-logo">
+							<a href="../index.html" target="blank" class="logo">
+								<img width = "80%" src="../img/logo.png" alt="">
+							</a>
+						</div>
+					</div>
+					<!-- /LOGO -->
+
+					<!-- SEARCH BAR -->
+					<div class="col-md-6">
+						<div class="header-search">
+							<form>
+								<select class="input-select">
+									<option value="0">Tất cả</option>
+									<option value="1">Gaming</option>
+									<option value="2">Văn phòng</option>
+									<option value="3">Doanh nhân</option>
+									<option value="4">Ultrabook</option>
+									<option value="5">Dell</option>
+									<option value="6">Asus</option>
+									<option value="7">MSI</option>
+									<option value="8">Apple</option>
+								</select>
+								<input class="input" placeholder="Bạn đang tìm sản phẩm nào?">
+								<button class="search-btn">Tìm kiếm</button>
+							</form>
+						</div>
+					</div>
+					<!-- /SEARCH BAR -->
+
+					<!-- ACCOUNT -->
+					<div class="col-md-3 clearfix">
+						<div class="header-ctn">
+							<!-- Wishlist -->
+							<div>
+								<a href="#">
+									<i class="far fa-heart"></i>
+									<span>Yêu thích</span>
+									<div class="qty">0</div>
+								</a>
+							</div>
+							<!-- /Wishlist -->
+
+							<!-- Cart -->
+							<div class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+									<i class="fa fa-shopping-cart"></i>
+									<span>Giỏ hàng</span>
+									<div class="qty">0</div>
+								</a>
+								<!-- <div class="cart-dropdown">
+									<div class="cart-list">
+										<div class="product-widget">
+											<div class="product-img">
+												<img src="./img/product01.png" alt="">
+											</div>
+											<div class="product-body">
+												<h3 class="product-name"><a href="#">product name goes here</a></h3>
+												<h4 class="product-price"><span class="qty">1x</span>$980.00</h4>
+											</div>
+											<button class="delete"><i class="fa fa-close"></i></button>
+										</div>
+
+										<div class="product-widget">
+											<div class="product-img">
+												<img src="./img/product02.png" alt="">
+											</div>
+											<div class="product-body">
+												<h3 class="product-name"><a href="#">product name goes here</a></h3>
+												<h4 class="product-price"><span class="qty">3x</span>$980.00</h4>
+											</div>
+											<button class="delete"><i class="fa fa-close"></i></button>
+										</div>
+									</div>
+									<div class="cart-summary">
+										<small>3 Item(s) selected</small>
+										<h5>SUBTOTAL: $2940.00</h5>
+									</div>
+									<div class="cart-btns">
+										<a href="#">View Cart</a>
+										<a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
+									</div>
+								</div> -->
+							</div>
+							<!-- /Cart -->
+
+							<!-- Menu Toogle -->
+							<div class="menu-toggle">
+								<a href="#">
+									<i class="fa fa-bars"></i>
+									<span>Menu</span>
+								</a>
+							</div>
+							<!-- /Menu Toogle -->
+						</div>
+					</div>
+					<!-- /ACCOUNT -->
+				</div>
+				<!-- row -->
+			</div>
+			<!-- container -->
+		</div>
+		<!-- /MAIN HEADER -->
+	</header>
+	<!-- /HEADER -->
+	<body>
+		
+		
+
+		
+		<!-- SECTION -->
+		<div class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<!-- ASIDE -->
+					<div id="aside" class="col-md-2">
+						<!-- aside Widget -->
+						<div class="aside">
+							<h3 class="aside-title">Tài khoản</h3>
+							<div class="checkbox-filter">
+								<div class="input-checkbox">		
+									<a href="">
+										<label for="brand-1">
+											<a href="updateinfo.html" target="blank">Cập nhật thông tin 
+											</a>
+											
+										</label>
+									</a>
+								</div>
+								<div class="input-checkbox">
+									<a href="">
+										<label for="brand-1">
+										<a href="cart.html" target="blank">Giỏ hàng</a>
+									</label>
+									</a>
+								</div>
+								<div class="input-checkbox">
+									<a href="">
+										<label for="brand-1">
+										<a href="pay.html" target="blank">Thanh toán</a>
+										
+									</label>
+									</a>
+								</div>
+								<div class="input-checkbox">
+									<a href="">
+										<label for="brand-1">
+										
+										<a href="historypay.html" target="blank">Lịch sử mua hàng</a>
+									</label>
+									</a>
+								</div>
+							</div>
+						</div>
+						<!-- /aside Widget -->			
+					</div>
+					<div id="store" class="col-md-10">
+						<div class="col-md-12">
+							<!---728x90--->
+							<!-- contact -->
+									<div class="check-out">	 
+									<div class="container">	 
+								 
+											<script>$(document).ready(function(c) {
+												$('.close1').on('click', function(c){
+													$('.cross').fadeOut('slow', function(c){
+														$('.cross').remove();
+													});
+													});	  
+												});
+										   </script>
+										<script>$(document).ready(function(c) {
+												$('.close2').on('click', function(c){
+													$('.cross1').fadeOut('slow', function(c){
+														$('.cross1').remove();
+													});
+													});	  
+												});
+										   </script>	
+										   <script>$(document).ready(function(c) {
+												$('.close3').on('click', function(c){
+													$('.cross2').fadeOut('slow', function(c){
+														$('.cross2').remove();
+													});
+													});	  
+												});
+										   </script>
+							
+						<div class="col-md-9">
+								<table class="table animated wow fadeInLeft" data-wow-delay=".5s">
+									  <tr>
+										<th class="t-head head-it ">Đơn hàng</th>
+										<th class="t-head">Ngày đặt hàng</th>
+										<th class="t-head">Sản phẩm</th>
+										<th class="t-head">Số lượng</th>
+										<th class="t-head">Trạng thái</th>
+										<th class="t-head">Thông tin</th>
+									  </tr>
+									  <tr class="cross">
+									  	<td>#20255125</td>
+									  	<td>23/04/2018</td>
+										<td class="ring-in t-data">
+											<a href="../detail/dell/Dell Vostro 3568.html" target="blank" class="at-in">
+												<img src="https://phongvu.vn/media/catalog/product/cache/23/thumbnail/70x/9df78eab33525d08d6e5fb8d27136e95/m/a/may-xach-tay-laptop-dell-inspiron-13-5378-26w972-xam-1.jpg" class="img-responsive" alt="">Dell Vostro 3568-VTI35037 (Đen)
+											</a>
+										
+											
+										 </td>
+										
+										<td class="t-data" style="padding-top: 20px; padding-left: 30px"><div class="quantity"> 
+															<div class="quantity-select">            
+																<div class="entry value-minus">&nbsp;</div>
+																	<div class="entry value"><span class="span-1">1</span></div>									
+																<div class="entry value-plus active">&nbsp;</div>
+															</div>
+														</div>
+										
+										</td>
+										<td class="t-data" style="padding-top: 40px">Đang giao hàng</td>
+										<td class="t-data" style="padding-top: 40px">Nhận hàng vào 26/04</td>
+
+										
+									  </tr>
+									  <tr class="cross1">
+									  	<td>#20255246</td>
+									  	<td>22/04/2018</td>
+									  <td class="t-data ring-in"><a href="../detail/asus/Asus GL503VM-GZ219T.html" class="at-in"><img src="https://phongvu.vn/media/catalog/product/cache/23/thumbnail/70x/9df78eab33525d08d6e5fb8d27136e95/uploads/product/po_14414_17010/2017/11/09/14414_1510210482-1.jpg" class="img-responsive" alt="">Asus GL503VM-GZ219T (I7-7700HQ) (Đen)</a>
+						
+										
+										
+										
+										<td class="t-data" style="padding-top: 20px; padding-left: 30px"><div class="quantity"> 
+															<div class="quantity-select">            
+																<div class="entry value-minus">&nbsp;</div>
+																	<div class="entry value"><span class="span-1">1</span></div>									
+																<div class="entry value-plus active">&nbsp;</div>
+															</div>
+														</div>
+														<!--quantity-->
+									
+										</td>
+										<td class="t-data" style="padding-top: 40px">Đang giao hàng</td>
+										<td class="t-data" style="padding-top: 40px">Nhận hàng vào 22/04</td>
+										
+									  </tr>
+									  <tr class="cross2">
+									  	<td>#20255136</td>
+									  	<td>20/04/2018</td>
+									  <td class="t-data ring-in"><a href="../detail/msi/msi_GV62.html" class="at-in"><img src="https://phongvu.vn/media/catalog/product/cache/23/thumbnail/70x/9df78eab33525d08d6e5fb8d27136e95/m/s/msi_gv62_3_1.jpg" class="img-responsive" alt="">MSI GP62M 7REX-1884XVN (I7-7700HQ)</a>
+								
+										
+										
+										<td class="t-data" style="padding-top: 20px; padding-left: 30px;">
+											<div class="quantity"> 
+															<div class="quantity-select">            
+																<div class="entry value-minus">&nbsp;</div>
+																	<div class="entry value"><span class="span-1">1</span></div>									
+																<div class="entry value-plus active">&nbsp;</div>
+															</div>
+														</div>
+													
+										</td>
+										<td class="t-data" style="padding-top: 40px">Đang giao hàng</td>
+										<td class="t-data" style="padding-top: 40px">Nhận hàng vào 20/04</td>
+										
+									  </tr>
+								</table>	
+						</div>		
+									 </div>
+									 				<!--quantity-->
+										<script>
+										$('.value-plus').on('click', function(){
+											var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
+											divUpd.text(newVal);
+										});
+
+										$('.value-minus').on('click', function(){
+											var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
+											if(newVal>=1) divUpd.text(newVal);
+										});
+										</script>
+						</div>
+					</div>		
+				</div>
+			<!-- /container -->
+		</div>
+		<!-- /SECTION -->
+		
+		</div>
+	</div>
+
+		<!-- FOOTER -->
+		<footer id="footer">
+			<!-- top footer -->
+			<div class="section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Về chúng tôi</h3>
+								<p>Môn Lập trình ứng dụng Web - khoa Công nghệ Thông tin, trường Đại học Khoa học Tự nhiên - Đại học Quốc gia Tp. Hồ Chí Minh</p>
+								<ul class="footer-links">
+									<li><a href="#"><i class="fa fa-phone"></i> 0989 871 786</a></li>
+									<li><a href="#"><i class="far fa-envelope"></i> laptopck@cklaptop.com.vn</a></li>
+									<li><a href="#"><i class="fa fa-map-marker"></i> 227 Nguyễn Văn Cừ, phường 4, quận 5, Tp. HCM</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Thông tin thành viên</h3>
+								<ul class="footer-links">
+									<li>1512576 - Nguyễn Quang Tính</li>
+									<li>1512609 - Hoàng Quốc Trung</li>
+									<li>1512613 - Nguyễn Chí Trung</li>
+									<li>1512651 - Bùi Châu Minh Tùng</li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="clearfix visible-xs"></div>
+
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Tìm kiếm nhanh</h3>
+								<ul class="footer-links">
+									<li><a href="../producer/Laptop_Dell.html" target="blank">DELL</a></li>
+									<li><a href="../producer/Laptop_Asus.html" target="blank">ASUS</a></li>
+									<li><a href="../producer/Laptop_MSI.html" target="blank">MSI</a></li>
+									<li><a href="../producer/Laptop_MacBook.html" target="blank">APPLE</a></li>
+									<li><a href="../type/Laptop_ChoiGame.html" target="blank">Laptop Gaming</a></li>
+									<li><a href="../type/Laptop_VanPhong.html" target="blank">Laptop Văn phòng</a></li>
+									<li><a href="../type/Laptop_DoanhNhan.html" target="blank">Laptop Doanh nhân</a></li>
+									<li><a href="../type/Laptop_UltraBook.html" target="blank">Laptop UltraBook</a></li>
+								</ul>
+							</div>
+						</div>
+
+						
+
+						<div class="col-md-3 col-xs-6">
+							<div class="footer">
+								<h3 class="footer-title">Dịch vụ</h3>
+								<ul class="footer-links">
+									<li><a href="../user/updateinfo.html" target="blank">Tài khoản của tôi</a></li>
+									<li><a href="../user/cart.html" target="blank">Xem giỏ hàng</a></li>
+									<li><a href="#" >Về đầu trang</a></li>
+									<li><a href="../admin/index.html" target="blank">Đến trang hệ thống</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /top footer -->
+
+			<!-- bottom footer -->
+			<div id="bottom-footer" class="section">
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<span class="copyright">
+								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by NQT
+								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							</span>
+						</div>
+					</div>
+					<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /bottom footer -->
+		</footer>
+		<!-- /FOOTER -->
+		
+		<!-- jQuery Plugins -->
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/slick.min.js"></script>
+		<script src="../js/nouislider.min.js"></script>
+		<script src="../js/jquery.zoom.min.js"></script>
+		<script src="../js/main.js"></script>
+ 
+	</body>
+</html>

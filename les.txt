@@ -1,0 +1,13 @@
+MVC
+C: 
+-User thao tác address bar để chỉ định chontrollver cần chạy & action của controller cần chạy
+- Rất nhiều route, gồm nhiều action (hàm) cho 1 controller
+- ko xử lý db
+M:
+-service/repo
+- xử lý DB
+
+V:
+htnl
+-được chỉ định bởi controller
+- VIEW Engine (ejs/handlebarjs)

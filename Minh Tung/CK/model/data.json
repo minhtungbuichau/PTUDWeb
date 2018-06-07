@@ -1,14 +1,14 @@
 {
-    "sanpham":[
+    "product":[
         {
             "id":1,
-            "name": "",
-            "image": "",
-            "price": "",
-            "describe":"",
-            "madein": "",
-            "type":"",
-            "producer":""
+            "name": "Laptop Asus GL503VM-GZ219T (I7-7700HQ) (Đen)",
+            "image": "./images/Asus/1.jpg",
+            "price": 23990000,
+            "describe":["- CPU Intel Core i7 7700HQ (2.8GHz Up to 3.8GHz, 6MB Cache)","- RAM 8GB DDR4 - 2400MHz","- SSHD 1TB 5400rpm + 8GB NAND", "- VGA NVIDIA GeForce GTX 1060 3GB GDDR5 + Intel HD Graphics 630","- Màn hình: 15.6 inch FHD (1920 x 1080) 120Hz","- Hệ điều hành: Windows 10 Home - 64bit" ],
+            "madein": "China",
+            "type":"Laptop Gaming",
+            "producer":"Asus"
         },
         {
             "id":2,
@@ -18,7 +18,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Asus"
         },
         {
             "id":3,
@@ -28,7 +28,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Asus"
         },
         {
             "id":4,
@@ -38,7 +38,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Asus"
         },
         {
             "id":5,
@@ -48,7 +48,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Asus"
         },
         {
             "id":6,
@@ -58,7 +58,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Asus"
         },
         {
             "id":7,
@@ -68,7 +68,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Asus"
         },
         {
             "id":8,
@@ -78,7 +78,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Asus"
         },
         {
             "id":9,
@@ -88,7 +88,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Asus"
         },
         {
             "id":10,
@@ -98,7 +98,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Asus"
         },
         {
             "id":11,
@@ -108,7 +108,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Dell"
         },
         {
             "id":12,
@@ -118,7 +118,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Dell"
         },
         {
             "id":13,
@@ -128,7 +128,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Dell"
         },
         {
             "id":14,
@@ -138,7 +138,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Dell"
         },
         {
             "id":15,
@@ -148,7 +148,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Dell"
         },
         {
             "id":16,
@@ -158,7 +158,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Dell"
         },
         {
             "id":17,
@@ -168,7 +168,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Dell"
         },
         {
             "id":18,
@@ -178,7 +178,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Dell"
         },
         {
             "id":19,
@@ -188,7 +188,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Dell"
         },
         {
             "id":20,
@@ -198,7 +198,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Dell"
         },
         {
             "id":21,
@@ -208,7 +208,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Apple"
         },
         {
             "id":22,
@@ -218,7 +218,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Apple"
         },
         {
             "id":23,
@@ -228,7 +228,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Apple"
         },
         {
             "id":24,
@@ -238,7 +238,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Apple"
         },
         {
             "id":25,
@@ -248,7 +248,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Apple"
         },
         {
             "id":26,
@@ -258,7 +258,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Apple"
         },
         {
             "id":27,
@@ -268,7 +268,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Apple"
         },
         {
             "id":28,
@@ -278,7 +278,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Apple"
         },
         {
             "id":29,
@@ -288,7 +288,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Apple"
         },
         {
             "id":30,
@@ -298,7 +298,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"Apple"
         },
         {
             "id":31,
@@ -308,7 +308,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"MSI"
         },
         {
             "id":32,
@@ -318,7 +318,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"MSI"
         },
         {
             "id":33,
@@ -328,7 +328,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"MSI"
         },
         {
             "id":34,
@@ -338,7 +338,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"MSI"
         },
         {
             "id":35,
@@ -348,7 +348,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"MSI"
         },
         {
             "id":36,
@@ -358,7 +358,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"MSI"
         },
         {
             "id":37,
@@ -368,7 +368,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"MSI"
         },
         {
             "id":38,
@@ -378,7 +378,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"MSI"
         },
         {
             "id":39,
@@ -388,7 +388,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"MSI"
         },
         {
             "id":40,
@@ -398,7 +398,7 @@
             "describe":"",
             "madein": "",
             "type":"",
-            "producer":""
+            "producer":"MSI"
         }
     ]
 }

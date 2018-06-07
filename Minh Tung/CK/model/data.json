@@ -1,0 +1,104 @@
+{
+    "sanpham":[
+        {
+            "id":1,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":""
+        },
+        {
+            "id":2,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":""
+        },
+        {
+            "id":3,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":""
+        },
+        {
+            "id":4,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":""
+        },
+        {
+            "id":5,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":""
+        },
+        {
+            "id":6,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":""
+        },
+        {
+            "id":7,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":""
+        },
+        {
+            "id":8,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":""
+        },
+        {
+            "id":9,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":""
+        },
+        {
+            "id":10,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":""
+        }
+    ]
+}

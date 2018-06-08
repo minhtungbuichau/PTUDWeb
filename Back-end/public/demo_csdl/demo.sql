@@ -23,7 +23,7 @@ CREATE TABLE `categories` (
 -- ----------------------------
 -- Records of categories
 -- ----------------------------
-INSERT INTO `categories` VALUES ('1', 'Laptop gaming');
+INSERT INTO `categories` VALUES ('1', 'Laptop Gaming');
 INSERT INTO `categories` VALUES ('2', 'Laptop Văn phòng');
 INSERT INTO `categories` VALUES ('3', 'Laptop Doanh nhân');
 INSERT INTO `categories` VALUES ('4', 'Laptop Ultrabook');
@@ -372,7 +372,7 @@ INSERT INTO `products` VALUES('27','LAPTOP MACBOOK 13.3" MPXW2ZP/A ','52390000',
 - Xuất xứ: Mỹ<br>
 - Nhà sản xuất: Apple<br></p>','4','3','100');
 INSERT INTO `products` VALUES('28','LAPTOP MACBOOK AIR MQD32HN/A','22490000','233','23',
-'<p> - CPU: Core i7 7Y75<br>
+'<p>- CPU: Core i7 7Y75<br>
 - Ram: 16Gb<br>
 - Ổ cứng: 512Gb SSD<br>
 - Màn hình: 13.3 QHD TouchScreen<br>
@@ -380,7 +380,7 @@ INSERT INTO `products` VALUES('28','LAPTOP MACBOOK AIR MQD32HN/A','22490000','23
 - Hệ điều hành có sẵn: Windows 10 + Office 365<br>
 - Xuất xứ: Trung Quốc<br>
 - Nhà sản xuất: DELL<br></p>','4','3','100');
-INSERT INTO `products` VALUES('29','LAPTOP MACBOOK AIR MQD32ZP/A','22.490.000 ','344','23',
+INSERT INTO `products` VALUES('29','LAPTOP MACBOOK AIR MQD32ZP/A','22490000','344','23',
 '<p>- CPU: Intel Core i5 Dual-core 1.8 GHz, Turbo Boost lên đến 2.9 GHz, 3 MB L3 cache<br>
 - RAM: 8GB 1600MHz LPDDR3 SDRAM<br>
 - SSD: 128GB <br>
@@ -392,7 +392,7 @@ INSERT INTO `products` VALUES('29','LAPTOP MACBOOK AIR MQD32ZP/A','22.490.000 ',
 - WARRANTY: 12 tháng<br>
 - Xuất xứ: Mỹ<br>
 - Nhà sản xuất: Apple<br></p>','4','3','100');
-INSERT INTO `products` VALUES('30','LAPTOP MACBOOK AIR MQD42LL/A','27700000 ','211','23',
+INSERT INTO `products` VALUES('30','LAPTOP MACBOOK AIR MQD42LL/A','27700000','211','23',
 '<p>- CPU: Intel Core i5, Dual - Core, 1.8GHz
 - RAM: 8GB, DDR3L, 1600 MHz, (On board)<br>
 - Ổ cứng: SSD 256GB<br>

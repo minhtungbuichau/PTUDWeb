@@ -1,0 +1,404 @@
+{
+    "product":[
+        {
+            "id":1,
+            "name": "Laptop Asus GL503VM-GZ219T (I7-7700HQ) (Đen)",
+            "image": "./images/Asus/1.jpg",
+            "price": 23990000,
+            "describe":["- CPU Intel Core i7 7700HQ (2.8GHz Up to 3.8GHz, 6MB Cache)","- RAM 8GB DDR4 - 2400MHz","- SSHD 1TB 5400rpm + 8GB NAND", "- VGA NVIDIA GeForce GTX 1060 3GB GDDR5 + Intel HD Graphics 630","- Màn hình: 15.6 inch FHD (1920 x 1080) 120Hz","- Hệ điều hành: Windows 10 Home - 64bit" ],
+            "madein": "China",
+            "type":"Laptop Gaming",
+            "producer":"Asus"
+        },
+        {
+            "id":2,
+            "name": "Laptop Asus X541UA-GO1384 (I5-7200U)",
+            "image": "./images/Asus/2.jpg",
+            "price": 17990000,
+            "describe":["- CPU Intel Core i7 7700HQ (2.8GHz Up to 3.8GHz, 6MB Cache)","- RAM 8GB DDR4 - 2400MHz","- SSHD 1TB 5400rpm + 8GB NAND", "- VGA NVIDIA GeForce GTX 1060 3GB GDDR5 + Intel HD Graphics 630","- Màn hình: 13.4 inch FHD (1920 x 1080) 120Hz","- Hệ điều hành: Free DOS" ],
+            "madein": "China",
+            "type":"",
+            "producer":"Asus"
+        },
+        {
+            "id":3,
+            "name": "Laptop Asus TP410UA-EC250T (I3-7100U) ",
+            "image": "./images/Asus/3.jpg",
+            "price": 13190000,
+            "describe":["- CPU Intel Core i3-7100U (2.4GHz, 3MB Cache)","-  RAM 4GB DDR4 - 2133MHz","- SSHD 1TB 5400rpm + 8GB NAND", "- HDD 500GB 5400rpm, 1x slot SSD (M.2/SATA)","- Màn hình: 13.4 inch FHD (1920 x 1080) 120Hz","- Hệ điều hành: Windows 10" ],
+            "madein": "China",
+            "type":"",
+            "producer":"Asus"
+        },
+        {
+            "id":4,
+            "name": "Laptop Asus UX510UX-CN204 (I5-7200U) (Xám)",
+            "image": "./images/Asus/4.jpg",
+            "price": 17190000,
+            "describe":["-  CPU Intel Core i5-7200U (2.5GHz Up to 3.1GHz, 3MB Cache)","-  RAM 4GB DDR4 - 2133MHz","- SSHD 1TB 5400rpm + 8GB NAND", "-  HDD 1TB 5400rpm, 1x slot SSD (M.2/SATA)","- Màn hình: 13.4 inch FHD (1920 x 1080) 120Hz","- Hệ điều hành: Windows 10" ],
+            "madein": "China",
+            "type":"",
+            "producer":"Asus"
+        },
+        {
+            "id":5,
+            "name": "Laptop Asus A540UP-DM094T (I3-7100U) (Bạc)",
+            "image": "./images/Asus/5.jpg",
+            "price": 14990000,
+            "describe":["-  CPU Intel Core i3-7100U (2.4GHz, 3MB Cache)","-  RAM 4GB DDR4 - 2133MHz","- SSHD 1TB 5400rpm + 8GB NAND", "-  VGA AMD Radeon R5 M420 2G DDR3 + Intel HD Graphics 620","- Màn hình: 13.4 inch FHD (1920 x 1080) 120Hz","- Hệ điều hành: Windows 10" ],
+            "madein": "China",
+            "type":"",
+            "producer":"Asus"
+        },
+        {
+            "id":6,
+            "name": "Laptop Asus X510UQ-BR570 (I5-7200U) (Xám)",
+            "image": "./images/Asus/6.jpg",
+            "price": 13990000,
+            "describe":["-  CPU: Intel Core i5-7200U 2.5Ghz Upto 3.1Ghz","-  RAM: 4GB DDR4 2400MHz","- HDD: 1TB 5400rpm", "-  VGA: NVIDIA GeForce GT 940MX 2GB GDDR5","- Màn hình: 13.4 inch FHD (1920 x 1080) 120Hz","- Hệ điều hành: Windows 10" ],
+            "madein": "China",
+            "type":"",
+            "producer":"Asus"
+        },
+        {
+            "id":7,
+            "name": "Laptop Asus UX430UN-GV097T (I7-8550U) ",
+            "image": "./images/Asus/7.jpg",
+            "price": 18990000,
+            "describe":["- CPU Intel® Core™ i7-8550U (1.8GHz Up to 4.0GHz, 8MB Cache)","-  RAM: 4GB DDR4 2400MHz","- SSD 256GB (M.2/SATA)", "-  VGA: NVIDIA GeForce GT 940MX 2GB GDDR5","- Màn hình: 14.0 inch FHD (1920 x 1080)","- Hệ điều hành: Windows 10" ],
+            "madein": "China",
+            "type":"",
+            "producer":"Asus"
+        },
+        {
+            "id":8,
+            "name": "Laptop Asus X405UA-BV330T (I3-7100U) (Xám đen)",
+            "image": "./images/Asus/8.jpg",
+            "price": "14990000",
+            "describe":["- CPU Intel® Core™ i7-8550U (1.8GHz Up to 4.0GHz, 8MB Cache)","-  RAM: 4GB DDR4 2400MHz","-  HDD 500GB 5400rpm", "- VGA Intel HD Graphics 620","- Màn hình: 14.0 inch FHD (1920 x 1080)","- Hệ điều hành: Windows 10" ],
+            "madein": "China",
+            "type":"",
+            "producer":"Asus"
+        },
+        {
+            "id":9,
+            "name": "Laptop Asus S510UA-BQ111T (I3-7100U) (Vàng đồng)",
+            "image": "./images/Asus/9.jpg",
+            "price": 12890000,
+            "describe":["- CPU Intel Core i3-7100U (2.4GHz, 3MB Cache)","-  RAM 4GB DDR4 - 2133MHz","-  HDD 1TB 5400rpm, x1 slot SSD (M.2/SATA)", "- VGA Intel HD Graphics 620","- Màn hình: 14.0 inch FHD (1920 x 1080)","- Hệ điều hành: Windows 10" ],
+            "madein": "China",
+            "type":"",
+            "producer":"Asus"
+        },
+        {
+            "id":10,
+            "name": "Laptop Asus GL503VM-GZ254T (I7-7700HQ) (Đen)",
+            "image": "./images/Asus/10.jpg",
+            "price": 17490000,
+            "describe":["- CPU Intel Core i7-7700HQ","-  RAM 16GB","-  SSD 256GB + HDD 1TB", "- VGA Intel HD Graphics 620","- Màn hình: 14.0 inch FHD (1920 x 1080)","- Hệ điều hành: Windows 10" ],
+            "madein": "China",
+            "type":"",
+            "producer":"Asus"
+        },
+        {
+            "id":11,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"Dell"
+        },
+        {
+            "id":12,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"Dell"
+        },
+        {
+            "id":13,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"Dell"
+        },
+        {
+            "id":14,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"Dell"
+        },
+        {
+            "id":15,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"Dell"
+        },
+        {
+            "id":16,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"Dell"
+        },
+        {
+            "id":17,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"Dell"
+        },
+        {
+            "id":18,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"Dell"
+        },
+        {
+            "id":19,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"Dell"
+        },
+        {
+            "id":20,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"Dell"
+        },
+        {
+            "id":21,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"Apple"
+        },
+        {
+            "id":22,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"Apple"
+        },
+        {
+            "id":23,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"Apple"
+        },
+        {
+            "id":24,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"Apple"
+        },
+        {
+            "id":25,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"Apple"
+        },
+        {
+            "id":26,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"Apple"
+        },
+        {
+            "id":27,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"Apple"
+        },
+        {
+            "id":28,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"Apple"
+        },
+        {
+            "id":29,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"Apple"
+        },
+        {
+            "id":30,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"Apple"
+        },
+        {
+            "id":31,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"MSI"
+        },
+        {
+            "id":32,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"MSI"
+        },
+        {
+            "id":33,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"MSI"
+        },
+        {
+            "id":34,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"MSI"
+        },
+        {
+            "id":35,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"MSI"
+        },
+        {
+            "id":36,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"MSI"
+        },
+        {
+            "id":37,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"MSI"
+        },
+        {
+            "id":38,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"MSI"
+        },
+        {
+            "id":39,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"MSI"
+        },
+        {
+            "id":40,
+            "name": "",
+            "image": "",
+            "price": "",
+            "describe":"",
+            "madein": "",
+            "type":"",
+            "producer":"MSI"
+        }
+    ]
+}

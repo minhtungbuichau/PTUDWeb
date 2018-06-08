@@ -1,11 +1,23 @@
 var createError = require('http-errors');
 var express = require('express');
+var mysql = require('mysql');
+var http = require('http').Server(app);
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+
+//create connection mysql
+var connection = mysql.createConnection({
+  host: "localhost",
+  user: "ptudwebtungbcm",
+  password:"123456789",
+  database:'demo.sql'
+});
+//call to connect
+connection.connect();
 
 var app = express();
 

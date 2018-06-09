@@ -11,6 +11,7 @@ var homeController = require('./controllers/homeController'),
     categoryController = require('./controllers/categoryController'),
     producerController=require('./controllers/producerController'),
     productController = require('./controllers/productController');
+var handleLayoutMDW = require('./middle-wares/handleLayout');
 
 var app = express();
 app.engine('hbs', exphbs({
@@ -60,14 +61,15 @@ app.use(session({
     saveUninitialized: false
 }));
 
-
+app.use(handleLayoutMDW);
 app.get('/', (req, res) => {
     res.redirect('/home');
 });
 app.use('/home', homeController);
 app.use('/category', categoryController);
-app.use('/producer',producerController);
-app.use('/product', productController);
+app.use('/producer', producerController);
+app.use('/products', productController);
+
 
 app.listen(4000, () => {
     console.log('Site running on port 4000');

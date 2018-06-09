@@ -1,7 +1,7 @@
 var db = require('../fn/db');
 
 exports.loadAll = () => {
-    var sql = 'select * from categories,producers,products ';
+    var sql = 'select * from categories ';
     return db.load(sql);
 }
 

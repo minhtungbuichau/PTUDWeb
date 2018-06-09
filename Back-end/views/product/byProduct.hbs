@@ -9,7 +9,7 @@
 	
 	<li class="dropdown"><a href="#"><i class="fas fa-bars"></i> Xem theo loại sản phẩm</a>
 		<div class="dropdown-content">
-			{{#each categories}}
+			{{#each layoutVM.categories}}
 			<a href="#">{{CatName}}</a>			
 			{{/each}}
 		</div>
@@ -73,7 +73,7 @@
 
 <!-- store products -->
 <div class="row">
-	{{#each layoutVM1.products}}
+	{{#each products}}
 		<!-- product -->
 		<div class="col-md-4 col-xs-6">
 			<a href="#" target="blank">
@@ -87,7 +87,7 @@
 					<div class="product-body">
 						<p class="product-category">Asus</p>
 						<h3 class="product-name"><a href="#">{{ProName}}</a></h3>
-						<h4 class="product-price">{{Price}} ₫<del class="product-old-price"></del></h4>
+						<h4 class="product-price">32.490.000 ₫<del class="product-old-price"></del></h4>
 						<div class="product-rating">
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>

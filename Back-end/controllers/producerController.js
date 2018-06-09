@@ -1,14 +1,14 @@
 var express = require('express');
-var categoryRepo = require('../repos/producerRepo');
+var producerRepo = require('../repos/producerRepo');
 
 var router = express.Router();
 
 router.get('/', (req, res) => {
-    categoryRepo.loadAll().then(rows => {
+    producerRepo.loadAll().then(rows => {
         var vm = {
-            categories: rows
+            producers: rows
         };
-        res.render('category/byCat', vm);
+        res.render('producer/byPro', vm);
     });
 });
 module.exports = router;

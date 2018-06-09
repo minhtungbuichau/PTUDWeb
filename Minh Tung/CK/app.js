@@ -5,14 +5,14 @@ var http = require('http').Server(app);
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+var bodyParser = require('body-parser');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 //create connection mysql
 var connection = mysql.createConnection({
   host: "localhost",
-  user: "ptudwebtungbcm",
+  user: "root",
   password:"123456789",
   database:'demo.sql'
 });
@@ -20,6 +20,15 @@ var connection = mysql.createConnection({
 connection.connect();
 
 var app = express();
+
+connection.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!!!")
+});
+
+app.listen('3000',function(){
+  console.log('Connected!');
+})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -53,5 +62,13 @@ app.use(function(err, req, res, next) {
 
 //load dữ liệu từ trang json
 app.locals.dataJSON = require('./model/data.json');
+
+
+
+app.get('/',function(req,res){
+  connection.query("SELECT * from qllaptop");
+});
+
+var bodyParser = require('body-parser');
 
 module.exports = app;

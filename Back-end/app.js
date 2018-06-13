@@ -9,8 +9,8 @@ var session = require('express-session');
 var MySQLStore = require('express-mysql-session')(session);
 var homeController = require('./controllers/homeController'),
     categoryController = require('./controllers/categoryController'),
-    producerController=require('./controllers/producerController'),
-    productController = require('./controllers/productController');
+    pro_productController=require('./controllers/pro_productController'),
+    cat_productController = require('./controllers/cat_productController');
 var handleLayoutMDW = require('./middle-wares/handleLayout');
 
 var app = express();
@@ -66,9 +66,9 @@ app.get('/', (req, res) => {
     res.redirect('/home');
 });
 app.use('/home', homeController);
-app.use('/category', categoryController);
-app.use('/producer', producerController);
-app.use('/products', productController);
+app.use('/category', cat_productController);
+app.use('/producer', pro_productController);
+
 
 
 app.listen(4000, () => {

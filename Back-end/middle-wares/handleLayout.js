@@ -1,6 +1,8 @@
-var categoryRepo = require('../repos/categoryRepo');
-var producerRepo=require('../repos/producerRepo');
+var categoryRepo = require('../repos/cat_productRepo');
+var producerRepo = require('../repos/pro_productRepo');
 
+var db = require('../fn/db');
+var config = require('../config/config');
 
 module.exports = (req, res, next) => {
 
@@ -15,6 +17,17 @@ module.exports = (req, res, next) => {
 
         
     });
+
+    categoryRepo.loadNameCat(catId).then(rows => {
+        res.locals.layoutVM3 = {
+            CatName: rows,   
+        };
+
+        // console.log(res.locals.layoutVM.curUser);
+
+        
+    });
+
     categoryRepo.loadAll().then(rows => {
         res.locals.layoutVM = {
             categories: rows,

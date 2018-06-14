@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<link rel="icon" href="#" type="image/png" size="8x8">
+		<link rel="icon" href="/imgs/logo.png" type="image/png" size="8x8">
 		<title>{{{_sections.title}}}</title>
 
 		<!-- Google font -->
@@ -62,7 +62,7 @@
 						<!-- LOGO -->
 						<div class="col-md-3">
 							<div class="header-logo">
-								<a href="#" class="logo">
+								<a href="../home" class="logo">
 									<img width = "80%" src="/imgs/logo.png" alt="">
 								</a>
 							</div>
@@ -147,7 +147,13 @@
 		</nav>
 		<!-- /NAVIGATION -->
 
+		<!-- main carousel -->
 		
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			{{{_sections.carousel}}}
+		</div>
+		<!-- end of carousel --> 
+
 		<!-- SECTION -->
 		<div class="section">
 			<!-- container -->
@@ -210,14 +216,14 @@
 							<div class="footer">
 								<h3 class="footer-title">Tìm kiếm nhanh</h3>
 								<ul class="footer-links">
-									<li><a href="#">DELL</a></li>
-									<li><a href="#">ASUS</a></li>
-									<li><a href="#">MSI</a></li>
-									<li><a href="#">APPLE</a></li>
-									<li><a href="#">Laptop Gaming</a></li>
-									<li><a href="#">Laptop Văn phòng</a></li>
-									<li><a href="#">Laptop Doanh nhân</a></li>
-									<li><a href="#">Laptop UltraBook</a></li>
+									{{#each layoutVM2.producers}}
+										<li><a href="/producer/{{ProduID}}">{{ProduName}}</a></li>
+									{{/each}}
+									{{#each layoutVM.categories}}
+										<li><a href="/category/{{CatID}}">{{CatName}}</a></li>
+									{{/each}}
+									
+									
 								</ul>
 							</div>
 						</div>

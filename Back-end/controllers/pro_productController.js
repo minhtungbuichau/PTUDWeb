@@ -6,8 +6,8 @@ var router = express.Router();
 
 
 
-router.get('/:catId', (req, res) => {
-    var catId = req.params.catId;
+router.get('/:produId', (req, res) => {
+    var produId = req.params.produId;
 
     var page = req.query.page;
     if (!page) {
@@ -16,8 +16,8 @@ router.get('/:catId', (req, res) => {
 
     var offset = (page - 1) * config.PRODUCTS_PER_PAGE;
 
-    var p1 = pro_productRepo.loadAllByCat(catId, offset);
-    var p2 = pro_productRepo.countByCat(catId);
+    var p1 = pro_productRepo.loadAllByPro(produId, offset);
+    var p2 = pro_productRepo.countByPro(produId);
     Promise.all([p1, p2]).then(([pRows, countRows]) => {
         // console.log(pRows);
         // console.log(countRows);

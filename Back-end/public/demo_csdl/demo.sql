@@ -43,10 +43,10 @@ CREATE TABLE `producers` (
 -- ----------------------------
 -- Records of producers
 -- ----------------------------
-INSERT INTO `producers` VALUES ('1', 'Asus');
-INSERT INTO `producers` VALUES ('2', 'Dell');
-INSERT INTO `producers` VALUES ('3', 'Mac');
-INSERT INTO `producers` VALUES ('4', 'MSI');
+INSERT INTO `producers` VALUES ('1', 'Laptop Asus');
+INSERT INTO `producers` VALUES ('2', 'Laptop Dell');
+INSERT INTO `producers` VALUES ('3', 'Laptop Mac');
+INSERT INTO `producers` VALUES ('4', 'Laptop MSI');
 
 -- ----------------------------
 -- Table structure for `orderdetails`

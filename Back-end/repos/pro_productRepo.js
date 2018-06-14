@@ -2,7 +2,7 @@ var db = require('../fn/db');
 var config = require('../config/config');
 
 exports.loadAll = () => {
-    var sql = 'select * from products';
+    var sql = 'select * from producers';
     return db.load(sql);
 }
 
@@ -11,12 +11,12 @@ exports.loadAll = () => {
 //     return db.load(sql);
 // }
 
-exports.loadAllByCat = (produId, offset) => {
+exports.loadAllByPro = (produId, offset) => {
     var sql = `select * from products where ProduID = ${produId} limit ${config.PRODUCTS_PER_PAGE} offset ${offset}`;
     return db.load(sql);
 }
 
-exports.countByCat = produId => {
+exports.countByPro = produId => {
 	var sql = `select count(*) as total from products where ProduID = ${produId}`;
     return db.load(sql);
 }

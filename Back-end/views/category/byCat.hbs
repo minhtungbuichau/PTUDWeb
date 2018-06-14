@@ -1,5 +1,5 @@
 {{#section 'title'}}
-	Ds sp
+	sadsa
 {{/section}}
 
 
@@ -10,14 +10,14 @@
 	<li class="dropdown"><a href="#"><i class="fas fa-bars"></i> Xem theo loại sản phẩm</a>
 		<div class="dropdown-content">
 			{{#each layoutVM.categories}}
-			<a href="#">{{CatName}}</a>			
+			<a href="/category/{{CatID}}">{{CatName}}</a>			
 			{{/each}}
 		</div>
 	</li>
 	<li class="dropdown"><a href="#"><i class="fas fa-bars"></i> Xem theo nhà sản xuất</a>
 		<div class="dropdown-content">
 			{{#each layoutVM2.producers}}
-			<a href="#">{{ProduName}}</a>
+			<a href="/producer/{{ProduID}}">{{ProduName}}</a>
 			{{/each}}
 		</div>
 	</li>
@@ -32,13 +32,25 @@
 		<div class="checkbox-filter">
 			{{#each layoutVM.categories}}
 				<div class="input-checkbox">
-					<input type="checkbox" checked=""  id="brand-1">
+					<input type="checkbox"   id="checkk">
 					<label for="brand-1">
 						<span></span>
-						<a href="#" target="blank">{{CatName}}</a>
+						<a href="/category/{{CatID}}" >{{CatName}}</a>
 						<small>(10)</small>
 					</label>
+					
+					
 				</div>
+				<script >
+					var i;
+					for (i = 1; i <= 4; i++) {
+					    if(i=={{CatID}})
+					    	{
+					    		document.getElementById("checkk").style.checked=true;
+					    	}
+					    
+					}
+				</script>
 			{{/each}}
 		</div>
 	</div>
@@ -85,9 +97,10 @@
 						</div>
 					</div>
 					<div class="product-body">
+						<p class="product-category">{{CatID}}</p>
 						<p class="product-category">{{ProduName}}</p>
 						<h3 class="product-name"><a href="#">{{ProName}}</a></h3>
-						<h4 class="product-price">32.490.000 ₫<del class="product-old-price"></del></h4>
+						<h4 class="product-price">{{number_format Price}}  ₫<del class="product-old-price"></del></h4>
 						<div class="product-rating">
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
@@ -95,10 +108,7 @@
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
 						</div>
-						<div class="product-btns">
-							<button class="add-to-wishlist"><i class="far fa-heart"></i><span class="tooltipp">add to wishlist</span></button>
-							<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-						</div>
+						
 					</div>
 					<div class="add-to-cart">
 						<a href="#">
@@ -117,21 +127,25 @@
 
 		<!-- /store products -->
 
-	<!-- store bottom filter -->
-	<div class="store-filter clearfix">
+<!-- store bottom filter -->
+<div class="row">
+	<div class="col-md-12 col-xs-12">
+		<div class="store-filter clearfix">
 
-		<ul class="store-pagination">
-		{{#each page_numbers}}
-		{{#if isCurPage}}
-			<li class="active"><a href="javascript:;">{{value}}</a></li>
-		{{else}}
-			<li><a href="?page={{value}}">{{value}}</a></li>
-		{{/if}}
-		{{/each}}
+			<ul class="store-pagination">
+			{{#each page_numbers}}
+			{{#if isCurPage}}
+				<li class="active"><a href="javascript:;">{{value}}</a></li>
+			{{else}}
+				<li><a href="?page={{value}}">{{value}}</a></li>
+			{{/if}}
+			{{/each}}
 
-			<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-		</ul>
+				<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+			</ul>
+		</div>
 	</div>
+</div>
 	<!-- /store bottom filter -->
 {{/section}}
 

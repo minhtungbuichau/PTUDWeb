@@ -2,9 +2,10 @@ var db = require('../fn/db');
 var config = require('../config/config');
 
 exports.loadAll = () => {
-    var sql = 'select * from products';
+    var sql = 'select * from categories ';
     return db.load(sql);
 }
+
 
 // exports.loadAllByCat = (catId) => {
 //     var sql = `select * from products where CatID = ${catId}`;
@@ -20,6 +21,13 @@ exports.countByCat = catId => {
 	var sql = `select count(*) as total from products where CatID = ${catId}`;
     return db.load(sql);
 }
+
+exports.loadNameCat = (catId) => {
+    var sql = `select CatName from categories where CatID = ${catId}`;
+    return db.load(sql);
+}
+
+
 
 exports.single = proId => {
     var sql = `select * from products where ProID = ${proId}`;

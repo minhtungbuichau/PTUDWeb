@@ -8,7 +8,7 @@ var wnumb = require('wnumb');
 var session = require('express-session');
 var MySQLStore = require('express-mysql-session')(session);
 var homeController = require('./controllers/homeController'),
-    categoryController = require('./controllers/categoryController'),
+
     pro_productController=require('./controllers/pro_productController'),
     cat_productController = require('./controllers/cat_productController');
 var handleLayoutMDW = require('./middle-wares/handleLayout');

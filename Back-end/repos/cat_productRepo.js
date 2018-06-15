@@ -22,7 +22,7 @@ exports.countByCat = catId => {
     return db.load(sql);
 }
 
-exports.loadNameCat = (catId) => {
+exports.loadNameCat = catId => {
     var sql = `select CatName from categories where CatID = ${catId}`;
     return db.load(sql);
 }

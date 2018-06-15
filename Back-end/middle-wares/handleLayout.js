@@ -6,6 +6,7 @@ var config = require('../config/config');
 
 module.exports = (req, res, next) => {
 
+    var catId = req.params.catId;
 
     producerRepo.loadAll().then(rows => {
         res.locals.layoutVM2 = {

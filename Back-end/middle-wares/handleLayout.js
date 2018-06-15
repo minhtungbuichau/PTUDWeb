@@ -1,5 +1,6 @@
 var categoryRepo = require('../repos/cat_productRepo');
 var producerRepo = require('../repos/pro_productRepo');
+var indexRepo = require('../repos/index_productRepo');
 
 var db = require('../fn/db');
 var config = require('../config/config');
@@ -12,21 +13,27 @@ module.exports = (req, res, next) => {
         res.locals.layoutVM2 = {
             producers: rows,
          
-        };
+        };     
+    });
 
-        // console.log(res.locals.layoutVM.curUser);
+    indexRepo.loadbyView().then(rows => {
+        res.locals.layoutbyView = {
+            byView: rows,
+         
+        };     
+    });
 
-        
+    indexRepo.loadbySale().then(rows => {
+        res.locals.layoutbySale = {
+            bySale: rows,
+         
+        };     
     });
 
     categoryRepo.loadNameCat(catId).then(rows => {
         res.locals.layoutVM3 = {
             CatName: rows,   
-        };
-
-        // console.log(res.locals.layoutVM.curUser);
-
-        
+        };   
     });
 
     categoryRepo.loadAll().then(rows => {
@@ -34,9 +41,6 @@ module.exports = (req, res, next) => {
             categories: rows,
          
         };
-
-        // console.log(res.locals.layoutVM.curUser);
-
         next();
     });
 

@@ -1,13 +1,21 @@
 var db = require('../fn/db');
 var config = require('../config/config');
 
-exports.loadbyView = () => {
-    var sql = `select * from products order by Views desc`;
+
+
+exports.loadbySale = () => {
+    var sql = `select products.ProName, products.ProID, products.Price, producers.ProduName  
+                from products,producers 
+                where producers.ProduId=products.ProduId 
+                order by Sales desc`;
     return db.load(sql);
 }
 
-exports.loadbySale = () => {
-    var sql = `select * from products order by Sales desc`;
+exports.loadbyView = () => {
+    var sql = `select products.ProName, products.ProID, products.Price, producers.ProduName  
+                from products,producers 
+                where producers.ProduId=products.ProduId 
+                order by Views desc`;
     return db.load(sql);
 }
 

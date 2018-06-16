@@ -1,0 +1,65 @@
+{{#section 'title'}}
+	Đăng ký
+{{/section}}
+
+{{#section 'css'}}
+  <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+{{/section}}
+
+{{#section 'js'}}
+	<script src="/assets/css/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+
+	<script type="text/javascript">
+		$('#txtDOB').datepicker({
+			format: 'd/m/yyyy',
+			autoclose: true
+		});
+
+		var validate = function() {
+		    if ($('#txtUsername').val().length === 0) {
+		        alert('Error');
+		        return false;
+		    }
+
+		    if ($('#txtPWD').val() !== $('#txtCPWD').val()) {
+		        alert('not match');
+		        return false;
+		    }
+
+		    return true;
+		}
+	</script>
+{{/section}}
+
+
+{{#section 'register'}}
+    <!-- row -->
+        <div id="login-box">
+          <div class="left">
+            <h1 class="h1">Sign up</h1>
+            
+            <input type="text" id="txtUsername" name="username" placeholder="Username" />          
+            <input type="password" id="txtPWD" name="rawPWD" placeholder="Password" />
+            <input type="password" id="txtCPWD" name="cPWD" placeholder="Retype password" />
+            <input type="text" name="email" placeholder="E-mail" />
+            <input type="text" name="name" placeholder="Full Name" />
+            <input type="text" class="form-control" id="txtDOB" placeholder="Date of Birth" name="dob"> 
+            <form>
+                <div class="g-recaptcha" data-sitekey="6LfPNVUUAAAAAGKNsEeXiuT2O_r_W73iMQ2Baw6p"></div>
+            </form>
+            
+            <a href="#" class="primary-btn order-submit">Sign up</a>
+          </div>
+          
+          <div class="rightsignup">
+            <span class="loginwith">Login in with</span>
+            
+            <button class="social-signin facebook">Log in with facebook</button>
+            <button class="social-signin twitter">Log in with Twitter</button>
+            <button class="social-signin google">Log in with Google+</button>
+          </div>
+          <div class="or">OR</div>
+        </div>
+    <!-- /row -->
+{{/section}}

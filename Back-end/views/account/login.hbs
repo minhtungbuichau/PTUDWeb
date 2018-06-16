@@ -1,0 +1,36 @@
+{{#section 'title'}}
+	Đăng nhập
+{{/section}}
+
+
+
+{{#if showError}}
+<div class="alert alert-danger">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	<strong>Title!</strong> {{errorMsg}}
+</div>
+{{/if}}
+
+{{#section 'login'}}
+    <!-- row -->
+    <div id="login-box">
+      <div class="left">
+        <h1 class="h1">Sign in</h1>
+        
+        <input type="text" name="username" placeholder="Username" />
+        <input type="password" name="rawPWD" placeholder="Password" />
+        
+        <a href="../AfterLog.html" class="primary-btn order-submit">Sign in</a>
+      </div>
+      
+      <div class="rightsignup">
+        <span class="loginwith">Log in with</span>
+        
+        <button class="social-signin facebook">Log in with facebook</button>
+        <button class="social-signin twitter">Log in with Twitter</button>
+        <button class="social-signin google">Log in with Google+</button>
+      </div>
+      <div class="or">OR</div>
+    </div>
+    <!-- /row -->
+{{/section}}

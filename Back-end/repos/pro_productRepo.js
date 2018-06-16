@@ -12,7 +12,9 @@ exports.loadAll = () => {
 // }
 
 exports.loadAllByPro = (produId, offset) => {
-    var sql = `select * from products where ProduID = ${produId} limit ${config.PRODUCTS_PER_PAGE} offset ${offset}`;
+    var sql = `select products.ProName, products.ProID, products.Price, producers.ProduName 
+			    from products,producers 
+			    where producers.ProduId=products.ProduId and products.ProduID = ${produId} limit ${config.PRODUCTS_PER_PAGE} offset ${offset}`;
     return db.load(sql);
 }
 

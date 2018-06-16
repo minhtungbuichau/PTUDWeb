@@ -2191,7 +2191,7 @@ textarea.input {
   position: relative;
   margin: 5% auto;
   width: 700px;
-  height: 450px;
+  height: 550px;
   background: #FFF;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
@@ -2267,7 +2267,7 @@ input[type="submit"]:active {
 
 .or {
   position: absolute;
-  top: 180px;
+  top: 220px;
   left: 330px;
   width: 40px;
   height: 40px;
@@ -2286,7 +2286,7 @@ input[type="submit"]:active {
   box-sizing: border-box;
   padding: 40px;
   width: 350px;
-  height: 450px;
+  height: 550px;
   background: url('https://i.vimeocdn.com/video/504065285.jpg?mw=1920&mh=1080&q=70');
   background-size: cover;
   background-position: center;

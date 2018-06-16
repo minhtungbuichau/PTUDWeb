@@ -8,10 +8,12 @@ var wnumb = require('wnumb');
 var session = require('express-session');
 var MySQLStore = require('express-mysql-session')(session);
 var homeController = require('./controllers/homeController'),
-
     pro_productController=require('./controllers/pro_productController'),
     cat_productController = require('./controllers/cat_productController');
-var handleLayoutMDW = require('./middle-wares/handleLayout');
+
+var handleLayoutMDW = require('./middle-wares/handleLayout'),
+    accountController = require('./controllers/accountController'),
+    cartController = require('./controllers/cartController');
 
 var app = express();
 app.engine('hbs', exphbs({
@@ -68,6 +70,7 @@ app.get('/', (req, res) => {
 app.use('/home', homeController);
 app.use('/category', cat_productController);
 app.use('/producer', pro_productController);
+app.use('/account', accountController);
 
 
 

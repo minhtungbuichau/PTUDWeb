@@ -23,7 +23,7 @@ exports.countByPro = produId => {
     return db.load(sql);
 }
 
-exports.single = proId => {
-    var sql = `select * from products where ProID = ${proId}`;
+exports.single = produId => {
+    var sql = `select * from producers where ProduID = ${produId}`;
     return db.load(sql);
 }

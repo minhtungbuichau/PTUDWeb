@@ -1,117 +1,163 @@
-{{#section 'title'}}
-	{{#with product}}
-		{{ProName}}
-	{{/with}}
-{{/section}}
-{{#with product}}
+{{#section 'title'}} {{#with product}} {{ProName}} {{/with}} {{/section}} {{#with product}}
 <!-- Product thumb imgs -->
 <div class="col-lg-2  ">
 	<div id="product-imgs">
 		<div class="product-preview">
-			<img src="/imgs/{{ProID}}/thumb1.jpg"/>
+			<img src="/imgs/{{ProID}}/thumb1.jpg" />
 		</div>
 
-		<div class="product-preview">	
-			<img src="/imgs/{{ProID}}/thumb2.jpg"/>
+		<div class="product-preview">
+			<img src="/imgs/{{ProID}}/thumb2.jpg" />
 		</div>
 		<div class="product-preview">
-			<img src="/imgs/{{ProID}}/thumb1.jpg"/>
+			<img src="/imgs/{{ProID}}/thumb1.jpg" />
 		</div>
 		<div class="product-preview">
-			<img src="/imgs/{{ProID}}/thumb3.jpg"/>
+			<img src="/imgs/{{ProID}}/thumb3.jpg" />
 		</div>
 	</div>
 </div>
 <div class="col-lg-5 ">
 	<div id="product-main-img">
-		<div class="product-preview">								
+		<div class="product-preview">
 			<img src="/imgs/{{ProID}}/main1.jpg" />
 		</div>
 		<div class="product-preview">
 			<img src="/imgs/{{ProID}}/main2.jpg" />
 		</div>
-		<div class="product-preview">								
+		<div class="product-preview">
 			<img src="/imgs/{{ProID}}/main1.jpg" />
 		</div>
 		<div class="product-preview">
 			<img src="/imgs/{{ProID}}/main3.jpg" />
-		</div>	
+		</div>
 	</div>
 </div>
 <!-- /Product main img -->
-					<div class="col-lg-5">
-						<div class="product-details">
-							<h2 class="product-name">{{ProName}}</h2>
-							<p>Lượt xem :{{number_format Views}} | Lượt bán :{{number_format Sales}}</p>
-							<p>Tồn kho: {{Quantity}}</p>
-								<h3 class="product-price">{{number_format Price}}</h3>
-								<span class="product-available">Còn hàng</span>
-							</div>
-							{{{Des}}}
-							<div class="add-to-cart">
-								<div class="qty-label">
-									Số lượng
-									<div class="input-number">
-										<input type="number">
-										<span class="qty-up">+</span>
-										<span class="qty-down">-</span>
-									</div>
-								</div>
-								<a href="../../user/cart.html"><button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng</button></a>
-							</div>
-							<ul class="product-links">
-								<li>Danh mục:</li>
-								<li><a href="../../type/Laptop_ChoiGame.html">Laptop Gaming</a></li>
-								<li><a href="../../producer/Laptop_MSI.html">Laptop MSI</a></li>
-							</ul>
-						</div>
-					</div>
-					<!-- /Product details -->
-					<!-- /product tab -->
-	{{/with}}
-		<!--Product same producer -->
-		<!-- Section -->
-		<div class="section">
-			<!-- container -->
-			<div class="container">
-				<!-- row -->
-				<div class="row">
-
-					<div class="col-md-12">
-						<div class="section-title text-center">
-							<h3 class="title">Sản phẩm cùng loại</h3>
-						</div>
-					</div>
-					<div class="col-md-1"></div>
-					{{#each loadSameProducer}}
-					<!-- product -->
-
-					<div class="col-md-2 col-xs-6" >
-						<div class="product">
-							<div class="product-img">
-								<img src="/imgs/{{ProID}}/main.jpg" height="140px" width="100px" alt="">
-							</div>
-							<div class="product-body">
-								<p class="product-category">{{ProduName}}</p>
-								<h3 class="product-name"><a href="/product/detail/{{ProID}}">{{ProName}}</a></h3>
-								<h4 class="product-price">{{Price}}</h4>
-							</div>
-							<div class="add-to-cart">
-								<a href="../../user/cart.html">
-									<button class="add-to-cart-btn"><i class="fa fa-shopping-cart" style="padding-top:8px"></i>Thêm vào giỏ</button>
-								</a>
-							</div>
-						</div>
-					</div>
-				{{/each}}
-				<div class="col-md-1"></div>
-				</div>
-				
-				<!-- /row -->
+<div class="col-lg-5">
+	<div class="product-details">
+		<h2 class="product-name">{{ProName}}</h2>
+		<p>Lượt xem :{{number_format Views}} | Lượt bán :{{number_format Sales}}</p>
+		<p>Tồn kho: {{Quantity}}</p>
+		<h3 class="product-price">{{number_format Price}}</h3>
+		<span class="product-available">Còn hàng</span>
+	</div>
+	{{{Des}}}
+	<div class="add-to-cart">
+		<div class="qty-label">
+			Số lượng
+			<div class="input-number">
+				<input type="number">
+				<span class="qty-up">+</span>
+				<span class="qty-down">-</span>
 			</div>
-			<!-- /container -->
 		</div>
-	
-		
-				
-	
+		<a href="../../user/cart.html">
+			<button class="add-to-cart-btn">
+				<i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng</button>
+		</a>
+	</div>
+	<ul class="product-links">
+		<li>Danh mục:</li>
+		<li>
+			<a href="../../type/Laptop_ChoiGame.html">Laptop Gaming</a>
+		</li>
+		<li>
+			<a href="../../producer/Laptop_MSI.html">Laptop MSI</a>
+		</li>
+	</ul>
+</div>
+</div>
+<!-- /Product details -->
+<!-- /product tab -->
+{{/with}}
+<!--Product same producer -->
+<!-- Section -->
+<div class="section">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+
+			<div class="col-md-12">
+				<div class="section-title text-center">
+					<h3 class="title">Sản phẩm cùng loại</h3>
+				</div>
+			</div>
+			<div class="col-md-1"></div>
+			{{#each loadSameProducer}}
+			<!-- product -->
+
+			<div class="col-md-2 col-xs-6">
+				<div class="product">
+					<div class="product-img">
+						<img src="/imgs/{{ProID}}/main.jpg" height="140px" width="100px" alt="">
+					</div>
+					<div class="product-body">
+						<p class="product-category">{{ProduName}}</p>
+						<h3 class="product-name">
+							<a href="/product/detail/{{ProID}}">{{ProName}}</a>
+						</h3>
+						<h4 class="product-price">{{Price}}</h4>
+					</div>
+					<div class="add-to-cart">
+						<a href="../../user/cart.html">
+							<button class="add-to-cart-btn">
+								<i class="fa fa-shopping-cart" style="padding-top:8px"></i>Thêm vào giỏ</button>
+						</a>
+					</div>
+				</div>
+			</div>
+			{{/each}}
+			<div class="col-md-1"></div>
+		</div>
+
+		<!-- /row -->
+	</div>
+	<!-- /container -->
+</div>
+
+<!-- Section -->
+<div class="section">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+
+			<div class="col-md-12">
+				<div class="section-title text-center">
+					<h3 class="title">Sản phẩm cùng hãng</h3>
+				</div>
+			</div>
+			<div class="col-md-1"></div>
+			{{#each loadSameCategory}}
+			<!-- product -->
+
+			<div class="col-md-2 col-xs-6">
+				<div class="product">
+					<div class="product-img">
+						<img src="/imgs/{{ProID}}/main.jpg" height="140px" width="100px" alt="">
+					</div>
+					<div class="product-body">
+						<p class="product-category">{{ProduName}}</p>
+						<h3 class="product-name">
+							<a href="/product/detail/{{ProID}}">{{ProName}}</a>
+						</h3>
+						<h4 class="product-price">{{Price}}</h4>
+					</div>
+					<div class="add-to-cart">
+						<a href="../../user/cart.html">
+							<button class="add-to-cart-btn">
+								<i class="fa fa-shopping-cart" style="padding-top:8px"></i>Thêm vào giỏ</button>
+						</a>
+					</div>
+				</div>
+			</div>
+			{{/each}}
+			<div class="col-md-1"></div>
+		</div>
+
+		<!-- /row -->
+	</div>
+	<!-- /container -->
+</div>

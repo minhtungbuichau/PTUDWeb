@@ -21,7 +21,7 @@ CREATE TABLE `categories` (
 -- ----------------------------
 -- Records of categories
 -- ----------------------------
-INSERT INTO `categories` VALUES ('1', 'Laptop Gaming');
+INSERT INTO `categoriescategories` VALUES ('1', 'Laptop Gaming');
 INSERT INTO `categories` VALUES ('2', 'Laptop Văn phòng');
 INSERT INTO `categories` VALUES ('3', 'Laptop Doanh nhân');
 INSERT INTO `categories` VALUES ('4', 'Laptop Ultrabook');
@@ -80,7 +80,7 @@ CREATE TABLE `orders` (
 
 -- ----------------------------
 -- Table structure for `products`
--- ----------------------------
+-- ----------------------pma__historypma__history------
 DROP TABLE IF EXISTS `products`;
 CREATE TABLE `products` (
   `ProID` int(11) unsigned NOT NULL AUTO_INCREMENT,

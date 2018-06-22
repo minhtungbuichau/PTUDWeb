@@ -66,7 +66,7 @@ app.use(session({
   secret : "secret",
   saveUninitialized: true,
   resave: true
-}))
+}));
 
 //load dữ liệu từ trang json
 app.locals.dataJSON = require('./model/data.json');

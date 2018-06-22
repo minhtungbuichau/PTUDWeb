@@ -30,7 +30,11 @@ module.exports = (req, res, next) => {
         };     
     });
 
-    
+    categoryRepo.loadNameCat(catId).then(rows => {
+        res.locals.layoutVM3 = {
+            CatName: rows,   
+        };   
+    });
 
     categoryRepo.loadAll().then(rows => {
         res.locals.layoutVM = {

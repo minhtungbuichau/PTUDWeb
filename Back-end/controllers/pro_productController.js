@@ -18,8 +18,7 @@ router.get('/:produId', (req, res) => {
 
     var p1 = pro_productRepo.loadAllByPro(produId, offset);
     var p2 = pro_productRepo.countByPro(produId);
-    var p3 = pro_productRepo.single(produId);
-    Promise.all([p1, p2, p3]).then(([pRows, countRows, rows]) => {
+    Promise.all([p1, p2]).then(([pRows, countRows]) => {
         // console.log(pRows);
         // console.log(countRows);
 
@@ -38,7 +37,6 @@ router.get('/:produId', (req, res) => {
         }
 
         var vm = {
-            nameproducer: rows[0],
             products: pRows,
             noProducts: pRows.length === 0,
             page_numbers: numbers

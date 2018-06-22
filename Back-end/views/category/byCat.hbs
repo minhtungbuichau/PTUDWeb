@@ -1,7 +1,5 @@
 {{#section 'title'}}
-	{{#with namecat}}
-		{{CatName}}
-	{{/with}}
+	sadsa
 {{/section}}
 
 
@@ -34,7 +32,7 @@
 		<div class="checkbox-filter">
 			{{#each layoutVM.categories}}
 				<div class="input-checkbox">
-					<input type="checkbox" checked=""  id="checkk">
+					<input type="checkbox"   id="checkk">
 					<label for="brand-1">
 						<span></span>
 						<a href="/category/{{CatID}}" >{{CatName}}</a>
@@ -43,7 +41,16 @@
 					
 					
 				</div>
-				
+				<script >
+					var i;
+					for (i = 1; i <= 4; i++) {
+					    if(i=={{CatID}})
+					    	{
+					    		document.getElementById("checkk").style.checked=true;
+					    	}
+					    
+					}
+				</script>
 			{{/each}}
 		</div>
 	</div>

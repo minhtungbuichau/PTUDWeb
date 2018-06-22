@@ -38,35 +38,18 @@
         <div id="login-box">
           <div class="left">
             <h1 class="h1">Sign up</h1>
-
             
-            <form action="" method="POST" class="form-horizontal" role="form" onsubmit="return validate();">
- 
-              <input type="text"  id="txtUsername" placeholder="Username" name="username">
-                  
-
-              <input type="password"  id="txtPWD" placeholder="Password" name="rawPWD">
-            
-          
-              <input type="password"  id="txtCPWD" placeholder="Retype password" name="cPWD">
-
-              
-              <input type="text"  id="txtName" placeholder="Full Name" name="name">
-                
-              
-              <input type="text"  id="txtEmail" placeholder="Email" name="email">
-                
-              
-              <input type="text"  id="txtDOB" placeholder="d/m/yyyy" name="dob">
-              
- 
-              <button type="submit" class="primary-btn order-submit">
-                Sign Up
-              </button>
-
+            <input type="text" id="txtUsername" name="username" placeholder="Username" />          
+            <input type="password" id="txtPWD" name="rawPWD" placeholder="Password" />
+            <input type="password" id="txtCPWD" name="cPWD" placeholder="Retype password" />
+            <input type="text" name="email" placeholder="E-mail" />
+            <input type="text" name="name" placeholder="Full Name" />
+            <input type="text" class="form-control" id="txtDOB" placeholder="Date of Birth" name="dob"> 
+            <form>
+                <div class="g-recaptcha" data-sitekey="6LfPNVUUAAAAAGKNsEeXiuT2O_r_W73iMQ2Baw6p"></div>
             </form>
             
-            
+            <a href="#" class="primary-btn order-submit">Sign up</a>
           </div>
           
           <div class="rightsignup">

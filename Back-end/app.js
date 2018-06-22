@@ -61,10 +61,10 @@ require('./controllers/passportRoute.js')(app, passport);
 
 var sessionStore = new MySQLStore({
     host: 'localhost',
-    port: 3306,
+    port: 3000,
     user: 'root',
-    password: 'tinh',
-    database: 'qllaptop',
+    password: 'root',
+    database: 'qlbh',
     createDatabaseTable: true,
     schema: {
         tableName: 'sessions',

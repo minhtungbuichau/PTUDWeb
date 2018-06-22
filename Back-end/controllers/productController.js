@@ -6,16 +6,18 @@ var router = express.Router();
 
 router.get('/detail/:proId', (req, res) => {
     var proId = req.params.proId;
-    productRepo.single(proId).then(rows => {
-        if (rows.length > 0) {
-            var vm = {
-                product: rows[0]
-            }
-            res.render('product/detail', vm);
-        } else {
-            res.redirect('/');
-        }
+    var p1 = productRepo.single(proId);
+    var p2 = productRepo.loadSameProducer(proId);
+    Promise.all([p1, p2]).then(([rows, prows]) => {
+        var vm = {
+            product: rows[0],
+            loadSameProducer: prows
+        };
+        
+        res.render('product/detail', vm);
     });
+
+    
 });
 
 module.exports = router;

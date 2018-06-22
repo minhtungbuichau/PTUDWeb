@@ -15,8 +15,18 @@ var homeController = require('./controllers/homeController'),
 var handleLayoutMDW = require('./middle-wares/handleLayout'),
     accountController = require('./controllers/accountController'),
     cartController = require('./controllers/cartController');
-
+var passportRoute = require('./controllers/passportRoute');
 var app = express();
+var passport = require('passport');
+var flash    = require('connect-flash');
+var morgan       = require('morgan');
+var cookieParser = require('cookie-parser');
+var session      = require('express-session');
+var configDB = require('./config/database.js');
+MySQLStore.connect(configDB.url);
+require('./config/passport')(passport);
+
+
 app.engine('hbs', exphbs({
     defaultLayout: 'main',
     layoutsDir: 'views/_layouts/',
@@ -30,6 +40,9 @@ app.engine('hbs', exphbs({
         }
     }
 }));
+app.use(morgan('dev')); // sử dụng để log mọi request ra console
+app.use(cookieParser()); // sử dụng để đọc thông tin từ cookie
+app.use(bodyParser()); // lấy thông tin từ form HTML
 
 app.set('view engine', 'hbs');
 app.use(express.static(path.resolve(__dirname, 'public')));
@@ -38,6 +51,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
 }));
+
+app.use(session({ secret: 'xxxxxxxxxxxxx' })); 
+app.use(passport.initialize());
+app.use(passport.session()); 
+app.use(flash()); 
+
+require('./controllers/passportRoute.js')(app, passport);
 
 var sessionStore = new MySQLStore({
     host: 'localhost',

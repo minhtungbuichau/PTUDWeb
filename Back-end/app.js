@@ -9,7 +9,8 @@ var session = require('express-session');
 var MySQLStore = require('express-mysql-session')(session);
 var homeController = require('./controllers/homeController'),
     pro_productController=require('./controllers/pro_productController'),
-    cat_productController = require('./controllers/cat_productController');
+    cat_productController = require('./controllers/cat_productController'),
+    productController = require('./controllers/productController');
 
 var handleLayoutMDW = require('./middle-wares/handleLayout'),
     accountController = require('./controllers/accountController'),
@@ -71,9 +72,10 @@ app.use('/home', homeController);
 app.use('/category', cat_productController);
 app.use('/producer', pro_productController);
 app.use('/account', accountController);
+app.use('/product', productController);
 
 
 
-app.listen(4000, () => {
+app.listen(3000, () => {
     console.log('Site running on port 4000');
 });

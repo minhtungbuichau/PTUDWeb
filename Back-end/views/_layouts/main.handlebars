@@ -50,11 +50,11 @@
 
 							<li class="dropdown" ><a href="#"><i class="fas fa-bars"></i>Tài khoản của {{layoutVM.curUser.f_Name}}</a>
 								<div class="dropdown-account">
-									<a href="./user/updateinfo.html">Cập nhật thông tin cá nhân</a>
-									<a href="./user/cart.html">Giỏ hàng</a>
-									<a href="./user/pay.html">Thanh toán</a>
-									<a href="./user/historypay.html">Lịch sử mua hàng</a>
-									<a href="./index.html">Đăng xuất</a>
+									<a href="#">Cập nhật thông tin cá nhân</a>
+									<a href="#">Giỏ hàng</a>
+									<a href="#">Thanh toán</a>
+									<a href="#">Lịch sử mua hàng</a>
+									<a id="lnkLogout" href="javascript:;">Đăng xuất</a>
 								</div>
 							</li>
 
@@ -62,7 +62,7 @@
 							<li><a href="/cart">Shopping Cart (0 items)</a></li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{layoutVM.curUser.f_Name}} <b class="caret"></b></a>
-								<ul class="dropdown-menu">
+								<ul class="dropdown-account">
 									<li><a href="#">Profile</a></li>
 									<li><a id="lnkLogout" href="javascript:;">Logout</a></li>
 								</ul>
@@ -314,6 +314,11 @@
 		<script src="/assets/js/nouislider.min.js"></script>
 		<script src="/assets/js/jquery.zoom.min.js"></script>
 		<script src="/assets/js/main.js"></script>
+		<script type="text/javascript">
+			$('#lnkLogout').on('click', function() {
+				$('#frmLogout').submit();
+			});
+		</script>
 		{{{_sections.js}}}
 	</body>
 </html>

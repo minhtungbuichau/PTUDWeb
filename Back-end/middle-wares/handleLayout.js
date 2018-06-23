@@ -5,6 +5,10 @@ var db = require('../fn/db');
 var config = require('../config/config');
 module.exports = (req, res, next) => {
 
+    if (req.session.isLogged === undefined) {
+        req.session.isLogged = false;
+    }
+
     var catId = req.params.catId;
 
     producerRepo.loadAll().then(rows => {
@@ -28,16 +32,13 @@ module.exports = (req, res, next) => {
         };     
     });
 
-    categoryRepo.loadNameCat(catId).then(rows => {
-        res.locals.layoutVM3 = {
-            CatName: rows,   
-        };   
-    });
+    
 
     categoryRepo.loadAll().then(rows => {
         res.locals.layoutVM = {
             categories: rows,
-         
+            isLogged: req.session.isLogged,
+            curUser: req.session.user
         };
         next();
     });

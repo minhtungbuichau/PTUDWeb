@@ -15,7 +15,7 @@ var homeController = require('./controllers/homeController'),
 var handleLayoutMDW = require('./middle-wares/handleLayout'),
     accountController = require('./controllers/accountController'),
     cartController = require('./controllers/cartController');
-var passportRoute = require('./controllers/passportRoute');
+
 var app = express();
 
 
@@ -34,7 +34,7 @@ app.engine('hbs', exphbs({
     }
 }));
 
-app.use(bodyParser()); // lấy thông tin từ form HTML
+
 
 app.set('view engine', 'hbs');
 app.use(express.static(path.resolve(__dirname, 'public')));
@@ -83,6 +83,6 @@ app.use('/product', productController);
 
 
 
-app.listen(3000, () => {
+app.listen(4000, () => {
     console.log('Site running on port 4000');
 });

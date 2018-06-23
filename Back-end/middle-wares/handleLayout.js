@@ -1,10 +1,8 @@
 var categoryRepo = require('../repos/cat_productRepo');
 var producerRepo = require('../repos/pro_productRepo');
 var indexRepo = require('../repos/index_productRepo');
-
 var db = require('../fn/db');
 var config = require('../config/config');
-
 module.exports = (req, res, next) => {
 
     var catId = req.params.catId;

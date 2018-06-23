@@ -1,5 +1,57 @@
-{{#section 'title'}} {{#with product}} {{ProName}} {{/with}} {{/section}} {{#with product}}
-<!-- Product thumb imgs -->
+{{#section 'title'}} {{#with product}} {{ProName}} {{/with}} {{/section}} 
+{{#section 'nav'}}
+<!-- NAV -->
+<li class="active">
+	<a href="/home">
+		<i class="fas fa-home"></i> Trang chủ</a>
+</li>
+
+<li class="dropdown">
+	<a href="#">
+		<i class="fas fa-bars"></i> Xem theo loại sản phẩm</a>
+	<div class="dropdown-content">
+		{{#each layoutVM.categories}}
+		<a href="/category/{{CatID}}">{{CatName}}</a>
+		{{/each}}
+	</div>
+</li>
+<li class="dropdown">
+	<a href="#">
+		<i class="fas fa-bars"></i> Xem theo nhà sản xuất</a>
+	<div class="dropdown-content">
+		{{#each layoutVM2.producers}}
+		<a href="/producer/{{ProduID}}">{{ProduName}}</a>
+		{{/each}}
+	</div>
+</li>
+<!-- /NAV -->
+{{/section}} <!-- Product thumb imgs -->
+
+{{#with product}}
+<!-- BREADCRUMB -->
+		<div id="breadcrumb" class="section" style="margin-top:0px">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12">
+						<ul class="breadcrumb-tree">
+							<li><a href="/home">Trang chủ</a></li>
+							<li><a href="/producer/{{ProduID}}">{{ProduName}}</a></li>
+							<li class="active">{{ProName}}</li>
+						</ul>
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /BREADCRUMB -->	
+{{/with}}
+
+{{#with product}}
+
+
 <div class="col-lg-2  ">
 	<div id="product-imgs">
 		<div class="product-preview">
@@ -60,10 +112,10 @@
 	<ul class="product-links">
 		<li>Danh mục:</li>
 		<li>
-			<a href="../../type/Laptop_ChoiGame.html">Laptop Gaming</a>
+			<a href="/category/{{CatID}}">{{CatName}}</a>
 		</li>
 		<li>
-			<a href="../../producer/Laptop_MSI.html">Laptop MSI</a>
+			<a href="/producer/{{ProduID}}">{{ProduName}}</a>
 		</li>
 	</ul>
 </div>
@@ -87,16 +139,16 @@
 			<div class="col-md-1"></div>
 			{{#each loadSameProducer}}
 			<!-- product -->
-
+			<a href="/product/detail/{{ProID}}">
 			<div class="col-md-2 col-xs-6">
 				<div class="product">
 					<div class="product-img">
 						<img src="/imgs/{{ProID}}/main.jpg" height="140px" width="100px" alt="">
 					</div>
 					<div class="product-body">
-						<p class="product-category">{{ProduName}}</p>
+						<p class="product-category">{{CatName}}</p>
 						<h3 class="product-name">
-							<a href="/product/detail/{{ProID}}">{{ProName}}</a>
+							{{ProName}}
 						</h3>
 						<h4 class="product-price">{{Price}}</h4>
 					</div>
@@ -108,6 +160,7 @@
 					</div>
 				</div>
 			</div>
+			</a>
 			{{/each}}
 			<div class="col-md-1"></div>
 		</div>
@@ -132,7 +185,7 @@
 			<div class="col-md-1"></div>
 			{{#each loadSameCategory}}
 			<!-- product -->
-
+			<a href="/product/detail/{{ProID}}">
 			<div class="col-md-2 col-xs-6">
 				<div class="product">
 					<div class="product-img">
@@ -141,7 +194,7 @@
 					<div class="product-body">
 						<p class="product-category">{{ProduName}}</p>
 						<h3 class="product-name">
-							<a href="/product/detail/{{ProID}}">{{ProName}}</a>
+							{{ProName}}
 						</h3>
 						<h4 class="product-price">{{Price}}</h4>
 					</div>
@@ -153,6 +206,7 @@
 					</div>
 				</div>
 			</div>
+			</a>
 			{{/each}}
 			<div class="col-md-1"></div>
 		</div>

@@ -15,10 +15,11 @@ router.get('/detail/:proId', (req, res) => {
             loadSameProducer: prows,
             loadSameCategory: crows
         };
-        
         res.render('product/detail', vm);
     });
-
+router.get('/home',(req,res)=>{
+    res.redirect('/');
+})
     
 });
 

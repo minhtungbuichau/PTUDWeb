@@ -48,9 +48,11 @@
 					<ul class="header-links pull-right">
 						{{#if layoutVM.isLogged}}
 
+							<li><a href="/cart"><i class="fa fa-shopping-cart"></i>Shopping Cart (0 items)</a></li>
+
 							<li class="dropdown" ><a href="#"><i class="fas fa-bars"></i>Tài khoản của {{layoutVM.curUser.f_Name}}</a>
 								<div class="dropdown-account">
-									<a href="#">Cập nhật thông tin cá nhân</a>
+									<a href="./account/updateinfo/{{layoutVM.curUser.f_ID}}">Cập nhật thông tin cá nhân</a>
 									<a href="#">Giỏ hàng</a>
 									<a href="#">Thanh toán</a>
 									<a href="#">Lịch sử mua hàng</a>
@@ -59,19 +61,13 @@
 							</li>
 
 							<form id="frmLogout" method="post" action="/account/logout"></form>
-							<li><a href="/cart">Shopping Cart (0 items)</a></li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{layoutVM.curUser.f_Name}} <b class="caret"></b></a>
-								<ul class="dropdown-account">
-									<li><a href="#">Profile</a></li>
-									<li><a id="lnkLogout" href="javascript:;">Logout</a></li>
-								</ul>
-							</li>
+							
+							
 						{{else}}
 
 						<li><a href="/account/login"><i class="far fa-user"></i>Đăng nhập</a></li>
 						<li><a href="/account/register"><i class="fas fa-plus"></i>Đăng ký</a></li>
-						{{/if}}					
+						{{/if}}						
 					</ul>
 				</div>
 			</div>

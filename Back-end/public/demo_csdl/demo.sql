@@ -466,7 +466,7 @@ INSERT INTO `products` VALUES('35','LAPTOP MSI GP72M 7REX-1216XVN ','27999000 ',
 - Xuất xứ: Đài Loan<br>
 - Nhà sản xuất: MSI<br></p>','1','4','100');
 INSERT INTO `products` VALUES('36','LAPTOP MSI GS63 7RD- 093XVN','27490000 ','421','23',
-'<p>	- CPU: Core i7-7700HQ 2.8GHz up to 3.8 GHz<br>
+'<p>  - CPU: Core i7-7700HQ 2.8GHz up to 3.8 GHz<br>
 - RAM: 8GB<br>
 - Ổ cứng: 1TB 5400rpm + 128GB PCIe NVMe<br>
 - Màn hình: 15.6in FHD 1920x1080<br>
@@ -530,3 +530,5 @@ CREATE TABLE `users` (
 -- ----------------------------
 -- Records of users
 -- ----------------------------
+
+

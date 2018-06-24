@@ -10,7 +10,10 @@ var MySQLStore = require('express-mysql-session')(session);
 var homeController = require('./controllers/homeController'),
     pro_productController=require('./controllers/pro_productController'),
     cat_productController = require('./controllers/cat_productController'),
-    productController = require('./controllers/productController');
+    productController = require('./controllers/productController'),
+    adminController = require('./controllers/adminController'),
+    byCatAdminController = require('./controllers/byCatAdminController'),
+    byProduAdminController = require('./controllers/byProduAdminController');
 
 var handleLayoutMDW = require('./middle-wares/handleLayout'),
     accountController = require('./controllers/accountController'),
@@ -35,7 +38,6 @@ app.engine('hbs', exphbs({
 }));
 
 
-
 app.set('view engine', 'hbs');
 app.use(express.static(path.resolve(__dirname, 'public')));
 
@@ -50,7 +52,7 @@ var sessionStore = new MySQLStore({
     host: 'localhost',
     port: 3306,
     user: 'root',
-    password: 'tinh',
+    password: 'root',
     database: 'qllaptop',
     createDatabaseTable: true,
     schema: {
@@ -80,7 +82,9 @@ app.use('/category', cat_productController);
 app.use('/producer', pro_productController);
 app.use('/account', accountController);
 app.use('/product', productController);
-
+app.use('/admin', adminController);
+app.use('/admin/byCatAdmin', byCatAdminController);
+app.use('/admin/byProduAdmin', byProduAdminController);
 
 
 app.listen(4000, () => {

@@ -36,26 +36,26 @@
                         <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
                     <h3 class="menu-title">Quản lý sản phẩm</h3><!-- /.menu-title -->
-          
-					<li class="dropdown"><a href="/admin/byCatAdmin"><i class="menu-icon fa fa-book"></i> Loại sản phẩm</a>
-						<li>
-							{{#each layoutVM.categories}}
-							<a href="/admin/byCatAdmin/{{CatID}}">{{CatName}}</a>			
-							{{/each}}
-						</li>
-						
-					</li>
-					<li class="dropdown"><a href="#"><i class="menu-icon fa fa-book"></i> Nhà sản xuất</a>
-						<li>
-							{{#each layoutVM2.producers}}
-							<a href="/producer/{{ProduID}}">{{ProduName}}</a>
-							{{/each}}
-						</li>
-					</li>
-                    <h3 class="menu-title">Đơn hàng</h3><!-- /.menu-title -->
-                    <li>
-                        <a href="TinhTrangDonHang.html"> <i class="menu-icon ti-email"></i>Tình trạng đơn hàng</a>
-                    </li>
+
+      					<li class="dropdown"><a href="/admin/byCatAdmin"><i class="menu-icon fa fa-book"></i> Loại sản phẩm</a>
+      						<li>
+      							{{#each layoutVM.categories}}
+      							   <a href="/admin/byCatAdmin/{{CatID}}">{{CatName}}</a>			
+      							{{/each}}
+      						</li>
+      					</li>
+
+      					<li class="dropdown"><a href="/admin/byProduAdmin"><i class="menu-icon fa fa-book"></i> Nhà sản xuất</a>
+      						<li>
+      							{{#each layoutVM2.producers}}
+      							   <a href="/admin/byProduAdmin/{{ProduID}}">{{ProduName}}</a>
+      							{{/each}}
+      						</li>
+      					</li>
+                <h3 class="menu-title">Đơn hàng</h3><!-- /.menu-title -->
+                <li>
+                    <a href="TinhTrangDonHang.html"> <i class="menu-icon ti-email"></i>Tình trạng đơn hàng</a>
+                </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>

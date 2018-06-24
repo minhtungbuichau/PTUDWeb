@@ -10,7 +10,13 @@ exports.loadbySale = () => {
                 order by Sales desc`;
     return db.load(sql);
 }
-
+exports.loadbyNew = () => {
+    var sql = `select products.ProName, products.ProID, products.Price, producers.ProduName  
+                from products,producers 
+                where producers.ProduId=products.ProduId 
+                order by products.ProID desc`;
+    return db.load(sql);
+}
 exports.loadbyView = () => {
     var sql = `select products.ProName, products.ProID, products.Price, producers.ProduName  
                 from products,producers 

@@ -4,7 +4,7 @@
 
 {{#section 'nav'}}
 	<!-- NAV -->
-	<li class="active"><a href="#"><i class="fas fa-home"></i> Trang chủ</a></li>
+	<li class="active"><a href="/home"><i class="fas fa-home"></i> Trang chủ</a></li>
 		
 		<li class="dropdown"><a href="#"><i class="fas fa-bars"></i> Xem theo loại sản phẩm</a>
 			<div class="dropdown-content">
@@ -68,23 +68,14 @@
 						<!-- product -->
 						{{#each layoutbySale.bySale}}
 							<div class="product">
-								<a href="#">
+								<a href="/product/detail/{{ProID}}">
 									<div class="product-img">
 										<img src="/imgs/{{ProID}}/main.jpg" alt="">
-										<div class="product-label">
-											<span class="new">NEW</span>
-										</div>
 									</div>
 									<div class="product-body">
 										<p class="product-category">{{ProduName}}</p>
 										<h3 class="product-name">{{ProName}}</h3>
 										<h4 class="product-price">{{number_format Price}} ₫ </h4>
-										
-										<div class="product-btns">
-											<button class="add-to-wishlist"><i class="far fa-heart"></i><span class="tooltipp">add to wishlist</span></button>
-
-											<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-										</div>
 									</div>
 									<div class="add-to-cart">
 										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart" style="padding-top: 8px"></i> thêm vào giỏ</button>
@@ -121,6 +112,7 @@
 				<!-- tab -->
 				<div id="tab1" class="tab-pane active">
 					<div class="products-slick" data-nav="#slick-nav-2">
+						{{#each layoutbyNew.byNew}}
 						<div class="product">
 								<a href="#">
 									<div class="product-img">
@@ -133,19 +125,13 @@
 										<p class="product-category">{{ProduName}}</p>
 										<h3 class="product-name">{{ProName}}</h3>
 										<h4 class="product-price">{{number_format Price}} ₫ </h4>
-										
-										<div class="product-btns">
-											<button class="add-to-wishlist"><i class="far fa-heart"></i><span class="tooltipp">add to wishlist</span></button>
-
-											<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-										</div>
 									</div>
 									<div class="add-to-cart">
 										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart" style="padding-top: 8px"></i> thêm vào giỏ</button>
 									</div>
 								</a>
 							</div>
-						
+						{{/each}}
 					</div>
 					<div id="slick-nav-2" class="products-slick-nav"></div>
 				</div>
@@ -177,23 +163,15 @@
 						<!-- product -->
 						{{#each layoutbyView.byView}}
 							<div class="product">
-								<a href="#">
+								<a href="/product/detail/{{ProID}}">
 									<div class="product-img">
 										<img src="/imgs/{{ProID}}/main.jpg" alt="">
-										<div class="product-label">
-											<span class="new">NEW</span>
-										</div>
 									</div>
 									<div class="product-body">
 										<p class="product-category">{{ProduName}}</p>
 										<h3 class="product-name">{{ProName}}</h3>
 										<h4 class="product-price">{{number_format Price}} ₫ </h4>
-										
-										<div class="product-btns">
-											<button class="add-to-wishlist"><i class="far fa-heart"></i><span class="tooltipp">add to wishlist</span></button>
-
-											<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-										</div>
+									
 									</div>
 									<div class="add-to-cart">
 										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart" style="padding-top: 8px"></i> thêm vào giỏ</button>

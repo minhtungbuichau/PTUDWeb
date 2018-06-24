@@ -7,9 +7,9 @@ Source Host           : localhost:3000
 Source Database       : chlaptop
 
 */
-DROP DATABASE qllaptop;
-CREATE database qllaptop;
-use qllaptop;
+DROP DATABASE IF EXISTS `qllaptop`;
+CREATE database `qllaptop`;
+use `qllaptop`;
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
@@ -204,7 +204,7 @@ INSERT INTO `products` VALUES('10','LAPTOP ASUS X541UA','10390000','233','15',
 - Nhà sản xuất: Asus<br></p>','4','1','100');
 
 -- Dell
-INSERT INTO `products` VALUES('11','LAPTOP DELL 5437','15900000 ','417','22',
+INSERT INTO `products` VALUES('11','DELL 5437','15900000 ','417','22',
 '<p> - CPU: Intel® Core™ i5-4200U Processor (3M Cache, up to 2.60 GHz)<br>
 - Ram: 4GB<br>
 - Ổ cứng: 500 GB 5400 rpm<br>
@@ -214,7 +214,7 @@ INSERT INTO `products` VALUES('11','LAPTOP DELL 5437','15900000 ','417','22',
 - Hệ điều hành có sẵn: Win 8 64bit<br>
 - Xuất xứ: Trung Quốc<br>
 - Nhà sản xuất: DELL<br></p>','2','2','100');
-INSERT INTO `products` VALUES('12','LAPTOP INSPIRON 13 5378','16990000 ','344','26',
+INSERT INTO `products` VALUES('12','DELL INSPIRON 13 5378','16990000 ','344','26',
 '<p> - CPU Intel Core i5-7200U (2.5GHz - up to 3.1Ghz. 3MB Cache)<br>
 - RAM 4GB DDR4 2133MHz<br>
 - HDD 500GB SATA 5400rpm<br>
@@ -225,7 +225,7 @@ INSERT INTO `products` VALUES('12','LAPTOP INSPIRON 13 5378','16990000 ','344','
 - Xuất xứ: Trung Quốc<br>
 - Nhà sản xuất: DELL<br></p>','2','2','100');
 
-INSERT INTO `products` VALUES('13','LAPTOP DELL INSPIRON 14 3467','11490000 ','344','23',
+INSERT INTO `products` VALUES('13','DELL INSPIRON 14 3467','11490000 ','344','23',
 '<p> - CPU Intel Core i3-7100U (2.4GHz. 3MB Cache)<br>
 - RAM 4GB DDR4 2133MHz<br>
 - HDD 1 TB SATA 5400rpm<br>
@@ -236,7 +236,7 @@ INSERT INTO `products` VALUES('13','LAPTOP DELL INSPIRON 14 3467','11490000 ','3
 - Xuất xứ: Trung Quốc<br>
 - Nhà sản xuất: DELL<br></p>','2','2','100');
 
-INSERT INTO `products` VALUES('14','LAPTOP DELL INSPIRON 14 5468','13690000 ','334','22',
+INSERT INTO `products` VALUES('14','DELL INSPIRON 14 5468','13690000 ','334','22',
 '<p> - CPU Intel Core i5-7200U (2.5GHz - up to 3.1Ghz. 3MB Cache)<br>
 - RAM 4GB DDR4 2133MHz<br>
 - HDD 500GB SATA 5400rpm<br>
@@ -247,7 +247,7 @@ INSERT INTO `products` VALUES('14','LAPTOP DELL INSPIRON 14 5468','13690000 ','3
 - Xuất xứ: Trung Quốc<br>
 - Nhà sản xuất: DELL<br></p>','3','2','100');
 
-INSERT INTO `products` VALUES('15','LAPTOP DELL INSPIRON 14 7460','16490000','117','15',
+INSERT INTO `products` VALUES('15','DELL INSPIRON 14 7460','16490000','117','15',
 '<p> - CPU Intel Core i5-7200U (2.5GHz - up to 3.1Ghz. 3MB Cache)<br>
 - RAM 4GB DDR4 2400MHz<br>
 - HDD 500GB SATA 5400rpm + SSD 128GB M.2 SATA<br>
@@ -258,7 +258,7 @@ INSERT INTO `products` VALUES('15','LAPTOP DELL INSPIRON 14 7460','16490000','11
 - Xuất xứ: Trung Quốc<br>
 - Nhà sản xuất: DELL<br></p>','3','2','100');
 
-INSERT INTO `products` VALUES('16','LAPTOP DELL VOSTRO 3468','12790000','788','44',
+INSERT INTO `products` VALUES('16','DELL VOSTRO 3468','12790000','788','44',
 '<p> - CPU Intel Core i5-7200U (2.5GHz - up to 3.1Ghz. 3MB Cache)<br>
 - RAM 4GB DDR4 2400MHz<br>
 - HDD 1TB SATA 5400rpm<br>
@@ -268,7 +268,7 @@ INSERT INTO `products` VALUES('16','LAPTOP DELL VOSTRO 3468','12790000','788','4
 - Hệ điều hành: Free DOS<br>
 - Xuất xứ: Trung Quốc<br>
 - Nhà sản xuất: DELL<br></p>','3','2','100');
-INSERT INTO `products` VALUES('17','LAPTOP DELL VOSTRO 3568','11090000 ','177','25',
+INSERT INTO `products` VALUES('17','DELL VOSTRO 3568','11090000 ','177','25',
 '<p> - CPU Intel Core i3-7100U (2.4GHz. 3MB Cache)<br>
 - RAM 4GB DDR4 2400MHz<br>
 - HDD 1 TB SATA 5400rpm<br>
@@ -278,7 +278,7 @@ INSERT INTO `products` VALUES('17','LAPTOP DELL VOSTRO 3568','11090000 ','177','
 - Hệ điều hành: Free DOS<br>
 - Xuất xứ: Trung Quốc<br>
 - Nhà sản xuất: DELL<br></p>','3','2','100');
-INSERT INTO `products` VALUES('18','LAPTOP DELL VOSTRO 5468','12790000','66','7',
+INSERT INTO `products` VALUES('18','DELL VOSTRO 5468','12790000','66','7',
 '<p> - CPU Intel Core i3-7100U (2.4GHz. 3MB Cache)<br>
 - RAM 4GB DDR4 2400MHz<br>
 - HDD 500GB SATA 5400rpm<br>
@@ -289,7 +289,7 @@ INSERT INTO `products` VALUES('18','LAPTOP DELL VOSTRO 5468','12790000','66','7'
 - Xuất xứ: Trung Quốc<br>
 - Nhà sản xuất: DELL<br></p>','4','2','100');
 
-INSERT INTO `products` VALUES('19','LAPTOP DELL XPS13 9360','46090000','533','10',
+INSERT INTO `products` VALUES('19','DELL XPS13 9360','46090000','533','10',
 '<p> - CPU: Intel Core i7-7560U <br>
 - Ram: 16GB DDR4<br>
 - Ổ cứng: 512Gb SSD<br>
@@ -299,7 +299,7 @@ INSERT INTO `products` VALUES('19','LAPTOP DELL XPS13 9360','46090000','533','10
 - Xuất xứ: Trung Quốc<br>
 - Nhà sản xuất: DELL<br></p>','4','2','100');
 
-INSERT INTO `products` VALUES('20','LAPTOP DELL XPS13 9365','54490000','655','23',
+INSERT INTO `products` VALUES('20','DELL XPS13 9365','54490000','655','23',
 '<p> - CPU: Core i7 7Y75<br>
 - Ram: 16Gb<br>
 - Ổ cứng: 512Gb SSD<br>
@@ -310,7 +310,7 @@ INSERT INTO `products` VALUES('20','LAPTOP DELL XPS13 9365','54490000','655','23
 - Nhà sản xuất: DELL<br></p>','4','2','100');
 
 -- mac
-INSERT INTO `products` VALUES('21','LAPTOP MACBOOK 12" MNYM2SA/A','33450000','344','23',
+INSERT INTO `products` VALUES('21','MACBOOK MNYM2SA/A','33450000','344','23',
 '<p> - CPU: Core i7 7Y75<br>
 - Ram: 16Gb<br>
 - Ổ cứng: 512Gb SSD<br>
@@ -319,7 +319,7 @@ INSERT INTO `products` VALUES('21','LAPTOP MACBOOK 12" MNYM2SA/A','33450000','34
 - Hệ điều hành có sẵn: Windows 10 + Office 365<br>
 - Xuất xứ: Trung Quốc<br>
 - Nhà sản xuất: DELL<br></p>','2','3','100');
-INSERT INTO `products` VALUES('22','LAPTOP MACBOOK 15" MPTT2SA/A','71500000','444','23',
+INSERT INTO `products` VALUES('22','MACBOOK MPTT2SA/A','71500000','444','23',
 '<p>- CPU Intel Core i7<br>
 - RAM: 16GB<br>
 - Ổ cứng: SSD 512GB<br>
@@ -328,7 +328,7 @@ INSERT INTO `products` VALUES('22','LAPTOP MACBOOK 15" MPTT2SA/A','71500000','44
 - Hệ điều hành: Mac OS<br>
 - Xuất xứ: Mỹ<br>
 - Nhà sản xuất: Apple<br></p>','2','3','100');
-INSERT INTO `products` VALUES('23','LAPTOP MACBOOK 13.3" MPXQ2SA/A','33590000','655','23',
+INSERT INTO `products` VALUES('23','MACBOOK MPXQ2SA/A','33590000','655','23',
 '<p>- CPU: Intel Core i5 Dual-core 2.3 GHz <br>
 - Ram: 8 GB 2133 MHz LPDDR3 <br>
 - Ổ cứng: 128 GB PCIe <br>
@@ -337,7 +337,7 @@ INSERT INTO `products` VALUES('23','LAPTOP MACBOOK 13.3" MPXQ2SA/A','33590000','
 - Hệ điều hành có sẵn: OS X Sierra<br>
 - Xuất xứ: Mỹ<br>
 - Nhà sản xuất: Apple<br></p>','2','3','100');
-INSERT INTO `products` VALUES('24','LAPTOP MACBOOK 13.3" MPXR2ZP/A','33590000 ','444','23',
+INSERT INTO `products` VALUES('24','MACBOOK MPXR2ZP/A','33590000 ','444','23',
 '<p>- CPU: Intel Core i5 Dual-Core<br>
 - Ram: 8GB<br>
 - Ổ cứng: SSD 256GB<br> 
@@ -346,7 +346,7 @@ INSERT INTO `products` VALUES('24','LAPTOP MACBOOK 13.3" MPXR2ZP/A','33590000 ',
 - Hệ điều hành có sẵn: OS X<br>
 - Xuất xứ: Mỹ<br>
 - Nhà sản xuất: Apple<br></p>','3','3','100');
-INSERT INTO `products` VALUES('25','LAPTOP MACBOOK 13.3" MPXU2LL/A','39250000','237','22',
+INSERT INTO `products` VALUES('25','MACBOOK MPXU2LL/A','39250000','237','22',
 '<p>- CPU: Intel Core i5 Dual-Core<br>
 - Ram: 8GB<br>
 - Ổ cứng: SSD 256GB<br> 
@@ -355,7 +355,7 @@ INSERT INTO `products` VALUES('25','LAPTOP MACBOOK 13.3" MPXU2LL/A','39250000','
 - Hệ điều hành có sẵn: OS X<br>
 - Xuất xứ: Mỹ<br>
 - Nhà sản xuất: Apple<br></p>','3','3','100');
-INSERT INTO `products` VALUES('26','LAPTOP MACBOOK 13.3" MPXV2ZP/A','45990000','744','34',
+INSERT INTO `products` VALUES('26','MACBOOK MPXV2ZP/A','45990000','744','34',
 '<p>- CPU Intel Core i5<br>
 - RAM: 8GB<br>
 - Ổ cứng: SSD  256GB<br>
@@ -364,7 +364,7 @@ INSERT INTO `products` VALUES('26','LAPTOP MACBOOK 13.3" MPXV2ZP/A','45990000','
 - Hệ điều hành: Mac OS<br>
 - Xuất xứ: Mỹ<br>
 - Nhà sản xuất: Apple<br></p>','3','3','100');
-INSERT INTO `products` VALUES('27','LAPTOP MACBOOK 13.3" MPXW2ZP/A ','52390000','333','54',
+INSERT INTO `products` VALUES('27','MACBOOK MPXW2ZP/A ','52390000','333','54',
 '<p>- CPU Intel Core i5<br>
 - RAM: 4GB<br>
 - Ổ cứng: SSD 512GB<br>
@@ -373,7 +373,7 @@ INSERT INTO `products` VALUES('27','LAPTOP MACBOOK 13.3" MPXW2ZP/A ','52390000',
 - Hệ điều hành: Mac OS<br>
 - Xuất xứ: Mỹ<br>
 - Nhà sản xuất: Apple<br></p>','4','3','100');
-INSERT INTO `products` VALUES('28','LAPTOP MACBOOK AIR MQD32HN/A','22490000','233','23',
+INSERT INTO `products` VALUES('28','MACBOOK MQD32HN/A','22490000','233','23',
 '<p>- CPU: Core i7 7Y75<br>
 - Ram: 16Gb<br>
 - Ổ cứng: 512Gb SSD<br>
@@ -382,7 +382,7 @@ INSERT INTO `products` VALUES('28','LAPTOP MACBOOK AIR MQD32HN/A','22490000','23
 - Hệ điều hành có sẵn: Windows 10 + Office 365<br>
 - Xuất xứ: Trung Quốc<br>
 - Nhà sản xuất: DELL<br></p>','4','3','100');
-INSERT INTO `products` VALUES('29','LAPTOP MACBOOK AIR MQD32ZP/A','22490000','344','23',
+INSERT INTO `products` VALUES('29','MACBOOK MQD32ZP/A','22490000','344','23',
 '<p>- CPU: Intel Core i5 Dual-core 1.8 GHz, Turbo Boost lên đến 2.9 GHz, 3 MB L3 cache<br>
 - RAM: 8GB 1600MHz LPDDR3 SDRAM<br>
 - SSD: 128GB <br>
@@ -394,7 +394,7 @@ INSERT INTO `products` VALUES('29','LAPTOP MACBOOK AIR MQD32ZP/A','22490000','34
 - WARRANTY: 12 tháng<br>
 - Xuất xứ: Mỹ<br>
 - Nhà sản xuất: Apple<br></p>','4','3','100');
-INSERT INTO `products` VALUES('30','LAPTOP MACBOOK AIR MQD42LL/A','27700000','211','23',
+INSERT INTO `products` VALUES('30','MACBOOK MQD42LL/A','27700000','211','23',
 '<p>- CPU: Intel Core i5, Dual - Core, 1.8GHz
 - RAM: 8GB, DDR3L, 1600 MHz, (On board)<br>
 - Ổ cứng: SSD 256GB<br>

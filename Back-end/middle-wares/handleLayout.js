@@ -24,7 +24,11 @@ module.exports = (req, res, next) => {
          
         };     
     });
-
+    indexRepo.loadbyNew().then(rows=>{
+        res.locals.layoutbyNew ={
+            byNew:rows,
+        }
+    })
     indexRepo.loadbySale().then(rows => {
         res.locals.layoutbySale = {
             bySale: rows,

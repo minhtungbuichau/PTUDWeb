@@ -176,7 +176,9 @@ router.get('/resultProduName/:ProduName',function(req,res){
         
     });
 })
-
+router.get('/resultNothing',function(req,res){
+    res.render('search/resultNothing');
+})
 
 var urlencoded = bodyParser.urlencoded({extended:false});
 router.post('/action',urlencoded,function(req,res){

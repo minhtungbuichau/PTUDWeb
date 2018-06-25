@@ -13,7 +13,8 @@ var homeController = require('./controllers/homeController'),
     productController = require('./controllers/productController'),
     adminController = require('./controllers/adminController'),
     byCatAdminController = require('./controllers/byCatAdminController'),
-    byProduAdminController = require('./controllers/byProduAdminController');
+    byProduAdminController = require('./controllers/byProduAdminController'),
+    searchController = require('./controllers/searchController');
 
 var handleLayoutMDW = require('./middle-wares/handleLayout'),
     accountController = require('./controllers/accountController'),
@@ -85,7 +86,7 @@ app.use('/product', productController);
 app.use('/admin', adminController);
 app.use('/admin/byCatAdmin', byCatAdminController);
 app.use('/admin/byProduAdmin', byProduAdminController);
-
+app.use('/search',searchController);
 
 app.listen(4000, () => {
     console.log('Site running on port 4000');

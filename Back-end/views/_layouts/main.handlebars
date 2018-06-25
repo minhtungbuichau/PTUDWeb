@@ -92,21 +92,14 @@
 						<!-- SEARCH BAR -->
 						<div class="col-md-6">
 							<div class="header-search">
-								<form>
+								<form method="POST" action="/search/action" name="option">
 									<select class="input-select">
-										<option value="0">Tất cả</option>
-										<option value="1">Gaming</option>
-										<option value="2">Văn phòng</option>
-										<option value="3">Doanh nhân</option>
-										<option value="4">Ultrabook</option>
-										<option value="5">Dell</option>
-										<option value="6">Asus</option>
-										<option value="7">MSI</option>
-										<option value="8">Apple</option>
-										
+										<option value="0">Tên sản phẩm</option>
+										<option value="1">Loại sản phẩm</option>
+										<option value="2">Nhà sản xuất</option>
 									</select>
-									<input class="input" placeholder="Bạn đang tìm sản phẩm nào?">
-									<button class="search-btn">Tìm kiếm</button>
+									<input class="input" placeholder="Bạn đang tìm sản phẩm nào?" name="searchEle">
+									<input type="submit" value="Tìm kiếm" class="search-btn">
 								</form>
 							</div>
 						</div>

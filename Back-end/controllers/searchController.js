@@ -36,13 +36,20 @@ router.get('/resultProName/:proName',function(req,res){
             noProducts: pRows.length === 0,
             page_numbers: numbers
         };
-        res.render('search/resultProName', vm);
+        
+        if(pRows[0] != null)
+        {
+            res.render('search/resultProName', vm);
+        }
+        else{
+            res.render('search/resultNothing');
+        }
+        
     });
 })
 var urlencoded = bodyParser.urlencoded({extended:false});
 router.post('/action',urlencoded,function(req,res){
     var proName = req.body.searchEle;
-    console.log(req.body.searchEle);
     res.redirect('/search/resultProName/'+proName);
 });
 module.exports = router;

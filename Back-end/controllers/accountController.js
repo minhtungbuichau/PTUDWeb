@@ -2,6 +2,9 @@ var express = require('express'),
     SHA256 = require('crypto-js/sha256'),
     moment = require('moment');
 
+var productRepo = require('../repos/productRepo'),
+    cartRepo = require('../repos/cartRepo');
+
 var accountRepo = require('../repos/accountRepo');
 var restrict = require('../middle-wares/restrict');
 
@@ -88,14 +91,59 @@ router.post('/updateinfo/:userID',(req, res) => {
     };
 
     accountRepo.update(user).then(value => {
-        res.render('account/updateinfo');
+        var url = '/';
+            if (req.query.retUrl) {
+                url = req.query.retUrl;
+            }
+            res.redirect(url);
     });
 });
 
-router.post('/logout', (req, res) => {
+router.post('/logout', restrict, (req, res) => {
     req.session.isLogged = false;
-    req.session.user = null;
-    // req.session.cart = [];
+    req.session.curUser = null;
+    req.session.cart = [];
+
+    res.redirect(req.headers.referer);
+});
+
+
+router.get('/pay/:userID',restrict, (req, res) => {
+    var userID = req.params.userID;
+    var vm = {
+        userId: userID,
+        items: req.session.cart
+    };
+    res.render('account/pay', vm);
+});
+
+
+router.get('/historypay/:userID',restrict, (req, res) => {
+    res.render('account/pay');
+});
+
+router.get('/cart/:userID', (req, res) => {
+    var vm = {
+        items: req.session.cart
+    };
+    res.render('account/cart', vm);
+});
+
+router.post('/cart/add', (req, res) => {
+    productRepo.sin(req.body.proId).then(rows => {
+        var item = {
+            product: rows[0],
+            quantity: +req.body.quantity,
+            amount: rows[0].Price * +req.body.quantity
+        };
+        
+        cartRepo.add(req.session.cart, item);
+        res.redirect(req.headers.referer);
+    });
+});
+
+router.post('/cart/remove', (req, res) => {
+    cartRepo.remove(req.session.cart, +req.body.proId);
     res.redirect(req.headers.referer);
 });
 

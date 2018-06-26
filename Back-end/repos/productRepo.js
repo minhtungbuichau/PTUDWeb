@@ -20,3 +20,8 @@ exports.loadSameCategory = proId =>{
     var sql = ` select distinct pro2.ProID, pro2.CatID, pro2.ProName, produ.ProduName from products pro1, products pro2 , producers produ  where pro1.ProID =${proId} AND pro1.ProduID = pro2.ProduID AND pro1.ProID<> pro2.ProID AND pro2.ProduID=produ.ProduID limit 5;`;
     return db.load(sql);
 }
+
+exports.sin = id => {
+	var sql = `select * from products where ProID = ${id}`;
+	return db.load(sql);
+}

@@ -11,6 +11,6 @@ exports.login = user => {
 }
 
 exports.update = user => {
-    var sql = `update users set f_Name =' anh yêu em' where f_ID = '${user.userId}' `;
+    var sql = `update users set f_Password ='${user.password}',f_Name= '${user.name}',f_Email='${user.email}',f_DOB='${user.dob}'   where f_ID = '${user.userId}' `;
     return db.load(sql);
 }

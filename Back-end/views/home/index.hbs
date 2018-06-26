@@ -1,7 +1,16 @@
 {{#section 'title'}}
 	CK Laptop - Uy tín - Chất lượng
 {{/section}}
-
+{{#section 'js'}}
+	<script type="text/javascript">
+		$('.addItem').on('click', function() {
+		    var id = $(this).data('proid');
+		    $('#txtP').val(id);
+		    $('#txtQ').val(1);
+		    $('#frmAddItem').submit();
+		});
+	</script>
+{{/section}}
 {{#section 'nav'}}
 	<!-- NAV -->
 	<li class="active"><a href="/home"><i class="fas fa-home"></i> Trang chủ</a></li>
@@ -47,7 +56,10 @@
 			</div>
 		</div>
 {{/section}}
-
+<form type="hidden" id="frmAddItem" method="post" action="/account/cart/add">
+	<input type="hidden" name="proId" id="txtP">
+	<input type="hidden" name="quantity" id="txtQ">
+</form>
 {{#section 'title1'}}
 	<!-- section title -->
 		<div class="col-md-12">
@@ -61,6 +73,7 @@
 	<!-- Products tab & slick -->
 	<div class="col-md-12">
 		<div class="row">
+
 			<div class="products-tabs">
 				<!-- tab -->
 				<div id="tab1" class="tab-pane active">
@@ -77,9 +90,14 @@
 										<h3 class="product-name">{{ProName}}</h3>
 										<h4 class="product-price">{{number_format Price}} ₫ </h4>
 									</div>
-									<div class="add-to-cart">
-										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart" style="padding-top: 8px"></i> thêm vào giỏ</button>
-									</div>
+									{{#if ../layoutVM.isLogged}}
+										<div class="add-to-cart">
+											<a data-proid="{{ProID}}" href="javascript:;" class=" addItem">
+												<button class="add-to-cart-btn">
+													<i class="fa fa-shopping-cart"></i>THÊM VÀO GIỎ</button>
+											</a>
+										</div>
+									{{/if}}
 								</a>
 							</div>
 						{{/each}}
@@ -126,9 +144,14 @@
 										<h3 class="product-name">{{ProName}}</h3>
 										<h4 class="product-price">{{number_format Price}} ₫ </h4>
 									</div>
-									<div class="add-to-cart">
-										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart" style="padding-top: 8px"></i> thêm vào giỏ</button>
-									</div>
+									{{#if ../layoutVM.isLogged}}
+										<div class="add-to-cart">
+											<a data-proid="{{ProID}}" href="javascript:;" class=" addItem">
+												<button class="add-to-cart-btn">
+													<i class="fa fa-shopping-cart"></i>THÊM VÀO GIỎ</button>
+											</a>
+										</div>
+									{{/if}}
 								</a>
 							</div>
 						{{/each}}
@@ -173,9 +196,14 @@
 										<h4 class="product-price">{{number_format Price}} ₫ </h4>
 									
 									</div>
-									<div class="add-to-cart">
-										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart" style="padding-top: 8px"></i> thêm vào giỏ</button>
-									</div>
+									{{#if ../layoutVM.isLogged}}
+										<div class="add-to-cart">
+											<a data-proid="{{ProID}}" href="javascript:;" class=" addItem">
+												<button class="add-to-cart-btn">
+													<i class="fa fa-shopping-cart"></i>THÊM VÀO GIỎ</button>
+											</a>
+										</div>
+									{{/if}}
 								</a>
 							</div>
 						{{/each}}

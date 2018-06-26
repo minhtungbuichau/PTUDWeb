@@ -4,7 +4,7 @@ var express_handlebars_sections = require('express-handlebars-sections');
 var bodyParser = require('body-parser');
 var path = require('path');
 var wnumb = require('wnumb');
-
+var restrict = require('./middle-wares/restrict');
 var session = require('express-session');
 var MySQLStore = require('express-mysql-session')(session);
 var homeController = require('./controllers/homeController'),
@@ -17,8 +17,7 @@ var homeController = require('./controllers/homeController'),
     searchController = require('./controllers/searchController');
 
 var handleLayoutMDW = require('./middle-wares/handleLayout'),
-    accountController = require('./controllers/accountController'),
-    cartController = require('./controllers/cartController');
+    accountController = require('./controllers/accountController');
 
 var app = express();
 

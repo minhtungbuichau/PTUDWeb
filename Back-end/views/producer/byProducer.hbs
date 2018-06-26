@@ -3,6 +3,16 @@
 	{{nameProdu.ProduName}}
 {{/section}}
 
+{{#section 'js'}}
+	<script type="text/javascript">
+		$('.addItem').on('click', function() {
+		    var id = $(this).data('proid');
+		    $('#txtP').val(id);
+		    $('#txtQ').val(1);
+		    $('#frmAddItem').submit();
+		});
+	</script>
+{{/section}}
 
 {{#section 'nav'}}
 <!-- NAV -->
@@ -73,12 +83,14 @@
 					</h4>
 
 				</div>
-				<div class="add-to-cart">
-					<a href="#">
-						<button class="add-to-cart-btn">
-							<i class="fa fa-shopping-cart"></i>THÊM VÀO GIỎ</button>
-					</a>
-				</div>
+				{{#if ../layoutVM.isLogged}}
+					<div class="add-to-cart">
+						<a data-proid="{{ProID}}" href="javascript:;" class=" addItem">
+							<button class="add-to-cart-btn">
+								<i class="fa fa-shopping-cart"></i>THÊM VÀO GIỎ</button>
+						</a>
+					</div>
+				{{/if}}
 			</div>
 		</a>
 	</div>

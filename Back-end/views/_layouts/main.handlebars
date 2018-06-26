@@ -48,14 +48,14 @@
 					<ul class="header-links pull-right">
 						{{#if layoutVM.isLogged}}
 
-							<li><a href="/cart"><i class="fa fa-shopping-cart"></i>Shopping Cart (0 items)</a></li>
+						
 
 							<li class="dropdown" ><a href="#"><i class="fas fa-bars"></i>Tài khoản của {{layoutVM.curUser.f_Name}}</a>
 								<div class="dropdown-account">
-									<a href="./account/updateinfo/{{layoutVM.curUser.f_ID}}">Cập nhật thông tin cá nhân</a>
-									<a href="#">Giỏ hàng</a>
-									<a href="#">Thanh toán</a>
-									<a href="#">Lịch sử mua hàng</a>
+									<a href="/account/updateinfo/{{layoutVM.curUser.f_ID}}">Cập nhật thông tin cá nhân</a>
+									<a href="/account/cart/{{layoutVM.curUser.f_ID}}">Giỏ hàng</a>
+									<a href="/account/pay/{{layoutVM.curUser.f_ID}}">Thanh toán</a>
+									<a href="/account/historypay/{{layoutVM.curUser.f_ID}}">Lịch sử mua hàng</a>
 									<a id="lnkLogout" href="javascript:;">Đăng xuất</a>
 								</div>
 							</li>
@@ -99,7 +99,7 @@
 										<option value="2">Nhà sản xuất</option>
 									</select>
 									<input class="input" placeholder="Bạn đang tìm sản phẩm nào?" name="searchEle">
-									<input type="submit" value="Tìm kiếm" class="search-btn">
+									<button class="search-btn" type="submit" >Tìm kiếm</button>
 								</form>
 							</div>
 						</div>
@@ -110,11 +110,23 @@
 							<div class="header-ctn">
 								<!-- Cart -->
 								<div class="dropdown">
+
+									{{#if layoutVM.isLogged}}
+										<a href="/account/cart/{{layoutVM.curUser.f_ID}}" >
+											<i class="fa fa-shopping-cart"></i>
+											<span>Giỏ hàng</span>
+											<div class="qty">{{layoutVM.cartSummary}}</div>
+										</a>									
+									{{else}}
+
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 										<i class="fa fa-shopping-cart"></i>
 										<span>Giỏ hàng</span>
 										<div class="qty">0</div>
 									</a> 
+
+									{{/if}}
+									
 								
 								</div>
 								<!-- /Cart -->
@@ -156,9 +168,11 @@
 			{{{_sections.carousel}}}
 		</div>
 		<!-- end of carousel --> 
+		
+		{{{_sections.breadcrumb}}}
 
 		<!-- SECTION -->
-		<div class="section" style="margin-top:0px; padding-top:0px">
+		<div class="section">
 			<!-- container -->
 			<div class="container">
 				<!-- row -->

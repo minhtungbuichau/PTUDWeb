@@ -180,32 +180,32 @@ router.get('/resultNothing',function(req,res){
 
 var urlencoded = bodyParser.urlencoded({extended:false});
 router.post('/action',urlencoded,function(req,res){
-    var keywork = req.body.searchEle;
+    var keyword = req.body.searchEle;
     var valueSearch = req.body.option;
     if(valueSearch == 0)
     {
-        if(keywork ===''){
+        if(keyword ===''){
             res.redirect('/search/resultAll');
         }
         else{
-            res.redirect('/search/resultProName/'+keywork);
+            res.redirect('/search/resultProName/'+keyword);
         }
     }
     else if(valueSearch == 1)
     {
-        if(keywork ===''){
+        if(keyword ===''){
             res.redirect('/search/resultNothing');
         }
         else{
-            res.redirect('/search/resultCatName/'+keywork);
+            res.redirect('/search/resultCatName/'+keyword);
         }
     }
     else {
-        if(keywork ===''){
+        if(keyword ===''){
             res.redirect('/search/resultNothing');
         }
         else{
-            res.redirect('/search/resultProduName/'+keywork);
+            res.redirect('/search/resultProduName/'+keyword);
         }
     }
     

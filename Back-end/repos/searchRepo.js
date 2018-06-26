@@ -1,7 +1,7 @@
 var db = require('../fn/db');
 var config = require('../config/config');
 exports.loadAll = (offset) => {
-    var sql =`select * from products limit ${config.PRODUCTS_PER_PAGE} offset ${offset}`;
+    var sql =`select products.*, producers.ProduName from products, producers where products.ProduID = producers.ProduID limit ${config.PRODUCTS_PER_PAGE} offset ${offset}`;
     return db.load(sql);
 }
 exports.countAll = ()=>{
@@ -20,7 +20,7 @@ exports.countByPro = proName => {
 
 //load by catname
 exports.loadbyCatName = (catName,offset)=>{
-    var sql = `select products.*, categories.CatName from products , categories where products.CatID = categories.CatID AND categories.CatName like "%${catName}%" limit ${config.PRODUCTS_PER_PAGE} offset ${offset} `;
+    var sql = `select products.*, categories.CatName ,producers.ProduName from products , categories,producers where producers.ProduID = products.ProduID AND products.CatID = categories.CatID AND categories.CatName like "%${catName}%" limit ${config.PRODUCTS_PER_PAGE} offset ${offset} `;
     return db.load(sql);
 }
 

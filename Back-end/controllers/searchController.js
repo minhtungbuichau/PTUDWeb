@@ -36,7 +36,7 @@ router.get('/resultAll',function(req,res){
             page_numbers: numbers
         };
         
-            res.render('search/resultAll', vm);
+            res.render('search/result', vm);
   
         
     });
@@ -76,7 +76,7 @@ router.get('/resultProName/:proName',function(req,res){
         
         if(pRows[0] != null)
         {
-            res.render('search/resultProName', vm);
+            res.render('search/result', vm);
         }
         else{
             res.render('search/resultNothing');
@@ -117,10 +117,9 @@ router.get('/resultCatName/:catName',function(req,res){
             noProducts: pRows.length === 0,
             page_numbers: numbers
         };
-        console.log(pRows);
         if(pRows[0] != null)
         {
-            res.render('search/resultCatName', vm);
+            res.render('search/result', vm);
             
         }
         
@@ -164,10 +163,9 @@ router.get('/resultProduName/:ProduName',function(req,res){
             noProducts: pRows.length === 0,
             page_numbers: numbers
         };
-        console.log(pRows);
         if(pRows[0] != null)
         {
-            res.render('search/resultProduName', vm);
+            res.render('search/result', vm);
             
         }   
         else{

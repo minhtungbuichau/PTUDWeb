@@ -44,8 +44,8 @@ module.exports = (req, res, next) => {
             categories: rows,
             isLogged: req.session.isLogged,
             curUser: req.session.user,
-            cartSummary: cartRepo.getNumberOfItems(req.session.cart),
-            inTotal: cartRepo.inTotal(req.session.cart)
+            cartSummary: cartRepo.getNumberOfItems(req.session.cart)
+            
         };
         next();
     });

@@ -110,11 +110,18 @@ router.post('/logout', restrict, (req, res) => {
 
 
 router.get('/pay/:userID',restrict, (req, res) => {
-    var vm = {
-        items: req.session.cart
-    };
 
-    res.render('account/pay', vm);
+    var p1 = cartRepo.inTotal(req.session.cart);
+
+    Promise.all([p1]).then(([rows]) => {
+
+        var vm = {
+            items: req.session.cart,
+            total: rows
+        };
+        console.log(vm);
+        res.render('account/pay', vm);
+    });
 });
 
 router.post('/pay/:userID',(req, res) => {

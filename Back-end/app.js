@@ -85,6 +85,6 @@ app.use('/admin/byCatAdmin', byCatAdminController);
 app.use('/admin/byProduAdmin', byProduAdminController);
 app.use('/search',searchController);
 
-app.listen(process.event.PORT || 4000, () => {
+app.listen(process.env.PORT || 4000, () => {
     console.log('Site running on port 4000');
 });

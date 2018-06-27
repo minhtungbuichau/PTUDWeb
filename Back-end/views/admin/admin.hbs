@@ -1,9 +1,10 @@
-{{#section 'title'}}
-	Admin
-{{/section}}
-{{#section 'css'}}
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="../public/imgs/Logo.png" type="image/png" sizes="8x8">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="/imgs/logo.png" type="image/png" sizes="8x8">
     <title>Admin</title>
     <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,117 +18,150 @@
     <link rel="stylesheet" href="assets_admin/css/themify-icons.css">
     <link rel="stylesheet" href="assets_admin/css/flag-icon.min.css">
     <link rel="stylesheet" href="assets_admin/css/cs-skin-elastic.css">
+    <!-- <link rel="stylesheet" href="assets/css/bootstrap-select.less"> -->
     <link rel="stylesheet" href="assets_admin/scss/style.css">
     <link href="assets_admin/css/lib/vector-map/jqvmap.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
-{{/section}}
-	{{#section 'bodyleft'}}
-		<nav class="navbar navbar-expand-sm navbar-default">
+</head>
+
+
+
+<body>
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
             <div class="navbar-header">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand hidden" href="./"><img src="/imgs/Logo.png" alt="Logo"></a>
+                <a class="navbar-brand" href="./">
+                    <img src="/imgs/logo.png" alt="Logo">
+                </a>
+                <a class="navbar-brand hidden" href="./">
+                    <img src="/imgs/logo.png" alt="Logo">
+                </a>
             </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="/home"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                        <a href="index.html">
+                            <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
-                    <h3 class="menu-title">Quản lý sản phẩm</h3><!-- /.menu-title -->
+                    <h3 class="menu-title">Quản lý sản phẩm</h3>
+                    <!-- /.menu-title -->
+                    <li>
+                        <a href="loaisp.html">
+                            <i class="menu-icon fa fa-book"></i>Loại sản phẩm </a>
+                    </li>
+                    <li>
+                        <a href="nhasanxuat.html">
+                            <i class="menu-icon fa fa-book"></i>Nhà sản xuất </a>
+                    </li>
 
-      					<li class="dropdown"><a href="/byCatAdmin"><i class="menu-icon fa fa-book"></i> Loại sản phẩm</a>
-      						<li>
-      							{{#each layoutVM.categories}}
-      							   <a href="/byCatAdmin/{{CatID}}">{{CatName}}</a>			
-      							{{/each}}
-      						</li>
-      					</li>
+                    <h3 class="menu-title">Đơn hàng</h3>
+                    <!-- /.menu-title -->
 
-      					<li class="dropdown"><a href="/byProduAdmin"><i class="menu-icon fa fa-book"></i> Nhà sản xuất</a>
-      						<li>
-      							{{#each layoutVM2.producers}}
-      							   <a href="/byProduAdmin/{{ProduID}}">{{ProduName}}</a>
-      							{{/each}}
-      						</li>
-      					</li>
-                <h3 class="menu-title">Đơn hàng</h3><!-- /.menu-title -->
-                <li>
-                    <a href="TinhTrangDonHang.html"> <i class="menu-icon ti-email"></i>Tình trạng đơn hàng</a>
-                </li>
+
+                    <li>
+                        <a href="TinhTrangDonHang.html">
+                            <i class="menu-icon ti-email"></i>Tình trạng đơn hàng</a>
+                    </li>
+
+
                 </ul>
-            </div><!-- /.navbar-collapse -->
-        </nav>
-	{{/section}}
-
-	{{#section 'bodyright'}}
-		<div class="col-lg-12">
-            <div class="header-menu">            
-                <div class="form-group row">
-                	<label for="example-search-input" class="col-2 col-form-label">Tìm kiếm</label>
-          			<div class="col-10">
-            			<input class="form-control" type="search" id="example-search-input">
-          			</div>
-          		</div> 
             </div>
-        </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+    </aside>
+    <!-- /#left-panel -->
+    <div class="col-lg-12">
+        <header id="header" class="header">
+            <div class="col-lg-8">
+                <div class="header-menu">
+                    <div class="form-group row">
+                        <label for="example-search-input" class="col-2 col-form-label">Tìm kiếm</label>
+                        <div class="col-10">
+                            <input class="form-control" type="search" id="example-search-input">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-4 ">
+                <div class="float-right">
+                    <img src="/imgs/logo.png" width="100px" height="50px">
+                </div>
+            </div>
+        </header>
+
+    </div>
+    <div class="col-lg-12">
         <div class="col-lg-6">
-            <div id="piechart" ></div>
-            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-            <script type="text/javascript">
-            // Load google charts
-            google.charts.load('current', {'packages':['corechart']});
-            google.charts.setOnLoadCallback(drawChart);
-
-            // Draw the chart and set the chart values
-            function drawChart() {
-              var data = google.visualization.arrayToDataTable([
-              ['Task', 'Hours per Day'],
-              ['Asus', 8],
-              ['Apple', 2],
-              ['Macbook', 4],
-              ['Dell', 4],
-              
-            ]);
-
-              // Optional; add a title and set the width and height of the chart
-              var options = {'title':'Biểu đồ theo nhà sản xuất', 'width':550, 'height':400};
-
-              // Display the chart inside the <div> element with id="piechart"
-              var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-              chart.draw(data, options);
-            }
-            </script>
-        </div>
-        <div class="col-lg-6">
-            <div id="piechart1" ></div>
+            <div id="piechart"></div>
 
             <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
             <script type="text/javascript">
-            // Load google charts
-            google.charts.load('current', {'packages':['corechart']});
-            google.charts.setOnLoadCallback(drawChart);
+                // Load google charts
+                google.charts.load('current', { 'packages': ['corechart'] });
+                google.charts.setOnLoadCallback(drawChart);
 
-            // Draw the chart and set the chart values
-            function drawChart() {
-              var data = google.visualization.arrayToDataTable([
-              ['Task', 'Hours per Day'],
-              ['Gaming', 8],
-              ['Văn phòng', 2],
-              ['UltraBook', 4],
-              ['Doanh nhân', 2],
-             
-            ]);
+                // Draw the chart and set the chart values
+                function drawChart() {
+                    var data = google.visualization.arrayToDataTable([
+                        ['Task', 'Hours per Day'],
+                        ['Asus', 8],
+                        ['Apple', 2],
+                        ['Macbook', 4],
+                        ['Dell', 4],
 
-              // Optional; add a title and set the width and height of the chart
-              var options = {'title':'Biểu đồ theo loại sản phẩm', 'width':550, 'height':400};
+                    ]);
 
-              // Display the chart inside the <div> element with id="piechart"
-              var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
-              chart.draw(data, options);
-            }
+                    // Optional; add a title and set the width and height of the chart
+                    var options = { 'title': 'Biểu đồ theo nhà sản xuất', 'width': 550, 'height': 400 };
+
+                    // Display the chart inside the <div> element with id="piechart"
+                    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                    chart.draw(data, options);
+                }
             </script>
-		</div>
-	{{/section}}
+
+        </div>
+        <div class="col-lg-6">
+            <div id="piechart1"></div>
+
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+            <script type="text/javascript">
+                // Load google charts
+                google.charts.load('current', { 'packages': ['corechart'] });
+                google.charts.setOnLoadCallback(drawChart);
+
+                // Draw the chart and set the chart values
+                function drawChart() {
+                    var data = google.visualization.arrayToDataTable([
+                        ['Task', 'Hours per Day'],
+                        ['Gaming', 8],
+                        ['Văn phòng', 2],
+                        ['UltraBook', 4],
+                        ['Doanh nhân', 2],
+
+                    ]);
+
+                    // Optional; add a title and set the width and height of the chart
+                    var options = { 'title': 'Biểu đồ theo loại sản phẩm', 'width': 550, 'height': 400 };
+
+                    // Display the chart inside the <div> element with id="piechart"
+                    var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+                    chart.draw(data, options);
+                }
+            </script>
+
+        </div>
+    </div>
+    <br>
+    <br>
+</body>

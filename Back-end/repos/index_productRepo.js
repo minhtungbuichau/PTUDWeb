@@ -7,21 +7,21 @@ exports.loadbySale = () => {
     var sql = `select products.ProName, products.ProID, products.Price, producers.ProduName  
                 from products,producers 
                 where producers.ProduId=products.ProduId 
-                order by Sales desc`;
+                order by Sales desc limit 10`;
     return db.load(sql);
 }
 exports.loadbyNew = () => {
     var sql = `select products.ProName, products.ProID, products.Price, producers.ProduName  
                 from products,producers 
                 where producers.ProduId=products.ProduId 
-                order by products.ProID desc`;
+                order by products.AddDate Desc limit 10`;
     return db.load(sql);
 }
 exports.loadbyView = () => {
     var sql = `select products.ProName, products.ProID, products.Price, producers.ProduName  
                 from products,producers 
                 where producers.ProduId=products.ProduId 
-                order by Views desc`;
+                order by Views desc limit 10`;
     return db.load(sql);
 }
 

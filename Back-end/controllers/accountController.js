@@ -119,7 +119,7 @@ router.get('/pay/:userID',restrict, (req, res) => {
             items: req.session.cart,
             total: rows
         };
-        console.log(vm);
+        
         res.render('account/pay', vm);
     });
 });
@@ -148,10 +148,18 @@ router.get('/historypay/:userID',restrict, (req, res) => {
 });
 
 router.get('/cart/:userID', (req, res) => {
-    var vm = {
-        items: req.session.cart
-    };
-    res.render('account/cart', vm);
+    var p1 = cartRepo.inTotal(req.session.cart);
+
+    Promise.all([p1]).then(([rows]) => {
+
+        var vm = {
+            items: req.session.cart,
+            total: rows
+        };
+        
+        res.render('account/cart', vm);
+    });
+   
 });
 
 router.post('/cart/add', (req, res) => {

@@ -74,9 +74,9 @@
       <tr>
         
         <td><img src="/imgs/{{product.ProID}}/main.jpg" width="20%" />{{product.ProName}}</td>
-        <td>{{number_format product.Price}}đ</td>
+        <td>{{number_format product.Price}}₫</td>
         <td>{{quantity}}</td>
-        <td>{{number_format amount}}đ</td>
+        <td>{{number_format amount}}₫</td>
         <td class="text-right">
           <a data-proid="{{product.ProID}}" class="btn btn-danger btn-xs removeItem" href="javascript:;" role="button">
             <span class="fa fa-remove"></span>
@@ -88,9 +88,9 @@
     <tfoot>
       <tr>
         <td>&nbsp;</td>
+        <td>Tổng tiền:</td>
         <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>{{sumary}}</td>
+        <td>{{number_format total}}₫</td>
         <td>&nbsp;</td>
       </tr>
     </tfoot>

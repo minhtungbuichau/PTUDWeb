@@ -39,3 +39,11 @@ exports.remove = (cart, proId) => {
         }
     }
 }
+
+exports.inTotal = (cart) => {
+    var total = 0;
+    for(var i = cart.length - 1; i >= 0;i--){
+        total += (cart[i].product.Price * cart[i].quantity);
+    }
+    return total;
+}

@@ -3,7 +3,8 @@ var express = require('express'),
     moment = require('moment');
 
 var productRepo = require('../repos/productRepo'),
-    cartRepo = require('../repos/cartRepo');
+    cartRepo = require('../repos/cartRepo'),
+    payRepo = require('../repos/payRepo')
 
 var accountRepo = require('../repos/accountRepo');
 var restrict = require('../middle-wares/restrict');
@@ -109,17 +110,31 @@ router.post('/logout', restrict, (req, res) => {
 
 
 router.get('/pay/:userID',restrict, (req, res) => {
-    var userID = req.params.userID;
     var vm = {
-        userId: userID,
         items: req.session.cart
     };
     res.render('account/pay', vm);
 });
 
+router.post('/pay/:userID',(req, res) => {
+
+    var userID = req.params.userID;
+
+
+    // var user = {    
+    //     userId: userID,     
+    //     phone: req.body.phone,
+    //     address: req.body.address
+    // };
+
+    payRepo.add(req.session.cart,userID);
+    res.redirect(req.headers.referer);
+});
+
+
 
 router.get('/historypay/:userID',restrict, (req, res) => {
-    res.render('account/pay');
+    res.render('account/historypay');
 });
 
 router.get('/cart/:userID', (req, res) => {

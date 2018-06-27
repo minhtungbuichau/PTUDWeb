@@ -7,7 +7,7 @@ exports.loadByCatAdmin = catId => {
     return db.load(sql);
 }
 
-exports.loadAllByCatAdmin = catId => {
+exports.loadAllByCatAdmin = () => {
     var sql = `select products.ProID, products.ProName, products.Sales ,products.Price from products`;
     return db.load(sql);
 }
@@ -18,7 +18,7 @@ exports.loadByProduAdmin = produId => {
     return db.load(sql);
 }
 
-exports.loadAllByProduAdmin = produId => {
+exports.loadAllByProduAdmin = () => {
     var sql = `select products.ProID, products.ProName, products.Sales ,products.Price from products`;
     return db.load(sql);
 }

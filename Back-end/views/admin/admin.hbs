@@ -3,7 +3,7 @@
 {{/section}}
 {{#section 'css'}}
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="/imgs/Logo.png" type="image/png" sizes="8x8">
+    <link rel="icon" href="../public/imgs/Logo.png" type="image/png" sizes="8x8">
     <title>Admin</title>
     <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,22 +33,22 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                        <a href="/home"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
                     <h3 class="menu-title">Quản lý sản phẩm</h3><!-- /.menu-title -->
 
-      					<li class="dropdown"><a href="/admin/byCatAdmin"><i class="menu-icon fa fa-book"></i> Loại sản phẩm</a>
+      					<li class="dropdown"><a href="/byCatAdmin"><i class="menu-icon fa fa-book"></i> Loại sản phẩm</a>
       						<li>
       							{{#each layoutVM.categories}}
-      							   <a href="/admin/byCatAdmin/{{CatID}}">{{CatName}}</a>			
+      							   <a href="/byCatAdmin/{{CatID}}">{{CatName}}</a>			
       							{{/each}}
       						</li>
       					</li>
 
-      					<li class="dropdown"><a href="/admin/byProduAdmin"><i class="menu-icon fa fa-book"></i> Nhà sản xuất</a>
+      					<li class="dropdown"><a href="/byProduAdmin"><i class="menu-icon fa fa-book"></i> Nhà sản xuất</a>
       						<li>
       							{{#each layoutVM2.producers}}
-      							   <a href="/admin/byProduAdmin/{{ProduID}}">{{ProduName}}</a>
+      							   <a href="/byProduAdmin/{{ProduID}}">{{ProduName}}</a>
       							{{/each}}
       						</li>
       					</li>

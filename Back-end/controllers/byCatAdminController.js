@@ -21,9 +21,9 @@ router.get('/home',(req,res)=>{
 });
 
 router.get('/', (req, res) => {
-    var catId = req.params.catId;
+    //var catId = req.params.catId;
     // var p1 = cat_productRepo.single(catId);
-    var p2 = adminRepo.loadAllByCatAdmin(catId);
+    var p2 = adminRepo.loadAllByCatAdmin();
    	
     Promise.all([p2]).then(([rows]) => {
         var vm = {

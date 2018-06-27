@@ -5,9 +5,9 @@ var adminRepo = require('../repos/adminRepo');
 var router = express.Router();
 
 router.get('/', (req, res) => {
-    var produId = req.params.produId;
+    // var produId = req.params.produId;
     // var p1 = cat_productRepo.single(catId);
-    var p1 = adminRepo.loadAllByProduAdmin(produId);
+    var p1 = adminRepo.loadAllByProduAdmin();
 
     Promise.all([p1]).then(([rows]) => {
         var vm = {

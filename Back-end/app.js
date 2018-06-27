@@ -83,13 +83,9 @@ app.use('/producer', pro_productController);
 app.use('/account', accountController);
 app.use('/product', productController);
 app.use('/admin', adminController);
-app.use('/byCatAdmin', byCatAdminController);
-app.use('/byProduAdmin', byProduAdminController);
+app.use('/admin/byCatAdmin', byCatAdminController);
+app.use('/admin/byProduAdmin', byProduAdminController);
 app.use('/search',searchController);
-app.use('/cart', accountController);
-app.use('/pay', accountController);
-app.use('/historypay', accountController);
-
 
 app.listen(4000, () => {
     console.log('Site running on port 4000');

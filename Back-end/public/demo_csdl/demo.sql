@@ -530,7 +530,13 @@ CREATE TABLE `users` (
   `f_Permission` int(11) NOT NULL,
   PRIMARY KEY (`f_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
+DROP TABLE IF EXISTS `admin`;
+CREATE TABLE `admin` (
+  `f_Username` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `f_Password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`f_Username`)
+)ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+INSERT INTO `admin` VALUES ('admin', 'admin');
 -- ----------------------------
 -- Records of users
 -- ----------------------------

@@ -59,6 +59,7 @@ CREATE TABLE `orderdetails` (
   `Quantity` int(11) NOT NULL,
   `Price` bigint(20) NOT NULL,
   `Amount` int(11) NOT NULL,
+  `f_ID` int(11) NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -521,6 +522,8 @@ CREATE TABLE `users` (
   `f_Username` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `f_Password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `f_Name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `f_Phone` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `f_Address` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `f_Email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `f_DOB` date NOT NULL,
   `f_Permission` int(11) NOT NULL,

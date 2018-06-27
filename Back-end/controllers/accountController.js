@@ -113,6 +113,7 @@ router.get('/pay/:userID',restrict, (req, res) => {
     var vm = {
         items: req.session.cart
     };
+
     res.render('account/pay', vm);
 });
 
@@ -121,13 +122,15 @@ router.post('/pay/:userID',(req, res) => {
     var userID = req.params.userID;
 
 
-    // var user = {    
-    //     userId: userID,     
-    //     phone: req.body.phone,
-    //     address: req.body.address
-    // };
+    var user = {    
+        userId: userID,     
+        phone: req.body.phone,
+        address: req.body.address
+    };
 
     payRepo.add(req.session.cart,userID);
+    payRepo.updateQuantity(req.session.cart);
+    accountRepo.addinfo(user);
     res.redirect(req.headers.referer);
 });
 

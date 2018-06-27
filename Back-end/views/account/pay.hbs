@@ -73,8 +73,7 @@
       </div>
       <div class="order-products">  
         {{#each items}} 
-          <div class="order-col">
-            
+          <div class="order-col">    
               <div>
                 <a href="#" class="at-in">
                   <img src="/imgs/{{product.ProID}}/main.jpg" width="15%" />{{product.ProName}}
@@ -86,7 +85,7 @@
         {{/each}}
         <div class="order-col">
           <div><strong>TỔNG CỘNG</strong></div>
-          <div><strong class="order-total">{{layoutVM.inTotal}}đ</strong></div>
+          <div><strong class="order-total">{{number_format layoutVM.inTotal}}₫</strong></div>
         </div>
         
         

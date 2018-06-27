@@ -46,4 +46,4 @@ exports.inTotal = (cart) => {
         total += (cart[i].product.Price * cart[i].quantity);
     }
     return total;
-}
+}    

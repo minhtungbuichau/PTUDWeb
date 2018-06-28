@@ -25,3 +25,10 @@ exports.sin = id => {
 	var sql = `select * from products where ProID = ${id}`;
 	return db.load(sql);
 }
+
+exports.updateView = proId => {
+    var sql = `update products 
+    set Views=Views+1   
+    where ProID = '${proId}' `;
+    return db.load(sql);
+}

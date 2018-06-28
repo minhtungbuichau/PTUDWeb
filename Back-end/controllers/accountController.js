@@ -30,10 +30,9 @@ router.post('/register', (req, res) => {
         dob: dob,
         permission: 0
     };
-
-    accountRepo.add(user).then(value => {
-        res.render('account/register');
-    });
+    accountRepo.add(user);
+    res.redirect(req.headers.referer);
+    
 });
 
 router.get('/login', (req, res) => {
@@ -137,14 +136,25 @@ router.post('/pay/:userID',(req, res) => {
 
     payRepo.add(req.session.cart,userID);
     payRepo.updateQuantity(req.session.cart);
+    payRepo.updateSale(req.session.cart);
     accountRepo.addinfo(user);
+    req.session.cart = [];
     res.redirect(req.headers.referer);
 });
 
 
 
 router.get('/historypay/:userID',restrict, (req, res) => {
-    res.render('account/historypay');
+
+    var p1= payRepo.loadAllOder(req.params.userID);
+    Promise.all([p1]).then(([rows]) => {
+
+        var vm = {
+            oders: rows
+        };     
+        res.render('account/historypay',vm);
+    });
+   
 });
 
 router.get('/cart/:userID', (req, res) => {

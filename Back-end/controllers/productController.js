@@ -9,11 +9,13 @@ router.get('/detail/:proId', (req, res) => {
     var p1 = productRepo.single(proId);
     var p2 = productRepo.loadSameProducer(proId);
     var p3 = productRepo.loadSameCategory(proId);
-    Promise.all([p1, p2, p3]).then(([rows, prows, crows]) => {
+    var p4 = productRepo.updateView(proId);
+    Promise.all([p1, p2, p3,p4]).then(([rows, prows, crows,urows]) => {
         var vm = {
             product: rows[0],
             loadSameProducer: prows,
-            loadSameCategory: crows
+            loadSameCategory: crows,
+            updateView:urows
         };
         res.render('product/detail', vm);
     });

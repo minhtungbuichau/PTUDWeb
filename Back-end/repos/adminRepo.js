@@ -5,7 +5,14 @@ exports.login = user => {
     var sql = `select * from admin where f_Username = '${user.username}' and f_Password = '${user.password}'`;
     return db.load(sql);
 }
-
+exports.loadAllProducts = offset =>{
+    var sql =`select * from products limit 10 offset ${offset}`;
+    return db.load(sql);
+}
+exports.countAllProducts = ()=>{
+    var sql = `select count(*) as total from products `;
+    return db.load(sql);
+}
 
 exports.loadByCatAdmin = catId => {
     var sql = `select products.ProID, products.ProName, products.Sales ,products.Price from products

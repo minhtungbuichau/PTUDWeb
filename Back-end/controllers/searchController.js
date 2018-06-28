@@ -210,4 +210,59 @@ router.post('/action',urlencoded,function(req,res){
     }
     
 });
+router.get('/resultAdvance/:producer/:category/:price',(req,res)=>{
+    var producer = req.params.producer;
+    var category = req.params.category;
+    var priceup = req.params.price;
+    var pricedown = priceup - 10000000;
+    console.log(producer + " " + category + " "+priceup+" " +pricedown);  
+    var page = req.query.page;
+    if (!page) {
+        page = 1;
+    }
+
+    var offset = (page - 1) * config.PRODUCTS_PER_PAGE;
+    var p1 = searchRepo.loadbyAdvance(producer,category,priceup,pricedown,offset);
+    var p2 = searchRepo.countByAdvance(producer,category,priceup, pricedown);
+    console.log("p1"+p1);
+    Promise.all([p1, p2]).then(([pRows, countRows]) => {
+        var total = countRows[0].total;
+        var nPages = total / config.PRODUCTS_PER_PAGE;
+        
+        if (total % config.PRODUCTS_PER_PAGE > 0) {
+            nPages++;
+        }
+
+        var numbers = [];
+        for (i = 1; i <= nPages; i++) {
+            numbers.push({
+                value: i,
+                isCurPage: i === +page
+            });
+        }
+
+        var vm = {
+            
+            searchItem: pRows,
+            noProducts: pRows.length === 0,
+            page_numbers: numbers
+        };
+        if(pRows[0] != null)
+        {
+            res.render('search/result', vm);
+            
+        }   
+        else{
+            res.render('search/resultNothing');
+        }
+        
+    });
+})
+router.post('/advancesearch',urlencoded,(req,res)=>{
+    var producer = req.body.optionProdu;
+    var category = req.body.optionCat;
+    var price = req.body.optionPrice;
+    var pricedow = price-10000000; 
+    res.redirect('/search/resultAdvance/'+producer+"/"+category+"/"+price);
+})
 module.exports = router;

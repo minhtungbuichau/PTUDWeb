@@ -38,3 +38,18 @@ exports.countByProduName= ProduName => {
 	var sql = `select count(products.ProID) as total from products, producers where products.ProduID = producers.ProduID AND ProduName like "%${ProduName}%"`;
     return db.load(sql);
 }
+
+
+exports.loadbyAdvance = (producer,category,priceup,pricedown,offset)=>{
+   var sql =  `select pro.* from products pro, producers produ, categories cat where pro.ProduID = produ.ProduID and 
+cat.CatID = pro.CatID and cat.CatName like "%${category}%"
+and produ.ProduName like "%${producer}%" and price between ${pricedown} and ${priceup} limit ${config.PRODUCTS_PER_PAGE} offset ${offset}`
+return db.load(sql);
+}
+
+exports.countByAdvance = (producer,category,priceup, pricedown) =>{
+  var sql =  `select count(pro.ProID) as total from products pro, producers produ, categories cat where pro.ProduID = produ.ProduID and 
+    cat.CatID = pro.CatID and cat.CatName like "%${category}%"
+    and produ.ProduName like "%${producer}%" and price between ${pricedown} and ${priceup} `
+    return db.load(sql);
+}

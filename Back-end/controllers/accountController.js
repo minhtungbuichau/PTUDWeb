@@ -30,10 +30,9 @@ router.post('/register', (req, res) => {
         dob: dob,
         permission: 0
     };
-
-    accountRepo.add(user).then(value => {
-        res.render('account/register');
-    });
+    accountRepo.add(user);
+    res.redirect('/account/login');
+    
 });
 
 router.get('/login', (req, res) => {
@@ -42,8 +41,7 @@ router.get('/login', (req, res) => {
 
 router.post('/login', (req, res) => {
     var user = {
-        username: req.body.username,
-        
+        username: req.body.username,       
         password: SHA256(req.body.rawPWD).toString()
     };
 
@@ -68,6 +66,19 @@ router.post('/login', (req, res) => {
             };
             res.render('account/login', vm);
         }
+    });
+});
+
+router.get('/profile/:userID', (req, res) => {
+    var p1 = accountRepo.loadinfo(req.params.userID);
+
+    Promise.all([p1]).then(([rows]) => {
+
+        var vm = {
+            info: rows
+        };
+        
+        res.render('account/profile', vm);
     });
 });
 
@@ -96,7 +107,7 @@ router.post('/updateinfo/:userID',(req, res) => {
             if (req.query.retUrl) {
                 url = req.query.retUrl;
             }
-            res.redirect(url);
+            res.redirect('/home');
     });
 });
 
@@ -123,6 +134,9 @@ router.get('/pay/:userID',restrict, (req, res) => {
         res.render('account/pay', vm);
     });
 });
+router.get('/home', (req, res) => {
+    res.render('home/index');
+});
 
 router.post('/pay/:userID',(req, res) => {
 
@@ -137,14 +151,25 @@ router.post('/pay/:userID',(req, res) => {
 
     payRepo.add(req.session.cart,userID);
     payRepo.updateQuantity(req.session.cart);
+    payRepo.updateSale(req.session.cart);
     accountRepo.addinfo(user);
-    res.redirect(req.headers.referer);
+    req.session.cart = [];
+    res.redirect('/home');
 });
 
 
 
 router.get('/historypay/:userID',restrict, (req, res) => {
-    res.render('account/historypay');
+
+    var p1= payRepo.loadAllOder(req.params.userID);
+    Promise.all([p1]).then(([rows]) => {
+
+        var vm = {
+            oders: rows
+        };     
+        res.render('account/historypay',vm);
+    });
+   
 });
 
 router.get('/cart/:userID', (req, res) => {

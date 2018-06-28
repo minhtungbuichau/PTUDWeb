@@ -1,22 +1,4 @@
 
-  <?php
-  if(isset($_POST['submit'])){
-     $captcha;
-     if(isset($_POST['g-recaptcha-response'])){
-        $captcha = $_POST['g-recaptcha-response'];
-     }
-     if(!$captcha){
-        echo '<h2>Hay xac nhan CAPTCHA</h2>';
-     }else{
-        $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LedT9wSAAAAAHRdSVndnSjeiDtkx6hKWQ-*****&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
-        if($response.success == false){
-           echo '<h2>SPAM!</h2>';
-        }else{
-           echo '<h2>'.$name.' Khong phai robot :)</h2>';
-        }
-     }
-  ?>
-
 {{#section 'title'}}
   Đăng ký
 {{/section}}
@@ -27,9 +9,9 @@
 {{/section}}
 
 {{#section 'js'}}
+
   <script src="/assets/css/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
   <script src="https://www.google.com/recaptcha/api.js"></script>
-
   <script type="text/javascript">
     $('#txtDOB').datepicker({
       format: 'd/m/yyyy',
@@ -73,10 +55,9 @@
                     
                         <input type="text"  id="txtDOB" placeholder="d/m/yyyy" name="dob">
                     
-                  <form id="comment_form" action="" method="post">
+                  
                      <div class="g-recaptcha" data-sitekey="6LevCWEUAAAAALEciD1YVK9PzI89okEBoHXQb2T2"></div>
-                  </form>
-
+                 
                   <button type="submit" class="primary-btn order-submit">
                     Đăng ký
                   </button>

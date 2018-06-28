@@ -5,11 +5,13 @@
 {{#section 'js'}}
   <script type="text/javascript">
     var validate = function() {
-          if ($('#txtName').val().length === 0 || $('#txtPhone').val().length === 0 || $('#txtAddress').val().length === 0 ) {
-              alert('Vui lòng nhập đầy đủ thông tin');
-              return false;
-          }    
-          return true;
+
+
+      if ($('#txtName').val().length === 0 || $('#txtPhone').val().length === 0 || $('#txtAddress').val().length === 0 ) {
+          alert('Vui lòng nhập đầy đủ thông tin');
+          return false;
+      }    
+      return true;
       }
   </script>
 {{/section}}
@@ -17,6 +19,7 @@
 <form type="hidden" id="frmAddItem" method="post" action="/account/cart/add">
   <input type="hidden" name="proId" id="txtP">
   <input type="hidden" name="quantity" id="txtQ">
+  
 </form>
 
 <div id="aside" class="col-md-2">
@@ -24,6 +27,16 @@
   <div class="aside">
     <h3 class="aside-title">Tài khoản</h3>
     <div class="checkbox-filter">
+
+      <div class="input-checkbox">    
+        <a href="">
+          <label for="brand-1">
+            <a href="/account/profile/{{layoutVM.curUser.f_ID}}" target="blank">Thông tin cá nhân
+            </a>
+            
+          </label>
+        </a>
+      </div>
       <div class="input-checkbox">    
         <a href="">
           <label for="brand-1">
@@ -62,6 +75,7 @@
 </div>
 <div id="store" class="col-md-10">
   <div class="col-md-12 order-details">
+    
     <div class="section-title text-center">
       <h3 class="title">Giỏ hàng</h3>
     </div>
@@ -109,6 +123,7 @@
             <input type="text"  id="txtPhone" placeholder="0164XXXXXXX" name="phone">
       <label for="txtUsername" class="col-sm-3 ">Địa chỉ nhận hàng</label>  
             <input type="text"  id="txtAddress" placeholder="Hồ Chí Minh" name="address">
+            
             
 
         

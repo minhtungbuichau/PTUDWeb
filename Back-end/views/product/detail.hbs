@@ -163,12 +163,17 @@
 						</h3>
 						<h4 class="product-price">{{Price}}</h4>
 					</div>
-					<div class="add-to-cart">
-						<a href="../../user/cart.html">
-							<button class="add-to-cart-btn">
-								<i class="fa fa-shopping-cart" style="padding-top:8px"></i>Thêm vào giỏ</button>
-						</a>
-					</div>
+					{{#if ../layoutVM.isLogged}}
+						<form class="form-horizontal" id="frmAddItem" method="post" action="/account/cart/add">
+							<div class="add-to-cart">								
+								<div class="input-number">
+									<input type="hidden" name="proId"  value="{{../product.ProID}}">
+					                <input name="quantity" type="hidden" class="input-number"  value="1">				
+					                <a><button type="submit" class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>THÊM VÀO GIỎ</button></a>
+					            </div>
+							</div>
+						</form>
+					{{/if}}
 				</div>
 			</div>
 			</a>
@@ -209,12 +214,17 @@
 						</h3>
 						<h4 class="product-price">{{Price}}</h4>
 					</div>
-					<div class="add-to-cart">
-						<a href="../../user/cart.html">
-							<button class="add-to-cart-btn">
-								<i class="fa fa-shopping-cart" style="padding-top:8px"></i>Thêm vào giỏ</button>
-						</a>
-					</div>
+					{{#if ../layoutVM.isLogged}}
+						<form class="form-horizontal" id="frmAddItem" method="post" action="/account/cart/add">
+							<div class="add-to-cart">								
+								<div class="input-number">
+									<input type="hidden" name="proId"  value="{{../product.ProID}}">
+					                <input name="quantity" type="hidden" class="input-number"  value="1">				
+					                <a><button type="submit" class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>THÊM VÀO GIỎ</button></a>
+					            </div>
+							</div>
+						</form>
+					{{/if}}
 				</div>
 			</div>
 			</a>

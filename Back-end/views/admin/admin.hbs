@@ -176,39 +176,9 @@
                 {{#each Item}}
                 <tr>
                     <td>{{ProID}}</td>
-                    <td>{{ProName}}</td>
-                    <script>
-                        var cate = ({{CatID}});
-                        var x = getCatFunction(cate);
-                        document.getElementById("cat").innerHTML = x;
-                        function getCatFunction(cate){
-                            if(cate === 1)
-                                return "Gaming";
-                            if(cate === 2)
-                                return "Văn phòng";
-                            if(cate === 3)
-                                return "Doanh nhân";
-                            if(cate === 4)
-                                return "Ultrabook";
-                        }
-                    </script>
-                    <td id="cat"></td>
-                    <script>
-                        var produ = ({{ProduID}});
-                        var x = getProduFunction(produ);
-                        document.getElementById("producer").innerHTML = x;
-                        function getProduFunction(produ){
-                            if(produ === 1)
-                                return "Asus";
-                            if(produ === 2)
-                                return "Dell";
-                            if(produ === 3)
-                                return "Macbook";
-                            if(produ === 4)
-                                return "MSI";
-                        }
-                    </script>
-                    <td id="producer"></td>
+                    <td>{{ProName}}</td>    
+                    <td>{{CatName}}</td>
+                    <td>{{ProduName}}</td>
                     <td>{{Quantity}}</td>
                     <td>{{Price}}</td>
                     <td>{{Sales}}</td>

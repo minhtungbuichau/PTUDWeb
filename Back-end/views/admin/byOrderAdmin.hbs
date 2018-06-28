@@ -134,20 +134,37 @@
         <table class="table">
             <thead class="">
                 <tr>
-                    <th scope="col">Mã loại</th>
-                    <th scope="col">Tên loại</th>
+                    <th scope="col">Mã đơn hàng</th>
+                    <th scope="col">Tên sản phẩm</th>
+                    <th scope="col">Số lượng</th>
+                    <th scope="col">Người mua</th>
+                    <th scope="col">Tổng tiền</th>
+                    <th scope="col">Trạng thái</th>
+                    <th scope="col">&nbsp;</th>
                 </tr>
             </thead>
             <tbody>
                 {{#each Item}}
                 <tr>
-                    <td>{{ProduID}}</td>
-                    <td>{{ProduName}}</td>
-                    {{!-- <td>
-                        <form action="/add" method="get">
-                        <input type="submit" value="+">
+                    <td>#{{ID}}</td>
+                    <td>{{ProName}}</td>
+                    <td>{{Quantity}}</td>
+                    <td>{{f_Name}}</td>
+                    <td>{{number_format Amount}} ₫</td>
+                    
+                        <form class="form-horizontal"  method="post" action="/admin/orders">
+                            <td>
+                            {{Status}}
+                            <input type="hidden" value="{{ID}}" name="id" >
+                            <td>
+                            <td>
+                            <a><button type="submit" >Update</button></a>
+                            </td>
                         </form>
-                    </td> --}}
+
+                    
+                    
+                    
                 </tr>
                 {{/each}}
             </tbody>

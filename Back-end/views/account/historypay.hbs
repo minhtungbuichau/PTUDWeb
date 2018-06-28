@@ -65,7 +65,7 @@
           {{#each oders}}
             <tr class="cross">
               <td>#{{ID}}</td>
-              <td>23/04/2018</td>
+              <td>{{OrderDay}}</td>
               <td class="ring-in t-data">
                 
                   <img src="/imgs/{{ProID}}/main.jpg" width="20%" />{{ProName}}
@@ -81,7 +81,7 @@
                       </div>  
               </td>
               <td class="t-data" style="padding-top: 40px">{{number_format Amount}}₫</td>
-              <td class="t-data" style="padding-top: 40px">Nhận hàng vào 26/04</td>   
+              <td class="t-data" style="padding-top: 40px">{{Status}}</td>   
             </tr>
 
           {{/each}}

@@ -3,14 +3,14 @@ var config = require('../config/config');
 
 
 exports.add = (pay, userId) => {
-    var s=`insert into orderdetails(Quantity, Price, Amount, ProID,f_ID, OrderDay) values`  ;
+    var s=`insert into orderdetails(Quantity, Price, Amount, ProID,f_ID, OrderDay, Status) values`  ;
 
     for (var i = pay.length - 1; i >= 1; i--) {
-        var s1=`('${pay[i].quantity}', '${pay[i].product.Price}', '${pay[i].amount}', '${pay[i].product.ProID}','${userId}', curdate() ),`;
+        var s1=`('${pay[i].quantity}', '${pay[i].product.Price}', '${pay[i].amount}', '${pay[i].product.ProID}','${userId}', curdate(),'Chưa giao hàng' ),`;
         s=s+s1;
     }
 
-    var s2=`('${pay[0].quantity}', '${pay[0].product.Price}', '${pay[0].amount}', '${pay[0].product.ProID}','${userId}',curdate() );`;
+    var s2=`('${pay[0].quantity}', '${pay[0].product.Price}', '${pay[0].amount}', '${pay[0].product.ProID}','${userId}',curdate(),'Chưa giao hàng' );`;
     var sql=s+s2;
 
     
@@ -62,7 +62,7 @@ exports.updateSale = (pay)=> {
 
 exports.loadAllOder = (id)=> {
     
-    var sql = `select orderdetails.ID,products.proID,products.ProName,orderdetails.Amount ,orderdetails.Quantity
+    var sql = `select orderdetails.ID,products.ProID,products.ProName,orderdetails.Amount ,orderdetails.Quantity,orderdetails.Status,orderdetails.OrderDay
     from orderdetails, products 
     where orderdetails.f_ID = ${id} and orderdetails.ProID=products.ProID`;
     return db.load(sql);

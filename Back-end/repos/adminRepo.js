@@ -64,20 +64,9 @@ exports.countOrder = ()=>{
 
 exports.updateOrder = (status,id)=>{
     var sql = `update orderdetails set Status='Đã giao hàng' where ID='${id}'`;
-<<<<<<< HEAD
-
     return db.load(sql);
 }
 
-    
-
-
-=======
-    return db.load(sql);
-    console.log(sql);
-}
-
->>>>>>> 55ae16496910c33536ab9613e5f51bf4025b3415
 exports.loadByProducts = proId => {
     var sql = `select products.ProID, products.ProName, products.Quantity, products.Price, products.Des, categories.CatName, producers.ProduName 
                 from products, categories, producers where products.ProID = ${proId} and products.CatID = categories.CatID and products.ProduID = producers.ProduID`;

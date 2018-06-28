@@ -43,8 +43,11 @@ router.get('/products', (req,res)=>{
     var offset = (page - 1) * 10;
     var p1 = adminRepo.loadAllProducts(offset);
     var p2 = adminRepo.countAllProducts();
+    var p3 = adminRepo.loadCat(offset);
+    var p4 = adminRepo.loadProduName();
+    var p5 = adminRepo.loadProductID();
     
-    Promise.all([p1, p2]).then(([pRows, countRows]) => {
+    Promise.all([p1, p2, p3, p4, p5]).then(([pRows, countRows, qRows, sRows, iRows]) => {
         var total = countRows[0].total;
         var nPages = total / 10;
         if (total % 10 > 0) {
@@ -62,6 +65,9 @@ router.get('/products', (req,res)=>{
         var vm = {
             
             Item: pRows,
+            Cate: qRows,
+            Produ: sRows,
+            ProId: iRows,
             noProducts: pRows.length === 0,
             page_numbers: numbers,
             layout:false,
@@ -230,6 +236,34 @@ router.post('/orders', (req,res)=>{
     });
 })
 
+//products modifying
+router.get('/products/modifyProducts/:proId',(req,res)=>{
+    var proId = req.params.proId;
+    adminRepo.loadByProducts(proId);
+    res.redirect('/admin/products');
+}); 
+router.post('/products/modify',urlencoded,(req, res)=>{
+    var proId = req.body.proId;
+    res.redirect('/admin/categories/modifyCat/'+proId);
+});
+
+//product adding
+router.get('/products/addProduct/:ProID',(req,res)=>{
+    var ProID = req.params.ProID;
+    adminRepo.loadByProducts(ProID);
+    res.redirect('/admin/products');
+});
+router.post('/producers/add',(req,res)=>{
+  
+    var ProID = req.body.ProID;
+    var ProName = req.body.ProName;
+    var CatID = req.body.catOption;
+    var ProduID = req.body.produOption;
+    var ProQuantity = req.body.ProQuantity;
+    var ProPrice = req.body.ProPrice;
+    var ProDes = req.body.ProDes;
+    res.redirect('/admin/producers/addProduct/'+ProID+"/"+ProName);
+});
 
 // category 
 

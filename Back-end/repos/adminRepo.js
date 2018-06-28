@@ -5,8 +5,8 @@ exports.login = user => {
     var sql = `select * from admin where f_Username = '${user.username}' and f_Password = '${user.password}'`;
     return db.load(sql);
 }
-exports.loadAllProducts = offset =>{
-    var sql =`select * from products limit 10 offset ${offset}`;
+exports.loadAllProducts = (offset) =>{
+    var sql =`select products.*, categories.CatName,producers.ProduName from products, categories,producers where products.ProduID = producers.ProduID and products.CatID = categories.CatID limit 10 offset ${offset}`;
     return db.load(sql);
 }
 exports.countAllProducts = ()=>{
@@ -51,10 +51,49 @@ exports.countOrder = ()=>{
 
 exports.updateOrder = (status,id)=>{
     var sql = `update orderdetails set Status='Đã giao hàng' where ID='${id}'`;
+<<<<<<< HEAD
     return db.load(sql);
 }
+=======
+    console.log(sql);
+}
+
+>>>>>>> bd77bd92d8521a48c9784410b191111aa1ae491f
 exports.loadByProducts = proId => {
     var sql = `select products.ProID, products.ProName, products.Quantity, products.Price from products where products.ProID = ${proId}`;
     return db.load(sql);
 }
 
+
+exports.addCat = (CatID, CatName)=>{
+    var sql = `insert into categories values('${CatID}','${CatName}')`
+    return db.load(sql);
+}
+
+exports.deleteCat = (CatID) =>{
+    var sql = `delete from categories where CatID = ${CatID}`
+    return db.load(sql);
+}
+
+
+exports.addProdu = (ProduID, ProduName)=>{
+    var sql = `insert into producers values('${ProduID}','${ProduName}')`
+    return db.load(sql);
+}
+
+exports.deleteProdu = (ProduID) =>{
+    var sql = `delete from producers where ProduID = ${ProduID}`
+    return db.load(sql);
+}
+
+///modify form cat
+
+exports.modifyCat = (CatID, CatName) =>{
+    var sql=`update categories set CatName = '${CatName}' where CatID = '${CatID}'`;
+    return db.load(sql);
+}
+
+exports.modifyProdu = (ProduID, ProduName) =>{
+    var sql=`update producers set ProduName = '${ProduName}' where ProduID = '${ProduID}'`;
+    return db.load(sql);
+}

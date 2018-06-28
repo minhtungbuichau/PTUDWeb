@@ -1,6 +1,7 @@
 var express = require('express');
 var adminRepo = require('../repos/adminRepo');
-
+var bodyParser = require('body-parser');
+var urlencoded = bodyParser.urlencoded({extended:false});
 
 var router = express.Router();
 router.get('/',(req,res)=>{
@@ -228,5 +229,87 @@ router.post('/orders', (req,res)=>{
 
     });
 })
+
+
+// category 
+
+
+
+router.get('/categories/addCat/:CatID/:CatName',(req,res)=>{
+    var CatID = req.params.CatID;
+    var CatName = req.params.CatName;
+    adminRepo.addCat(CatID, CatName);
+    res.redirect('/admin/categories');
+});
+router.post('/categories/add',(req,res)=>{
+    var CatID = req.body.CatID;
+    var CatName = req.body.CatName;
+    res.redirect('/admin/categories/addCat/'+CatID+"/"+CatName);
+});
+//delete cat
+router.get('/categories/deleteCat/:CatID',(req,res)=>{
+    var CatID = req.params.CatID;
+    adminRepo.deleteCat(CatID);
+    res.redirect('/admin/categories');
+}); 
+router.post('/categories/delete',urlencoded,(req, res)=>{
+    var CatID = req.body.id;
+    console.log(CatID);
+    res.redirect('/admin/categories/deleteCat/'+CatID);
+});
+
+
+// producers
+
+router.get('/producers/addProdu/:ProduID/:ProduName',(req,res)=>{
+    var ProduID = req.params.ProduID;
+    var ProduName = req.params.ProduName;
+    adminRepo.addProdu(ProduID, ProduName);
+    res.redirect('/admin/producers');
+});
+router.post('/producers/add',(req,res)=>{
+  
+    var ProduID = req.body.ProduID;
+    var ProduName = req.body.ProduName;
+    res.redirect('/admin/producers/addProdu/'+ProduID+"/"+ProduName);
+});
+//delete Producers
+router.get('/producers/deleteProdu/:ProduID',(req,res)=>{
+    var ProduID = req.params.ProduID;
+    adminRepo.deleteProdu(ProduID);
+    res.redirect('/admin/producers');
+}); 
+router.post('/producers/delete',urlencoded,(req, res)=>{
+    var ProduID = req.body.id;
+    res.redirect('/admin/categories/deleteCat/'+ProduID);
+});
+
+
+//MODIFY FORM Category
+router.get('/categories/modifyCat/:CatID/:CatName',(req,res)=>{
+    var CatID = req.params.CatID;
+    var CatName = req.params.CatName;
+    adminRepo.modifyCat(CatID,CatName);
+    res.redirect('/admin/categories');
+}); 
+router.post('/categories/modify',urlencoded,(req, res)=>{
+    var CatID = req.body.option;
+    var CatName = req.body.CatName;
+    console.log(CatID+" "+CatName);
+    res.redirect('/admin/categories/modifyCat/'+CatID+"/"+CatName);
+});
+
+//MODIFY FORM Producers
+router.get('/producers/modifyProdu/:ProduID/:ProduName',(req,res)=>{
+    var ProduID = req.params.ProduID;
+    var ProduName = req.params.ProduName;
+    adminRepo.modifyProdu(ProduID,ProduName);
+    res.redirect('/admin/producers');
+}); 
+router.post('/producers/modify',urlencoded,(req, res)=>{
+    var ProduID = req.body.option;
+    var ProduName = req.body.ProduName;
+    res.redirect('/admin/producers/modifyProdu/'+ProduID+"/"+ProduName);
+});
 
 module.exports = router;

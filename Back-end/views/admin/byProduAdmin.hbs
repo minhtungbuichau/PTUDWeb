@@ -128,7 +128,31 @@
 
     </div>
     end header -->
-    
+    <div class="row">
+    <div class="col-md-12">
+        
+            <!-- Add new disease -->
+            <h4 style="margin-top: 50px;margin-bottom:50px">Thêm nhà sản xuất mới vào hệ thống</h4>
+            <form action="/admin/producers/add" method="post">
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label">Mã nhà sản xuất</label>
+                    <div class="col-sm-7 col-md-7 col-lg-7">
+                        <input class="form-control" style="width: 100%;" type="text" name="ProduID" required="true" placeholder="Nhập mã nhà sản xuất">
+                    </div>
+                </div>
+
+                <!-- Last name input -->
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label">Tên nhà sản xuất</label>
+                    <div class="col-sm-7 col-md-7 col-lg-7">
+                        <input class="form-control" style="width: 100%;" type="text" name="ProduName" required="true" placeholder="Nhập tên nhà sản xuất">
+                    </div>
+                </div>
+
+            	<input class="btn btn-success" style="float: right;margin-right:200px" type="Submit" name="Submit" value="Thêm">
+            </form>
+        </div>
+    </div>
 
     <div style="margin-top:50px">
         <table class="table">
@@ -141,13 +165,12 @@
             <tbody>
                 {{#each Item}}
                 <tr>
+                       <form action="/admin/producers/delete" method="POST">
                     <td>{{ProduID}}</td>
-                    <td>{{ProduName}}</td>
-                    {{!-- <td>
-                        <form action="/add" method="get">
-                        <input type="submit" value="+">
-                        </form>
-                    </td> --}}
+                    <input type="hidden" name="id" value="{{ProduID}}">
+                    <td>{{ProduName}}</td> 
+                    <td><input class="btn btn-success" style="float: right;margin-right:200px ; margin-top:0px" type="Submit" name="Submit" value="Xóa" ></td>
+                    </form>
                 </tr>
                 {{/each}}
             </tbody>

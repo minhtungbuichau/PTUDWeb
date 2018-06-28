@@ -58,3 +58,24 @@ exports.loadByProducts = proId => {
     return db.load(sql);
 }
 
+
+exports.addCat = (CatID, CatName)=>{
+    var sql = `insert into categories values('${CatID}','${CatName}')`
+    return db.load(sql);
+}
+
+exports.deleteCat = (CatID) =>{
+    var sql = `delete from categories where CatID = ${CatID}`
+    return db.load(sql);
+}
+
+
+exports.addProdu = (ProduID, ProduName)=>{
+    var sql = `insert into producers values('${ProduID}','${ProduName}')`
+    return db.load(sql);
+}
+
+exports.deleteProdu = (ProduID) =>{
+    var sql = `delete from producers where ProduID = ${ProduID}`
+    return db.load(sql);
+}

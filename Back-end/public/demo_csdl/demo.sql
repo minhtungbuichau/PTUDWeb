@@ -54,12 +54,13 @@ INSERT INTO `producers` VALUES ('4', 'Laptop MSI');
 DROP TABLE IF EXISTS `orderdetails`;
 CREATE TABLE `orderdetails` (
   `ID` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `OrderID` int(11) NOT NULL,
   `ProID` int(11) NOT NULL,
   `Quantity` int(11) NOT NULL,
   `Price` bigint(20) NOT NULL,
   `Amount` int(11) NOT NULL,
   `f_ID` int(11) NOT NULL,
+  `OrderDay` date ,
+  `Status` text COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
  
@@ -68,20 +69,7 @@ CREATE TABLE `orderdetails` (
 -- ----------------------------
  
 -- ----------------------------
--- Table structure for `orders`
--- ----------------------------
-DROP TABLE IF EXISTS `orders`;
-CREATE TABLE `orders` (
-  `OrderID` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `OrderDate` datetime NOT NULL,
-  `UserID` int(11) NOT NULL,
-  `Total` bigint(20) NOT NULL,
-  PRIMARY KEY (`OrderID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
- 
--- ----------------------------
--- Records of orders
--- ----------------------------
+
  
 -- ----------------------------
 -- Table structure for `products`
@@ -540,5 +528,3 @@ INSERT INTO `admin` VALUES ('admin', 'admin');
 -- ----------------------------
 -- Records of users
 -- ----------------------------
- 
- 

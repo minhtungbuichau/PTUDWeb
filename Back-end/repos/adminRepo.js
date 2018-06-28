@@ -79,3 +79,15 @@ exports.deleteProdu = (ProduID) =>{
     var sql = `delete from producers where ProduID = ${ProduID}`
     return db.load(sql);
 }
+
+///modify form cat
+
+exports.modifyCat = (CatID, CatName) =>{
+    var sql=`update categories set CatName = '${CatName}' where CatID = '${CatID}'`;
+    return db.load(sql);
+}
+
+exports.modifyProdu = (ProduID, ProduName) =>{
+    var sql=`update producers set ProduName = '${ProduName}' where ProduID = '${ProduID}'`;
+    return db.load(sql);
+}

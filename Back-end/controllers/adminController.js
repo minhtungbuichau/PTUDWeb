@@ -274,7 +274,7 @@ router.post('/producers/add',(req,res)=>{
     var ProduName = req.body.ProduName;
     res.redirect('/admin/producers/addProdu/'+ProduID+"/"+ProduName);
 });
-//delete cat
+//delete Producers
 router.get('/producers/deleteProdu/:ProduID',(req,res)=>{
     var ProduID = req.params.ProduID;
     adminRepo.deleteProdu(ProduID);
@@ -285,5 +285,32 @@ router.post('/producers/delete',urlencoded,(req, res)=>{
     res.redirect('/admin/categories/deleteCat/'+ProduID);
 });
 
+
+//MODIFY FORM Category
+router.get('/categories/modifyCat/:CatID/:CatName',(req,res)=>{
+    var CatID = req.params.CatID;
+    var CatName = req.params.CatName;
+    adminRepo.modifyCat(CatID,CatName);
+    res.redirect('/admin/categories');
+}); 
+router.post('/categories/modify',urlencoded,(req, res)=>{
+    var CatID = req.body.option;
+    var CatName = req.body.CatName;
+    console.log(CatID+" "+CatName);
+    res.redirect('/admin/categories/modifyCat/'+CatID+"/"+CatName);
+});
+
+//MODIFY FORM Producers
+router.get('/producers/modifyProdu/:ProduID/:ProduName',(req,res)=>{
+    var ProduID = req.params.ProduID;
+    var ProduName = req.params.ProduName;
+    adminRepo.modifyProdu(ProduID,ProduName);
+    res.redirect('/admin/producers');
+}); 
+router.post('/producers/modify',urlencoded,(req, res)=>{
+    var ProduID = req.body.option;
+    var ProduName = req.body.ProduName;
+    res.redirect('/admin/producers/modifyProdu/'+ProduID+"/"+ProduName);
+});
 
 module.exports = router;

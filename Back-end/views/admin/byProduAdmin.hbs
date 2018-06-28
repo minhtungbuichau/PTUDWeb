@@ -129,9 +129,8 @@
     </div>
     end header -->
     <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-6">
         
-            <!-- Add new disease -->
             <h4 style="margin-top: 50px;margin-bottom:50px">Thêm nhà sản xuất mới vào hệ thống</h4>
             <form action="/admin/producers/add" method="post">
                 <div class="form-group row">
@@ -141,7 +140,6 @@
                     </div>
                 </div>
 
-                <!-- Last name input -->
                 <div class="form-group row">
                     <label class="col-md-3 col-form-label">Tên nhà sản xuất</label>
                     <div class="col-sm-7 col-md-7 col-lg-7">
@@ -150,6 +148,32 @@
                 </div>
 
             	<input class="btn btn-success" style="float: right;margin-right:200px" type="Submit" name="Submit" value="Thêm">
+            </form>
+        </div>
+          {{!-- form modify --}}
+        <div class="col-md-6">
+            <h4 style="margin-top: 50px;margin-bottom:50px">Sửa nhà sản xuất đã có trong hệ thống</h4>
+            <form action="/admin/producers/modify" method="post">
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label">Mã nhà sản xuất</label>
+                    <div class="col-sm-7 col-md-7 col-lg-7">
+                        {{!-- <input class="form-control" style="width: 100%;" type="text" name="CatID" required="true" placeholder="Nhập mã loại sản phẩm"> --}}
+                        <select class="input-select" name="option">
+                            {{#each Item}}
+							    <option value="{{ProduID}}">{{ProduID}}</option>
+                            {{/each}}
+					    </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label">Tên nhà sản xuất</label>
+                    <div class="col-sm-7 col-md-7 col-lg-7">
+                        <input class="form-control" style="width: 100%;" type="text" name="ProduName" required="true" placeholder="Nhập tên nhà sản xuất">
+                    </div>
+                </div>
+
+            	<input class="btn btn-success" style="float: right;margin-right:200px" type="Submit" name="Submit" value="Sửa">
             </form>
         </div>
     </div>

@@ -129,9 +129,7 @@
     </div>
     end header -->
     <div class="row">
-    <div class="col-md-12">
-        
-            <!-- Add new disease -->
+    <div class="col-md-6">
             <h4 style="margin-top: 50px;margin-bottom:50px">Thêm loại sản phảm mới vào hệ thống</h4>
             <form action="/admin/categories/add" method="post">
                 <div class="form-group row">
@@ -141,7 +139,6 @@
                     </div>
                 </div>
 
-                <!-- Last name input -->
                 <div class="form-group row">
                     <label class="col-md-3 col-form-label">Tên loại</label>
                     <div class="col-sm-7 col-md-7 col-lg-7">
@@ -150,6 +147,33 @@
                 </div>
 
             	<input class="btn btn-success" style="float: right;margin-right:200px" type="Submit" name="Submit" value="Thêm">
+            </form>
+        </div>
+
+        {{!-- form modify --}}
+        <div class="col-md-6">
+            <h4 style="margin-top: 50px;margin-bottom:50px">Sửa loại sản phẩm đã có trong hệ thống</h4>
+            <form action="/admin/categories/modify" method="post">
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label">Mã loại</label>
+                    <div class="col-sm-7 col-md-7 col-lg-7">
+                        {{!-- <input class="form-control" style="width: 100%;" type="text" name="CatID" required="true" placeholder="Nhập mã loại sản phẩm"> --}}
+                        <select class="input-select" name="option">
+                            {{#each Item}}
+							    <option value="{{CatID}}">{{CatID}}</option>
+                            {{/each}}
+					    </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label">Tên loại</label>
+                    <div class="col-sm-7 col-md-7 col-lg-7">
+                        <input class="form-control" style="width: 100%;" type="text" name="CatName" required="true" placeholder="Nhập tên loại sản phẩm">
+                    </div>
+                </div>
+
+            	<input class="btn btn-success" style="float: right;margin-right:200px" type="Submit" name="Submit" value="Sửa">
             </form>
         </div>
     </div>

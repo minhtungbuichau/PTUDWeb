@@ -128,14 +128,42 @@
 
     </div>
     end header -->
-    
-
-    <div style="margin-top:50px">
+    <div class="row">
+        <div style="margin-left: 70px">
+            {{!-- {{#each loadByProducts}} --}}
+                <img id="profile-img" class="profile-img-card" src="/imgs/logo.png" width="150px" height="80px" />
+                <p id="profile-name" class="profile-name-card"></p>
+                <form method="post">
+                      <div class="form-group">
+                            <label for="ProID">Mã sản phẩm</label>
+                            <input type="text"  style="width=80%" class="form-control" id="ProID" aria-describedby="text" value="">
+                      </div>
+                      <div class="form-group">
+                            <label for="ProName">Tên sản phẩm</label>
+                            <input type="text" class="form-control" id="ProName" value="">
+                      </div>
+                      <div class="form-group">
+                            <label for="Quantity">Số lượng</label>
+                            <input type="text" class="form-control" id="ProName" value="">
+                      </div>
+                      <div class="form-group">
+                            <label for="ProPrice">Giá sản phẩm</label>
+                            <input type="text" class="form-control" id="ProName" value="">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            {{!-- {{/each}} --}}
+        </div>
+    </div>
+    {{!-- <div class="row"> --}}
+    <div class="row" style="margin-left:40px; margin-right: 40px; margin-top: 50px">
         <table class="table">
             <thead class="">
                 <tr>
                     <th scope="col">Mã sản phẩm</th>
                     <th scope="col">Tên sản phẩm</th>
+                    <th scope="col">Loại sản phẩm</th>
+                    <th scope="col">Nhà sản xuất</th>
                     <th scope="col">Số lượng</th>
                     <th scope="col">Giá bán</th>
                     <th scope="col">Lượt bán</th>
@@ -149,6 +177,38 @@
                 <tr>
                     <td>{{ProID}}</td>
                     <td>{{ProName}}</td>
+                    <script>
+                        var cate = ({{CatID}});
+                        var x = getCatFunction(cate);
+                        document.getElementById("cat").innerHTML = x;
+                        function getCatFunction(cate){
+                            if(cate === 1)
+                                return "Gaming";
+                            if(cate === 2)
+                                return "Văn phòng";
+                            if(cate === 3)
+                                return "Doanh nhân";
+                            if(cate === 4)
+                                return "Ultrabook";
+                        }
+                    </script>
+                    <td id="cat"></td>
+                    <script>
+                        var produ = ({{ProduID}});
+                        var x = getProduFunction(produ);
+                        document.getElementById("producer").innerHTML = x;
+                        function getProduFunction(produ){
+                            if(produ === 1)
+                                return "Asus";
+                            if(produ === 2)
+                                return "Dell";
+                            if(produ === 3)
+                                return "Macbook";
+                            if(produ === 4)
+                                return "MSI";
+                        }
+                    </script>
+                    <td id="producer"></td>
                     <td>{{Quantity}}</td>
                     <td>{{Price}}</td>
                     <td>{{Sales}}</td>
@@ -164,21 +224,22 @@
             </tbody>
         </table>
     </div>
+    {{!-- </div> --}}
     <div class="row">
-	<div class="col-md-12 col-xs-12">
-		<div class="store-filter clearfix">
+    	<div class="col-md-12 col-xs-12">
+    		<div class="store-filter clearfix">
 
-			<ul class="store-pagination">
-			{{#each page_numbers}}
-			{{#if isCurPage}}
-				<li class="active"><a href="javascript:;">{{value}}</a></li>
-			{{else}}
-				<li><a href="?page={{value}}">{{value}}</a></li>
-			{{/if}}
-			{{/each}}
-				<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-			</ul>
-		</div>
-	</div>
-</div>
+    			<ul class="store-pagination">
+    			{{#each page_numbers}}
+    			{{#if isCurPage}}
+    				<li class="active"><a href="javascript:;">{{value}}</a></li>
+    			{{else}}
+    				<li><a href="?page={{value}}">{{value}}</a></li>
+    			{{/if}}
+    			{{/each}}
+    				<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+    			</ul>
+    		</div>
+    	</div>
+    </div>
 </body>

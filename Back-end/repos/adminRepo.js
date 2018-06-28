@@ -33,6 +33,7 @@ exports.countProdu = ()=>{
     return db.load(sql);
 }
 
+<<<<<<< HEAD
 exports.loadOrder = (offset)=>{
     var sql = `select products.*,orderdetails.*,users.* 
     from orderdetails,products,users 
@@ -50,6 +51,10 @@ exports.countOrder = ()=>{
 exports.updateOrder = (status,id)=>{
     var sql = `update orderdetails set Status='Đã giao hàng' where ID='${id}'`;
     console.log(sql);
+=======
+exports.loadByProducts = proId => {
+    var sql = `select products.ProID, products.ProName, products.Quantity, products.Price from products where products.ProID = ${proId}`;
+>>>>>>> 516c61e5f442e312561331aa71ddbfb50e25a2f5
     return db.load(sql);
 }
 

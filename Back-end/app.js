@@ -14,7 +14,8 @@ var homeController = require('./controllers/homeController'),
     adminController = require('./controllers/adminController'),
     byCatAdminController = require('./controllers/byCatAdminController'),
     byProduAdminController = require('./controllers/byProduAdminController'),
-    searchController = require('./controllers/searchController');
+    searchController = require('./controllers/searchController'),
+    adminManageController = require('./controllers/adminManageController');
 
 var handleLayoutMDW = require('./middle-wares/handleLayout'),
     accountController = require('./controllers/accountController');
@@ -84,6 +85,7 @@ app.use('/admin', adminController);
 app.use('/admin/byCatAdmin', byCatAdminController);
 app.use('/admin/byProduAdmin', byProduAdminController);
 app.use('/search',searchController);
+app.use('/admin/adminManagements', adminManageController);
 
 app.listen(process.env.PORT || 4000, () => {
     console.log('Site running on port 4000');

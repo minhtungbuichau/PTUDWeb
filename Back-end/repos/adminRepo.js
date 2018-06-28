@@ -33,3 +33,8 @@ exports.countProdu = ()=>{
     return db.load(sql);
 }
 
+exports.loadByProducts = proId => {
+    var sql = `select products.ProID, products.ProName, products.Quantity, products.Price from products where products.ProID = ${proId}`;
+    return db.load(sql);
+}
+

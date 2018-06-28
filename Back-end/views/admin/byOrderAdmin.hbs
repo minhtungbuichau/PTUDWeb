@@ -47,9 +47,23 @@
 		<link type="text/css" rel="stylesheet" href="../assets/css/style1.css">
 		<link type="text/css" rel="stylesheet" href="../assets/css/style-dropdown.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+
+                        $("#color").addClass("changecl");
+                });
+            });
+        </script>
 </head>
 
-
+<style>
+.changecl {
+    font-size: 150%;
+    color: red;
+}
+</style>
 
 <body>
     <aside id="left-panel" class="left-panel" style="background-color:#e7e7e7">
@@ -104,37 +118,15 @@
             <!-- /.navbar-collapse -->
         </nav>
     </aside>
-    <!-- /#left-panel -->
-   <!--  <div class="col-lg-12">
-        <header id="header" class="header">
-            <div class="col-lg-8">
-                <div class="header-menu">
-                    <div class="form-group row">
-                        <label for="example-search-input" class="col-2 col-form-label">Tìm kiếm</label>
-                        <div class="col-10">
-                            <input class="form-control" type="search" id="example-search-input">
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-lg-4 ">
-                <div class="float-right">
-                    <img src="/imgs/logo.png" width="100px" height="50px">
-                </div>
-            </div>
-        </header>
-
-    </div>
-    end header -->
+    
     
 
     <div style="margin-top:50px">
         <table class="table">
             <thead class="">
-                <tr>
+                <tr >
                     <th scope="col">Mã đơn hàng</th>
+                    <th scope="col">Ngày lập</th>
                     <th scope="col">Tên sản phẩm</th>
                     <th scope="col">Số lượng</th>
                     <th scope="col">Người mua</th>
@@ -145,8 +137,11 @@
             </thead>
             <tbody>
                 {{#each Item}}
-                <tr>
-                    <td>#{{ID}}</td>
+                <tr id="color">
+
+    
+                    <td >#{{ID}}</td>
+                    <td >{{OrderDay}}</td>
                     <td>{{ProName}}</td>
                     <td>{{Quantity}}</td>
                     <td>{{f_Name}}</td>
@@ -158,7 +153,10 @@
                             <input type="hidden" value="{{ID}}" name="id" >
                             <td>
                             <td>
-                            <a><button type="submit" >Update</button></a>
+                                <a data-status="{{Status}}" href="javascript:;" class=" addItem">
+                                                <button type="submit" >Cập nhật</button>
+                                            </a>
+                            
                             </td>
                         </form>
 

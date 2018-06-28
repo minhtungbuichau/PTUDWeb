@@ -224,9 +224,8 @@ router.post('/orders', (req,res)=>{
             layout:false,
         };
         
-            res.render('admin/admin', vm);
-  
-        
+            res.render('admin/admin', vm); 
+
     });
 })
 

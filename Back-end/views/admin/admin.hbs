@@ -81,12 +81,12 @@
                             <i class="menu-icon fa fa-book"></i><span style="color:black ;font-weight: bold">Sản phẩm </span> </a>
                     </li>
                     <li>
-                        <a href="nhasanxuat.html">
-                            <i class="menu-icon fa fa-book"></i>Nhà sản xuất </a>
+                        <a href="/admin/producers">
+                            <i class="menu-icon fa fa-book"></i><span style="color:black ;font-weight: bold">Nhà sản xuất</span> </a>
                     </li>
                     <li>
-                        <a href="nhasanxuat.html">
-                            <i class="menu-icon fa fa-book"></i>Loại sản phẩm </a>
+                        <a href="/admin/categories">
+                            <i class="menu-icon fa fa-book"></i><span style="color:black ;font-weight: bold">Loại sản phẩm</span> </a>
                     </li>
 
                     <h3 class="menu-title">Đơn hàng</h3>
@@ -134,7 +134,6 @@
         <table class="table">
             <thead class="">
                 <tr>
-                    <th scope="col">STT</th>
                     <th scope="col">Mã sản phẩm</th>
                     <th scope="col">Tên sản phẩm</th>
                     <th scope="col">Số lượng</th>
@@ -142,12 +141,12 @@
                     <th scope="col">Lượt bán</th>
                     <th scope="col">Lượt xem</th>
                     <th scope="col">Ngày thêm</th>
+                    <th scope="col">Quản lý</th>
                 </tr>
             </thead>
             <tbody>
                 {{#each Item}}
                 <tr>
-                    <th scope="row">{{ProID}}</th>
                     <td>{{ProID}}</td>
                     <td>{{ProName}}</td>
                     <td>{{Quantity}}</td>
@@ -155,6 +154,11 @@
                     <td>{{Sales}}</td>
                     <td>{{Views}}</td>
                     <td>{{AddDate}}</td>
+                    <td>
+                        <form action="/add" method="get">
+                        <input type="submit" value="+">
+                        </form>
+                    </td>
                 </tr>
                 {{/each}}
             </tbody>

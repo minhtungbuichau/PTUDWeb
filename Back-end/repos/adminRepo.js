@@ -14,24 +14,22 @@ exports.countAllProducts = ()=>{
     return db.load(sql);
 }
 
-exports.loadByCatAdmin = catId => {
-    var sql = `select products.ProID, products.ProName, products.Sales ,products.Price from products
-                where products.CatID = ${catId}`;
+
+exports.loadCat = (offset)=>{
+    var sql = `select * from categories  limit 10 offset ${offset}`;
+    return db.load(sql);
+}
+exports.countCat = ()=>{
+    var sql = `select count(*) as total from categories`;
+    return db.load(sql);
+}
+exports.loadProdu = (offset)=>{
+    var sql = `select * from producers  limit 10 offset ${offset}`;
     return db.load(sql);
 }
 
-exports.loadAllByCatAdmin = () => {
-    var sql = `select products.ProID, products.ProName, products.Sales ,products.Price from products`;
+exports.countProdu = ()=>{
+    var sql = `select count(*) as total from producers`;
     return db.load(sql);
 }
 
-exports.loadByProduAdmin = produId => {
-    var sql = `select products.ProID, products.ProName, products.Sales ,products.Price from products
-                where products.ProduID = ${produId}`;
-    return db.load(sql);
-}
-
-exports.loadAllByProduAdmin = () => {
-    var sql = `select products.ProID, products.ProName, products.Sales ,products.Price from products`;
-    return db.load(sql);
-}

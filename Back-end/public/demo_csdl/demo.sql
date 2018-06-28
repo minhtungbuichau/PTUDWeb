@@ -7,9 +7,7 @@ Source Host           : localhost:3000
 Source Database       : chlaptop
 
 */
-DROP DATABASE qllaptop;
-CREATE database qllaptop;
-use qllaptop;
+
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
@@ -86,6 +84,10 @@ CREATE TABLE `orders` (
 -- ----------------------------
 -- Table structure for `products`
 -- ----------------------------
+DROP DATABASE qllaptop;
+CREATE database qllaptop;
+use qllaptop;
+
 DROP TABLE IF EXISTS `products`;
 CREATE TABLE `products` (
   `ProID` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -114,7 +116,7 @@ INSERT INTO `products` VALUES('1','ASUS A540UP ','11900000 ','150','15',
 - Trọng lượng: ~ 1.9kg<br>
 - Hệ điều hành: Windows 10 Home - 64bit<br>
 - Xuất xứ: Đài Loan<br>
-- Nhà sản xuất: Asus<br></p>','2','1','100',STR_TO_DATE('01-06-2018', '%d-%m-%Y'));
+- Nhà sản xuất: Asus<br></p>','2','1','100',STR_TO_DATE('02-06-2018', '%d-%m-%Y'));
 INSERT INTO `products` VALUES('2','ASUS GL503VM','32490000  ','133','23',
 '<p> - CPU Intel Core i7 7700HQ (2.8GHz Up to 3.8GHz, 6MB Cache)<br>
 - RAM 8GB DDR4 - 2400MHz<br>

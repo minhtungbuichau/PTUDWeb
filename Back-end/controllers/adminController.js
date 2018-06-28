@@ -65,8 +65,85 @@ router.get('/products', (req,res)=>{
             page_numbers: numbers,
             layout:false,
         };
-        
+        console.log(vm);
             res.render('admin/admin', vm);
+  
+        
+    });
+})
+router.get('/producers', (req,res)=>{
+    var page = req.query.page;
+    if (!page) {
+        page = 1;
+    }
+
+    var offset = (page - 1) * 10;
+    var p1 = adminRepo.loadProdu(offset);
+    var p2 = adminRepo.countProdu();
+    
+    Promise.all([p1, p2]).then(([pRows, countRows]) => {
+        var total = countRows[0].total;
+        var nPages = total / 10;
+        if (total % 10 > 0) {
+            nPages++;
+        }
+
+        var numbers = [];
+        for (i = 1; i <= nPages; i++) {
+            numbers.push({
+                value: i,
+                isCurPage: i === +page
+            });
+        }
+
+        var vm = {
+            
+            Item: pRows,
+            noProducts: pRows.length === 0,
+            page_numbers: numbers,
+            layout:false,
+        };
+        
+            res.render('admin/byProduAdmin', vm);
+  
+        
+    });
+})
+
+router.get('/categories', (req,res)=>{
+    var page = req.query.page;
+    if (!page) {
+        page = 1;
+    }
+
+    var offset = (page - 1) * 10;
+    var p1 = adminRepo.loadCat(offset);
+    var p2 = adminRepo.countCat();
+    
+    Promise.all([p1, p2]).then(([pRows, countRows]) => {
+        var total = countRows[0].total;
+        var nPages = total / 10;
+        if (total % 10 > 0) {
+            nPages++;
+        }
+
+        var numbers = [];
+        for (i = 1; i <= nPages; i++) {
+            numbers.push({
+                value: i,
+                isCurPage: i === +page
+            });
+        }
+
+        var vm = {
+            
+            Item: pRows,
+            noProducts: pRows.length === 0,
+            page_numbers: numbers,
+            layout:false,
+        };
+        
+            res.render('admin/byCatAdmin', vm);
   
         
     });

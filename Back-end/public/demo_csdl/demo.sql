@@ -528,3 +528,5 @@ INSERT INTO `admin` VALUES ('admin', 'admin');
 -- ----------------------------
 -- Records of users
 -- ----------------------------
+
+select *from categories

@@ -111,3 +111,14 @@ exports.addProduct = (ProID, ProName, CatID, ProduID, Quantity, Price, Des,AddDa
     var sql= `insert into products values('${ProID}', '${ProName}', '${Price}', '0','0', '${Des}', '${CatID}', '${ProduID}', '${Quantity}', STR_TO_DATE('${AddDate}', '%d-%m-%Y'))`;
     return db.load(sql);
 }
+
+exports.modifyPro = (ProID, ProName, CatID, ProduID, Quantity, Price, Des,AddDate) =>{
+    var sql=`update products set ProName = '${ProName}',CatID = '${CatID}',ProduID = '${ProduID}',Quantity = '${Quantity}',Price = '${Price}',Des = '${Des}',AddDate = STR_TO_DATE('${AddDate}', '%d-%m-%Y') where ProID = '${ProID}'`;
+    return db.load(sql);
+}
+
+exports.deletePro = (ProID) =>{
+    var sql = `delete from products where ProID = ${ProID}`
+    return db.load(sql);
+}
+

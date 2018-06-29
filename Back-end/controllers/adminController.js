@@ -373,6 +373,43 @@ router.post('/products/addPro',(req,res)=>{
     res.redirect('/admin/products/addPro/'+ProID+"/"+ProName+"/"+CatID+"/"+ProduID+"/"+Quantity+"/"+Price+"/"+Des+"/"+AddDate);
 }) 
 
+//Modify products
+router.get('/products/modifyPro/:ProID/:ProName/:CatID/:ProduID/:Quantity/:Price/:Des/:AddDate',(req,res)=>{
+    var ProID = req.params.ProID;
+    var ProName = req.params.ProName;
+    var CatID = req.params.CatID;
+    var ProduID = req.params.ProduID;
+    var Quantity = req.params.Quantity;
+    var Price = req.params.Price;
+    var Des = req.params.Des;
+    var AddDate =  req.params.AddDate;
+    adminRepo.modifyPro(ProID,ProName,CatID,ProduID,Quantity,Price,Des,AddDate);
+    res.redirect('/admin/products')
+    
+})
 
+router.post('/products/modifyPro',(req,res)=>{
+    var ProID = req.body.ProID;
+    var ProName = req.body.ProName;
+    var CatID = req.body.CatID;
+    var ProduID = req.body.ProduID;
+    var Quantity = req.body.Quantity;
+    var Price = req.body.Price;
+    var Des = req.body.Des;
+    var AddDate = req.body.AddDate;
+    console.log(ProID+" "+ProName+" "+CatID+" "+ProduID+" "+Quantity+" "+Price+" "+Des+" "+AddDate)
+    res.redirect('/admin/products/modifyPro/'+ProID+"/"+ProName+"/"+CatID+"/"+ProduID+"/"+Quantity+"/"+Price+"/"+Des+"/"+AddDate);
+}) 
+//delete products
+router.get('/products/deletePro/:ProID',(req,res)=>{
+    var ProID = req.params.ProID;
+    adminRepo.deletePro(ProID);
+    res.redirect('/admin/products');
+}); 
+router.post('/products/delete',urlencoded,(req, res)=>{
+    var ProID = req.body.id;
+    res.redirect('/admin/products/deletePro/'+ProID);
+    console.log(ProID);
+});
 
 module.exports = router;

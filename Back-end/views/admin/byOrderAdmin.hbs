@@ -28,25 +28,25 @@
     <!--  Main handlebar css-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
 
-		<!-- Bootstrap -->
-		<link type="text/css" rel="stylesheet" href="../assets/css/bootstrap.min.css"/>
-		<!-- 	<link type="text/css" rel="stylesheet" href="css/bootstrap4.css"/> -->
+        <!-- Bootstrap -->
+        <link type="text/css" rel="stylesheet" href="../assets/css/bootstrap.min.css"/>
+        <!--    <link type="text/css" rel="stylesheet" href="css/bootstrap4.css"/> -->
 
-		<!-- Slick -->
-		<link type="text/css" rel="stylesheet" href="../assets/css/slick.css"/>
-		<link type="text/css" rel="stylesheet" href="../assets/css/slick-theme.css"/>
+        <!-- Slick -->
+        <link type="text/css" rel="stylesheet" href="../assets/css/slick.css"/>
+        <link type="text/css" rel="stylesheet" href="../assets/css/slick-theme.css"/>
 
-		<!-- nouislider -->
-		<link type="text/css" rel="stylesheet" href="../assets/css/nouislider.min.css"/>
+        <!-- nouislider -->
+        <link type="text/css" rel="stylesheet" href="../assets/css/nouislider.min.css"/>
 
-		<!-- Font Awesome Icon -->
-		<link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+        <!-- Font Awesome Icon -->
+        <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
 
-		<!-- Custom stlylesheet -->
-		<link type="text/css" rel="stylesheet" href="../assets/css/style.css"/>
-		<link type="text/css" rel="stylesheet" href="../assets/css/style1.css">
-		<link type="text/css" rel="stylesheet" href="../assets/css/style-dropdown.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+        <!-- Custom stlylesheet -->
+        <link type="text/css" rel="stylesheet" href="../assets/css/style.css"/>
+        <link type="text/css" rel="stylesheet" href="../assets/css/style1.css">
+        <link type="text/css" rel="stylesheet" href="../assets/css/style-dropdown.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
             $(document).ready(function(){
@@ -146,15 +146,25 @@
                     <td>{{Quantity}}</td>
                     <td>{{f_Name}}</td>
                     <td>{{number_format Amount}} ₫</td>
-                    
+                    <td>{{Status}}<td>
                         <form class="form-horizontal"  method="post" action="/admin/orders">
-                            <td>
-                            {{Status}}
+                            
                             <input type="hidden" value="{{ID}}" name="id" >
-                            <td>
+                            
                             <td>
                                 <a data-status="{{Status}}" href="javascript:;" class=" addItem">
-                                                <button type="submit" >Cập nhật</button>
+                                                <button type="submit" >Đã giao</button>
+                                            </a>
+                            
+                            </td>
+                        </form>
+                        <form class="form-horizontal"  method="post" action="/admin/orderss">
+                            
+                            <input type="hidden" value="{{ID}}" name="id" >
+                            
+                            <td>
+                                <a data-status1="{{Status}}" href="javascript:;" class=" addItem">
+                                                <button type="submit" >Chưa giao</button>
                                             </a>
                             
                             </td>
@@ -169,20 +179,20 @@
         </table>
     </div>
     <div class="row">
-	<div class="col-md-12 col-xs-12">
-		<div class="store-filter clearfix">
+    <div class="col-md-12 col-xs-12">
+        <div class="store-filter clearfix">
 
-			<ul class="store-pagination">
-			{{#each page_numbers}}
-			{{#if isCurPage}}
-				<li class="active"><a href="javascript:;">{{value}}</a></li>
-			{{else}}
-				<li><a href="?page={{value}}">{{value}}</a></li>
-			{{/if}}
-			{{/each}}
-				<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-			</ul>
-		</div>
-	</div>
+            <ul class="store-pagination">
+            {{#each page_numbers}}
+            {{#if isCurPage}}
+                <li class="active"><a href="javascript:;">{{value}}</a></li>
+            {{else}}
+                <li><a href="?page={{value}}">{{value}}</a></li>
+            {{/if}}
+            {{/each}}
+                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+            </ul>
+        </div>
+    </div>
 </div>
 </body>

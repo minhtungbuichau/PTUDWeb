@@ -11,7 +11,32 @@ router.get('/login', (req, res) => {
     res.render('admin/loginadmin',{layout: false});
 });
 router.get('/dashboard', (req,res)=>{
-    res.render('admin/admin',{layout: false});
+    var p1 = adminRepo.loadAsus();
+    var p2 = adminRepo.loadDell();
+    var p3 = adminRepo.loadMac();
+    var p4 = adminRepo.loadMSI();
+    var p5 = adminRepo.loadVP();
+    var p6 = adminRepo.loadDN();
+    var p7 = adminRepo.loadUltra();
+    var p8 = adminRepo.loadGaming();
+
+    Promise.all([p1,p2,p3,p4,p5,p6,p7,p8]).then(([asus,dell,mac,msi,vp,dn,ul,g]) => {
+
+        var vm = {
+            Asus: asus[0],
+            Mac: mac[0],
+            Dell: dell[0],
+            MSI: msi[0],
+            VP: vp[0],
+            DN: dn[0],
+            Gaming: g[0],
+            Ultra: ul[0],
+            layout:false,
+        };
+        
+        
+        res.render('admin/dashboard', vm);
+    });
 })
 router.post('/login',(req,res)=>{
     var user = {
@@ -235,36 +260,44 @@ router.post('/orders', (req,res)=>{
     });
 })
 
-// //products modifying
-// router.get('/products/modifyProducts/:proId',(req,res)=>{
-//     var proId = req.params.proId;
-//     adminRepo.loadByProducts(proId);
-//     res.redirect('/admin/products');
-// }); 
-// router.post('/products/modify',urlencoded,(req, res)=>{
-//     var proId = req.body.proId;
-//     res.redirect('/admin/categories/modifyCat/'+proId);
-// });
+router.post('/orderss', (req,res)=>{
+    var page = req.query.page;
+    if (!page) {
+        page = 1;
+    }
 
-// //product adding
-// router.get('/products/addProduct/:ProID',(req,res)=>{
-//     var ProID = req.params.ProID;
-//     adminRepo.loadByProducts(ProID);
-//     res.redirect('/admin/products');
-// });
-// router.post('/producers/add',(req,res)=>{
-  
-//     var ProID = req.body.ProID;
-//     var ProName = req.body.ProName;
-//     var CatID = req.body.catOption;
-//     var ProduID = req.body.produOption;
-//     var ProQuantity = req.body.ProQuantity;
-//     var ProPrice = req.body.ProPrice;
-//     var ProDes = req.body.ProDes;
-//     res.redirect('/admin/producers/addProduct/'+ProID+"/"+ProName);
-// });
+    var offset = (page - 1) * 10;
+    var p1 = adminRepo.loadOrder(offset);
+    var p2 = adminRepo.countOrder();
+    var p3 = adminRepo.updateagainOrder(req.body.status1,req.body.id);
+    
+    Promise.all([p1, p2,p3]).then(([pRows, countRows,orders]) => {
+        var total = countRows[0].total;
+        var nPages = total / 10;
+        if (total % 10 > 0) {
+            nPages++;
+        }
 
-// category 
+        var numbers = [];
+        for (i = 1; i <= nPages; i++) {
+            numbers.push({
+                value: i,
+                isCurPage: i === +page
+            });
+        }
+
+        var vm = {
+            orders: orders,
+            Item: pRows,
+            noProducts: pRows.length === 0,
+            page_numbers: numbers,
+            layout:false,
+        };
+        
+            res.render('admin/admin', vm); 
+
+    });
+})
 
 
 

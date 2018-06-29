@@ -67,6 +67,11 @@ exports.updateOrder = (status,id)=>{
     return db.load(sql);
 }
 
+exports.updateagainOrder = (status,id)=>{
+    var sql = `update orderdetails set Status='Chưa giao hàng' where ID='${id}'`;
+    return db.load(sql);
+}
+
 exports.loadByProducts = proId => {
     var sql = `select products.ProID, products.ProName, products.Quantity, products.Price, products.Des, categories.CatName, producers.ProduName 
                 from products, categories, producers where products.ProID = ${proId} and products.CatID = categories.CatID and products.ProduID = producers.ProduID`;
@@ -109,5 +114,63 @@ exports.modifyProdu = (ProduID, ProduName) =>{
 
 exports.addProduct = (ProID, ProName, CatID, ProduID, Quantity, Price, Des,AddDate) =>{
     var sql= `insert into products values('${ProID}', '${ProName}', '${Price}', '0','0', '${Des}', '${CatID}', '${ProduID}', '${Quantity}', STR_TO_DATE('${AddDate}', '%d-%m-%Y'))`;
+    return db.load(sql);
+}
+
+exports.modifyPro = (ProID, ProName, CatID, ProduID, Quantity, Price, Des,AddDate) =>{
+    var sql=`update products set ProName = '${ProName}',CatID = '${CatID}',ProduID = '${ProduID}',Quantity = '${Quantity}',Price = '${Price}',Des = '${Des}',AddDate = STR_TO_DATE('${AddDate}', '%d-%m-%Y') where ProID = '${ProID}'`;
+    return db.load(sql);
+}
+
+exports.deletePro = (ProID) =>{
+    var sql = `delete from products where ProID = ${ProID}`
+    return db.load(sql);
+}
+
+exports.loadAsus = ()=>{
+    var sql = `select SUM(Sales) Sold FROM products where ProduID=1`;
+
+    return db.load(sql);
+}
+
+exports.loadDell = ()=>{
+    var sql = `select SUM(Sales) Sold FROM products where ProduID=2`;
+
+    return db.load(sql);
+}
+
+exports.loadMac = ()=>{
+    var sql = `select SUM(Sales) Sold FROM products where ProduID=3`;
+
+    return db.load(sql);
+}
+
+exports.loadMSI = ()=>{
+    var sql = `select SUM(Sales) Sold FROM products where ProduID=4`;
+ 
+    return db.load(sql);
+}
+
+exports.loadVP = ()=>{
+    var sql = `select SUM(Sales) Sold FROM products where CatID=2`;
+ 
+    return db.load(sql);
+}
+
+exports.loadDN = ()=>{
+    var sql = `select SUM(Sales) Sold FROM products where CatID=3`;
+    
+    return db.load(sql);
+}
+
+exports.loadGaming = ()=>{
+    var sql = `select SUM(Sales) Sold FROM products where CatID=1`;
+  
+    return db.load(sql);
+}
+
+exports.loadUltra = ()=>{
+    var sql = `select SUM(Sales) Sold FROM products where CatID=4`;
+   
     return db.load(sql);
 }

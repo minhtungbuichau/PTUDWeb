@@ -43,7 +43,7 @@ router.get('/products', (req,res)=>{
     var offset = (page - 1) * 10;
     var p1 = adminRepo.loadAllProducts(offset);
     var p2 = adminRepo.countAllProducts();
-    var p3 = adminRepo.loadCat(offset);
+    var p3 = adminRepo.loadCatName();
     var p4 = adminRepo.loadProduName();
     var p5 = adminRepo.loadProductID();
     
@@ -72,7 +72,6 @@ router.get('/products', (req,res)=>{
             page_numbers: numbers,
             layout:false,
         };
-        
             res.render('admin/admin', vm);
   
         
@@ -236,34 +235,34 @@ router.post('/orders', (req,res)=>{
     });
 })
 
-//products modifying
-router.get('/products/modifyProducts/:proId',(req,res)=>{
-    var proId = req.params.proId;
-    adminRepo.loadByProducts(proId);
-    res.redirect('/admin/products');
-}); 
-router.post('/products/modify',urlencoded,(req, res)=>{
-    var proId = req.body.proId;
-    res.redirect('/admin/categories/modifyCat/'+proId);
-});
+// //products modifying
+// router.get('/products/modifyProducts/:proId',(req,res)=>{
+//     var proId = req.params.proId;
+//     adminRepo.loadByProducts(proId);
+//     res.redirect('/admin/products');
+// }); 
+// router.post('/products/modify',urlencoded,(req, res)=>{
+//     var proId = req.body.proId;
+//     res.redirect('/admin/categories/modifyCat/'+proId);
+// });
 
-//product adding
-router.get('/products/addProduct/:ProID',(req,res)=>{
-    var ProID = req.params.ProID;
-    adminRepo.loadByProducts(ProID);
-    res.redirect('/admin/products');
-});
-router.post('/producers/add',(req,res)=>{
+// //product adding
+// router.get('/products/addProduct/:ProID',(req,res)=>{
+//     var ProID = req.params.ProID;
+//     adminRepo.loadByProducts(ProID);
+//     res.redirect('/admin/products');
+// });
+// router.post('/producers/add',(req,res)=>{
   
-    var ProID = req.body.ProID;
-    var ProName = req.body.ProName;
-    var CatID = req.body.catOption;
-    var ProduID = req.body.produOption;
-    var ProQuantity = req.body.ProQuantity;
-    var ProPrice = req.body.ProPrice;
-    var ProDes = req.body.ProDes;
-    res.redirect('/admin/producers/addProduct/'+ProID+"/"+ProName);
-});
+//     var ProID = req.body.ProID;
+//     var ProName = req.body.ProName;
+//     var CatID = req.body.catOption;
+//     var ProduID = req.body.produOption;
+//     var ProQuantity = req.body.ProQuantity;
+//     var ProPrice = req.body.ProPrice;
+//     var ProDes = req.body.ProDes;
+//     res.redirect('/admin/producers/addProduct/'+ProID+"/"+ProName);
+// });
 
 // category 
 
@@ -329,7 +328,6 @@ router.get('/categories/modifyCat/:CatID/:CatName',(req,res)=>{
 router.post('/categories/modify',urlencoded,(req, res)=>{
     var CatID = req.body.option;
     var CatName = req.body.CatName;
-    console.log(CatID+" "+CatName);
     res.redirect('/admin/categories/modifyCat/'+CatID+"/"+CatName);
 });
 
@@ -345,5 +343,36 @@ router.post('/producers/modify',urlencoded,(req, res)=>{
     var ProduName = req.body.ProduName;
     res.redirect('/admin/producers/modifyProdu/'+ProduID+"/"+ProduName);
 });
+
+
+//Add product
+router.get('/products/addPro/:ProID/:ProName/:CatID/:ProduID/:Quantity/:Price/:Des/:AddDate',(req,res)=>{
+    var ProID = req.params.ProID;
+    var ProName = req.params.ProName;
+    var CatID = req.params.CatID;
+    var ProduID = req.params.ProduID;
+    var Quantity = req.params.Quantity;
+    var Price = req.params.Price;
+    var Des = req.params.Des;
+    var AddDate =  req.params.AddDate;
+    adminRepo.addProduct(ProID,ProName,CatID,ProduID,Quantity,Price,Des,AddDate);
+    res.redirect('/admin/products')
+    
+})
+
+router.post('/products/addPro',(req,res)=>{
+    var ProID = req.body.ProID;
+    var ProName = req.body.ProName;
+    var CatID = req.body.CatID;
+    var ProduID = req.body.ProduID;
+    var Quantity = req.body.Quantity;
+    var Price = req.body.Price;
+    var Des = req.body.Des;
+    var AddDate = req.body.AddDate;
+    console.log(ProID+" "+ProName+" "+CatID+" "+ProduID+" "+Quantity+" "+Price+" "+Des+" "+AddDate)
+    res.redirect('/admin/products/addPro/'+ProID+"/"+ProName+"/"+CatID+"/"+ProduID+"/"+Quantity+"/"+Price+"/"+Des+"/"+AddDate);
+}) 
+
+
 
 module.exports = router;

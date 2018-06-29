@@ -6,7 +6,7 @@ exports.login = user => {
     return db.load(sql);
 }
 exports.loadAllProducts = (offset) =>{
-    var sql =`select products.*, categories.CatName,producers.ProduName from products, categories,producers where products.ProduID = producers.ProduID and products.CatID = categories.CatID limit 10 offset ${offset}`;
+    var sql =`select products.*, categories.CatName,producers.ProduName from products, categories,producers where products.ProduID = producers.ProduID and products.CatID = categories.CatID order by ProID asc limit 10 offset ${offset}`;
     return db.load(sql);
 }
 exports.countAllProducts = ()=>{
@@ -34,12 +34,12 @@ exports.countProdu = ()=>{
 }
 
 exports.loadCatName = () =>{
-    var sql = `select categories.CatID, categories.CatName from categories`;
+    var sql = `select categories.* from categories`;
     return db.load(sql);
 }
 
 exports.loadProduName = () =>{
-    var sql = `select producers.ProduName from producers`;
+    var sql = `select  producers.* from producers`;
     return db.load(sql);
 }
 
@@ -107,7 +107,7 @@ exports.modifyProdu = (ProduID, ProduName) =>{
     return db.load(sql);
 }
 
-exports.addProduct = (ProID, ProName, CatName, ProduName, Quantity, Price, Des) =>{
-    var sql= `insert into products values('${ProID}', '${ProName}', '${Price}', 0, 0, '${Des}', '${CatID}', '${ProduID}', '${Quantity}', STR_TO_DATE('29-06-2018', '%d-%m-%Y'))`;
+exports.addProduct = (ProID, ProName, CatID, ProduID, Quantity, Price, Des,AddDate) =>{
+    var sql= `insert into products values('${ProID}', '${ProName}', '${Price}', '0','0', '${Des}', '${CatID}', '${ProduID}', '${Quantity}', STR_TO_DATE('${AddDate}', '%d-%m-%Y'))`;
     return db.load(sql);
 }

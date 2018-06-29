@@ -131,7 +131,7 @@
    <div class="row">
     <div class="col-md-5" style="margin-top: 50px;margin-bottom:50px; margin-left: 30px">
             <h4>Thêm sản phẩm mới vào hệ thống</h4><br>
-            <form action="/admin/producers/add" method="post">
+            <form action="/admin/products/addPro" method="post">
                 <div class="form-group row">
                     <label class="col-md-4 col-form-label">Mã sản phẩm</label>
                     <div class="col-sm-7 col-md-7 col-lg-7">
@@ -149,9 +149,22 @@
                 <div class="form-group row">
                     <label class="col-md-3 col-form-label">Loại sản phẩm</label>
                     <div class="col-sm-1 col-md-1 col-lg-1" style="margin-left: 50px">
-                        <select class="input-select" name="catOption">
+                        <select class="input-select" name="CatID">
                             {{#each Cate}}
-                                <option value={{CatID}} name={{CatID}}>{{CatName}}</option>
+                                <option value={{CatID}}>{{CatName}}</option>
+                            {{/each}}
+                            
+                        </select>
+                    </div>
+                </div>
+                <br>
+              
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label">Nhà sản xuất</label>
+                    <div class="col-sm-1 col-md-1 col-lg-1" style="margin-left: 50px">
+                        <select class="input-select" name="ProduID">
+                            {{#each Produ}}
+                                <option value={{ProduID}}>{{ProduName}}</option>
                             {{/each}}
                             
                         </select>
@@ -159,34 +172,30 @@
                 </div>
                 <br>
                 <div class="form-group row">
-                    <label class="col-md-3 col-form-label">Nhà sản xuất</label>
-                    <div class="col-sm-1 col-md-1 col-lg-1" style="margin-left: 50px">
-                        <select class="input-select" name="produOption">
-                            {{#each Produ}}
-                                <option value={{ProduID}} name={{ProduID}}>{{ProduName}}</option>
-                            {{/each}}
-                        </select>
-                    </div>
-                </div>
-                <br>
-                <div class="form-group row">
                     <label class="col-md-4 col-form-label">Số lượng</label>
                     <div class="col-sm-7 col-md-7 col-lg-7">
-                        <input class="form-control" style="width: 100%;" type="text" name="ProQuantity" required="true" placeholder="Nhập số lượng sản phẩm">
+                        <input class="form-control" style="width: 100%;" type="text" name="Quantity" required="true" placeholder="Nhập số lượng sản phẩm">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="col-md-4 col-form-label">Giá bán</label>
                     <div class="col-sm-7 col-md-7 col-lg-7">
-                        <input class="form-control" style="width: 100%;" type="text" name="ProPrice" required="true" placeholder="Nhập giá thành sản phẩm">
+                        <input class="form-control" style="width: 100%;" type="text" name="Price" required="true" placeholder="Nhập giá thành sản phẩm">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="col-md-4 col-form-label" for="exampleFormControlTextarea1">Mô tả sản phẩm</label>
                     <div class="col-sm-7 col-md-7 col-lg-7">
-                        <textarea class="form-control noresize" id="exampleFormControlTextarea1" rows="3" name="ProDes"></textarea>
+                        <textarea class="form-control noresize" id="exampleFormControlTextarea1" rows="3" name="Des"></textarea>
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <label class="col-md-4 col-form-label">Ngày nhập kho</label>
+                    <div class="col-sm-7 col-md-7 col-lg-7">
+                        <input class="form-control" style="width: 100%;" type="text" name="AddDate" required="true" placeholder="dd-mm-yy">
                     </div>
                 </div>
                 <input class="btn btn-success" style="float: right;margin-right: 50px; margin-top: 0px" type="Submit" name="Submit" value="Thêm">
